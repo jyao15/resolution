@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:18:15 11/22/2016 
+-- Create Date:    11:35:48 11/29/2017 
 -- Design Name: 
--- Module Name:    BMux - Behavioral 
+-- Module Name:    ALUMuxB - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,44 +29,38 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity BMux is
+entity ALUMuxB is
 	port(
 		--控制信号
 		ForwardB : in std_logic_vector(1 downto 0);
-		ALUSrcB  : in std_logic;
+		ALUSrcBIsImme  : in std_logic;
 		--供选择数据
-		ReadData2 : in std_logic_vector(15 downto 0);
+		readData2 : in std_logic_vector(15 downto 0);
 		imme 	    : in std_logic_vector(15 downto 0);
-		ExMemALUResult : in std_logic_vector(15 downto 0);	--上条指令的ALU结果
-		MemWbResult : in std_logic_vector(15 downto 0);	--上上条指令的ALU结果
-		--MemWbMemResult : in std_logic_vector(15 downto 0);	--上上条指令的读DM结果
+		ExeMemALUResult : in std_logic_vector(15 downto 0);	-- 上条指令的ALU结果（严格说是MFPCMux的结果）
+		MemWbWriteData : in std_logic_vector(15 downto 0);	   -- 上上条指令（包括插入的NOP）将写回的寄存器值(WriteData)
 		--选择结果输出
-		BsrcOut : out std_logic_vector(15 downto 0)
+		ALUSrcB : out std_logic_vector(15 downto 0)
 	);	
-end BMux;
+end ALUMuxB;
 
-architecture Behavioral of BMux is
-	
+architecture Behavioral of ALUMuxB is
 begin
-	process(ForwardB, ALUSrcB, ReadData2, imme, ExMemALUResult, MemWbResult)
-	begin 
-		case ForwardB is
-			when "00" =>
-				case ALUSrcB is
-					when '0' =>
-						BsrcOut <= ReadData2;
-					when '1' =>
-						BsrcOut <= imme;
-					when others =>
-				end case;
-				
-			when "01" =>
-				BsrcOut <= ExMemALUResult;
-			when "10" =>
-				BsrcOut <= MemWbResult;
-			when others => --error
-		end case;
 
+	process(ForwardB, ALUSrcBIsImme, readData2, imme, ExeMemALUResult, MemWbWriteData)
+	begin
+		if (ALUSrcBIsImme = '1') then
+			ALUSrcB <= imme;
+		else
+			case ForwardB is
+				when "01" =>
+					ALUSrcB <= ExeMemALUResult;
+				when "10" =>
+					ALUSrcB <= MemWbWriteData;
+				when others =>
+					ALUSrcB <= readData2;
+			end case;
+		end if;
 	end process;
 
 end Behavioral;

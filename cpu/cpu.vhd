@@ -223,19 +223,18 @@ architecture Behavioral of cpu is
 	end component;
 	
 	--选择器：ALU的第二个计算数
-	component BMux
+	component ALUMuxB
 	port(
 		--控制信号
 		ForwardB : in std_logic_vector(1 downto 0);
-		ALUSrcB  : in std_logic;
+		ALUSrcBIsImme  : in std_logic;
 		--供选择数据
-		ReadData2 : in std_logic_vector(15 downto 0);
+		readData2 : in std_logic_vector(15 downto 0);
 		imme 	    : in std_logic_vector(15 downto 0);
-		ExMemALUResult : in std_logic_vector(15 downto 0);	--上条指令的ALU结果
-		MemWbResult : in std_logic_vector(15 downto 0);		--上上条指令的结果
-		--MemWbMemResult : in std_logic_vector(15 downto 0);	--上上条指令的读DM结果
+		ExeMemALUResult : in std_logic_vector(15 downto 0);	-- 上条指令的ALU结果（严格说是MFPCMux的结果）
+		MemWbWriteData : in std_logic_vector(15 downto 0);	   -- 上上条指令（包括插入的NOP）将写回的寄存器值(WriteData)
 		--选择结果输出
-		BsrcOut : out std_logic_vector(15 downto 0)
+		ALUSrcB : out std_logic_vector(15 downto 0)
 	);	
 	end component;
 	
@@ -841,17 +840,17 @@ begin
 			ALUSrcA => AMuxOut
 		);
 		
-	u10 : BMux
+	u10 : ALUMuxB
 	port map(
 			ForwardB => ForwardB,
-			ALUSrcB => IdExALUSrcB,
+			ALUSrcBIsImme => IdExALUSrcB,
 			
-			ReadData2 => IdExReadData2,
+			readData2 => IdExReadData2,
 			imme => IdExImme,
-			ExMemALUResult => ExMemALUResult,
-			MemWbResult => dataToWB,
+			ExeMemALUResult => ExMemALUResult,
+			MemWbWriteData => dataToWB,
 			
-			BsrcOut => BMuxOut
+			ALUSrcB => BMuxOut
 		);	
 		
 	u11 : ForwardController
