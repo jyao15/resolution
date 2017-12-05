@@ -9,25 +9,25 @@ Target Device  : xc3s1200e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Dec 06 00:50:09 2017
+Mapped Date    : Wed Dec 06 02:15:05 2017
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   20
+Number of warnings:   13
 Logic Utilization:
-  Total Number Slice Registers:         690 out of  17,344    3%
-    Number used as Flip Flops:          591
-    Number used as Latches:              99
-  Number of 4 input LUTs:             2,763 out of  17,344   15%
+  Total Number Slice Registers:         661 out of  17,344    3%
+    Number used as Flip Flops:          579
+    Number used as Latches:              82
+  Number of 4 input LUTs:             2,806 out of  17,344   16%
 Logic Distribution:
-  Number of occupied Slices:          1,678 out of   8,672   19%
-    Number of Slices containing only related logic:   1,678 out of   1,678 100%
-    Number of Slices containing unrelated logic:          0 out of   1,678   0%
+  Number of occupied Slices:          1,698 out of   8,672   19%
+    Number of Slices containing only related logic:   1,698 out of   1,698 100%
+    Number of Slices containing unrelated logic:          0 out of   1,698   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,918 out of  17,344   16%
-    Number used as logic:             2,763
-    Number used as a route-thru:        155
+  Total Number of 4 input LUTs:       2,956 out of  17,344   17%
+    Number used as logic:             2,806
+    Number used as a route-thru:        150
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -37,11 +37,11 @@ Logic Distribution:
   Number of BUFGMUXs:                     6 out of      24   25%
   Number of DCMs:                         1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                4.07
+Average Fanout of Non-Clock Nets:                4.11
 
 Peak Memory Usage:  362 MB
-Total REAL time to MAP completion:  13 secs 
-Total CPU time to MAP completion:   9 secs 
+Total REAL time to MAP completion:  6 secs 
+Total CPU time to MAP completion:   5 secs 
 
 NOTES:
 
@@ -104,21 +104,6 @@ WARNING:LIT:178 - Clock buffer BUFGMUX symbol
    cause ALL of the dedicated clock routing resources for this buffer to be
    wasted. The non-clock loads are:
    Pin I2 of clkIn_clock1
-WARNING:Pack:266 - The function generator u12/Sh8_SW0 failed to merge with F5
-   multiplexer u12/Sh10_f5.  There is a conflict for the FXMUX.  The design will
-   exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator u12/Sh9_SW0 failed to merge with F5
-   multiplexer u12/Sh11_f5.  There is a conflict for the FXMUX.  The design will
-   exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator u12/Sh38_SW0 failed to merge with F5
-   multiplexer u12/Sh36_f5.  There is a conflict for the FXMUX.  The design will
-   exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator u12/Sh39_SW0 failed to merge with F5
-   multiplexer u12/Sh37_f5.  There is a conflict for the FXMUX.  The design will
-   exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator u23/romAddr_mux0053<4>36 failed to
-   merge with F5 multiplexer u23/romAddr_mux0053<4>1784_SW0.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator u23/romAddr_mux0053<3>32 failed to
    merge with F5 multiplexer u23/romAddr_mux0053<3>21_f5.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
@@ -128,13 +113,7 @@ WARNING:Pack:266 - The function generator u23/romAddr_mux0053<6>31 failed to
 WARNING:PhysDesignRules:372 - Gated clock. Clock net u7/sign_or0000 is sourced
    by a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net u12/ALUresult_not0001 is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net u6/ReadData1_or0000 is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net u12/branchJudge_not0001 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 

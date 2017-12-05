@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    18:38:21 11/22/2016 
+-- Create Date:    13:33:31 11/27/2017 
 -- Design Name: 
 -- Module Name:    ALU - Behavioral 
 -- Project Name: 
@@ -31,92 +31,106 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
 entity ALU is
-	port(
-		Asrc       :  in STD_LOGIC_VECTOR(15 downto 0);
-		Bsrc       :  in STD_LOGIC_VECTOR(15 downto 0);
-		ALUop		  :  in STD_LOGIC_VECTOR(3 downto 0);
-		ALUresult  :  out STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; -- 默认设为全0
-		branchJudge : out std_logic
+	Port(
+	input1:in STD_LOGIC_VECTOR(15 downto 0);
+	input2:in STD_LOGIC_VECTOR(15 downto 0);
+	ALUop:in STD_LOGIC_VECTOR(3 downto 0);
+	result:out STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000";
+	branch:out STD_LOGIC
 	);
 end ALU;
 
 architecture Behavioral of ALU is
-	shared variable tmp : std_logic_vector(15 downto 0);
-	shared variable zero : std_logic_vector(15 downto 0) := "0000000000000000";
+
 begin
-	process(Asrc , Bsrc , ALUop)
+	process(input1,input2,ALUop)
 	begin
 		case ALUop is 
 			when "0001" => --  +
-				ALUresult <= Asrc + Bsrc;
-				branchJudge <= '0';
+				result <= input1 + input2;
+				branch <= '0';
 			when "0010" => --  -
-				ALUresult <= Asrc - Bsrc; -- A-B
-				branchJudge <= '0';
+				result <= input1 - input2;
+				branch <= '0';
 			when "0011" => --  AND
-				ALUresult <= Asrc and Bsrc;
-				branchJudge <= '0';
+				result <= input1 and input2;
+				branch <= '0';
 			when "0100" => --  OR
-				ALUresult <= Asrc or Bsrc;
-				branchJudge <= '0';
-			when "0101" => -- NEG
-				ALUresult <= zero - Asrc;
-				branchJudge <= '0';
+				result <= input1 or input2;
+			branch <= '0';
+			when "0101" => -- NOT
+				result <= not input1;
+				branch <= '0';
 			when "0110" => --SLL
-				tmp := Asrc(15 downto 0);
-				if (Bsrc = zero) then 
-					ALUresult(15 downto 0) <= to_stdlogicvector(to_bitvector(tmp) sll 8);--left 8
+				if (input2 = "0000000000000000") then 
+					result <= to_stdlogicvector(to_bitvector(input1) sll 8);--left 8
 				else 
-					ALUresult <= to_stdlogicvector(to_bitvector(Asrc) sll conv_integer(Bsrc));
+					result <= to_stdlogicvector(to_bitvector(input1) sll conv_integer(input2));
 				end if;
-				branchJudge <= '0';
-			when "1100" => --SLLV
-				ALUresult <= to_stdlogicvector(to_bitvector(Asrc) sll conv_integer(Bsrc));
-				branchJudge <= '0';
+				branch <= '0';
+			when "1100" => --SRLV
+				result <= to_stdlogicvector(to_bitvector(input1) srl conv_integer(input2));
+				branch <= '0';
 			when "0111" => --  SRA
-				tmp := Asrc(15 downto 0);
-				if (Bsrc = zero) then 
-					ALUresult(15 downto 0) <= to_stdlogicvector(to_bitvector(tmp) sra 8);--left 8
+				if (input2 = "0000000000000000") then 
+					result <= to_stdlogicvector(to_bitvector(input1) sra 8);--left 8
 				else 
-					ALUresult <= to_stdlogicvector(to_bitvector(Asrc) sra conv_integer(Bsrc));
+					result <= to_stdlogicvector(to_bitvector(input1) sra conv_integer(input2));
 				end if;
-				branchJudge <= '0';
-			when "1101" => --SRAV
-				ALUresult <= to_stdlogicvector(to_bitvector(Asrc) sra conv_integer(Bsrc));
-				branchJudge <= '0';
+				branch <= '0';
+			when "1101" => --SLTUI
+				if (input1 < input2) then 
+					result <= "0000000000000001";
+				else
+					result <= "0000000000000000";
+				end if;
+				branch <= '0';
 			when "1000" => -- cmp , cmpi
-				if (Asrc = Bsrc) then 
-					ALUresult <= "0000000000000000";
+				if (input1 = input2) then 
+					result <= "0000000000000000";
 				else 
-					ALUresult <= "0000000000000001";
+					result <= "0000000000000001";
 				end if;
-				branchJudge <= '0';
+				branch <= '0';
 			when "1001" => --BEQZ, BTEQZ
-				--ALUresult  <= Asrc - Bsrc; 
-				if (Asrc = zero) then
-					branchJudge <= '1';
+				if (input1 = "0000000000000000") then
+					branch <= '1';
 				else 
-					branchJudge <= '0';
+					branch <= '0';
 				end if;
+				result <= "0000000000000000";
 			when "1010" => --B
-				branchJudge <= '1';
-			when "1011" => --BNEZ
-				--ALUresult  <= Asrc - Bsrc; 
-				if (Asrc = zero) then
-					branchJudge <= '0';
+				branch <= '1';
+				result <= "0000000000000000";
+			when "1011" => --BNEZ, BTNEZ 
+				if (input1 = "0000000000000000") then
+					branch <= '0';
 				else 
-					branchJudge <= '1';
+					branch <= '1';
 				end if;
-			when "1110" => --Asrc
-				ALUresult <= Asrc;
-			when "1111" => --Bsrc
-				ALUresult <= Bsrc;
+				result <= "0000000000000000";
+			when "1110" => --input1
+				result <= input1;
+				branch <= '0';
+			when "1111" => --input2
+				result <= input2;
+				branch <= '0';
 				
-			when others => ALUresult <= "0000000000000000";
-				branchJudge <= '0';
+			when others => result <= "0000000000000000";
+				branch <= '0';
 		end case;
 	end process;
 
 end Behavioral;
+
 

@@ -200,11 +200,11 @@ architecture Behavioral of cpu is
 	--ALU运算器
 	component ALU
 	port(
-		Asrc       	 :  in STD_LOGIC_VECTOR(15 downto 0);
-		Bsrc       	 :  in STD_LOGIC_VECTOR(15 downto 0);
+		input1       	 :  in STD_LOGIC_VECTOR(15 downto 0);
+		input2       	 :  in STD_LOGIC_VECTOR(15 downto 0);
 		ALUop		  	 :  in STD_LOGIC_VECTOR(3 downto 0);
-		ALUresult  	 :  out STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; -- 默认设为全0
-		BranchJudge  :  out STD_LOGIC
+		result  	 :  out STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; -- 默认设为全0
+		branch  :  out STD_LOGIC
 		);
 	end component;
 	
@@ -470,8 +470,8 @@ architecture Behavioral of cpu is
 	--源寄存器1选择器
 	component ReadReg1Mux
 		port(
-			rx : in std_logic_vector(2 downto 0);
-			ry : in std_logic_vector(2 downto 0);			--R0~R7中的一个
+			ten_downto_eight : in std_logic_vector(2 downto 0);
+			seven_downto_five : in std_logic_vector(2 downto 0);			--R0~R7中的一个
 			
 			ReadReg1 : in std_logic_vector(2 downto 0);		--由总控制器Controller生成的控制信号
 			
@@ -492,15 +492,15 @@ architecture Behavioral of cpu is
 	end component;
 	
 	--目的寄存器选择器
-	component RdMux
+	component ReadDstMUX
 		port(
-			rx : in std_logic_vector(2 downto 0);
-			ry : in std_logic_vector(2 downto 0);
-			rz : in std_logic_vector(2 downto 0);			--R0~R7中的一个
+			ten_downto_eight : in std_logic_vector(2 downto 0);
+			seven_downto_five : in std_logic_vector(2 downto 0);
+			four_downto_two : in std_logic_vector(2 downto 0);			--R0~R7中的一个
 			
 			RegDst : in std_logic_vector(2 downto 0);		--由总控制器Controller生成的控制信号
 			
-			rdOut : out std_logic_vector(3 downto 0)		--"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T, "1111"=没有
+			ReadDstOut : out std_logic_vector(3 downto 0)		--"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T, "1111"=没有
 		);
 	end component;
 	
@@ -725,14 +725,14 @@ begin
 			PCOut => IfIdPC
 		);
 		
-	u4 : RdMux
+	u4 : ReadDstMUX
 	port map(
-			rx => rx,
-			ry => ry,
-			rz => rz,
+			ten_downto_eight => rx,
+			seven_downto_five => ry,
+			four_downto_two => rz,
 			
 			RegDst => controllerOut(20 downto 18),
-			rdOut => rdMuxOut
+			ReadDstOut => rdMuxOut
 		);
 		
 	u5 : Controller
@@ -877,12 +877,12 @@ begin
 	
 	u12 : ALU
 	port map(
-			Asrc      	=> AMuxOut,
-			Bsrc        => BMuxOut,
+			input1      	=> AMuxOut,
+			input2        => BMuxOut,
 			ALUop		  	=> IdExALUOP,
 			
-			ALUresult  	=> ALUResult,
-			branchJudge => BranchJudge
+			result  	=> ALUResult,
+			branch => BranchJudge
 	);
 	
 	u13 : ExMemRegisters
@@ -1043,8 +1043,8 @@ begin
 	
 	u21 : ReadReg1Mux
 	port map(
-			rx => rx,
-			ry => ry,
+			ten_downto_eight => rx,
+			seven_downto_five => ry,
 			ReadReg1 => controllerOut(17 downto 15),
 			
 			ReadReg1Out => ReadReg1MuxOut
