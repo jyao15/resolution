@@ -332,16 +332,14 @@ architecture Behavioral of cpu is
 	--LW数据冲突控制单元
 	component HazardDetectionUnit
 	port(
-		IdExRd : in std_logic_vector(3 downto 0);
-		IdExMemRead : in std_logic;
+		IdExeMemRead: in std_logic;
+		IdExeWriteReg: in std_logic_vector(3 downto 0);
+		readReg1: in std_logic_vector(3 downto 0);
+		readReg2: in std_logic_vector(3 downto 0);
 		
-		ReadReg1 : in std_logic_vector(3 downto 0);
-		ReadReg2 : in std_logic_vector(3 downto 0);
-		
-		PCKeep : out std_logic;
-		IfIdKeep : out std_logic;
-		IdExFlush : out std_logic
-		
+		IdExeFlush_LW: out std_logic;
+		PCKeep: out std_logic;
+		IfIdKeep_LW: out std_logic
 	);
 	end component;
 	
@@ -531,13 +529,11 @@ architecture Behavioral of cpu is
 	--SW写指令内存 结构冲突
 	component StructConflictUnit
 	port(
-		IdExMemWrite : in std_logic;
-		ALUResultAsAddr : in std_logic_vector(15 downto 0);
-		PC : in std_logic_vector(15 downto 0);
-		
-		IfIdFlush : out std_logic;		--IF/ID段在下个时钟到来时清零
-		IdExFlush : out std_logic;		--ID/EX段在下个时钟到来时清零
-		PCRollback : out std_logic		--PCMux将选择PC
+		IdExeMemWrite: in std_logic;
+		ALUResult: in std_logic_vector(15 downto 0);
+		IfIdFlush_StructConflict: out std_logic;
+		IdExeFlush_StructConflict: out std_logic;
+		PCRollBack: out std_logic
 	);
 	end component;
 	
@@ -928,15 +924,15 @@ begin
 	
 	u15 : HazardDetectionUnit
 	port map(
-			IdExRd => IdExRd,
-			IdExMemRead => IdExMemRead,
+			IdExeWriteReg => IdExRd,
+			IdExeMemRead => IdExMemRead,
 			
-			ReadReg1 => ReadReg1MuxOut,
-			ReadReg2 => ReadReg2MuxOut,
+			readReg1 => ReadReg1MuxOut,
+			readReg2 => ReadReg2MuxOut,
 			
 			PCKeep => PCKeep,
-			IfIdKeep => IfIdKeep,
-			IdExFlush => LW_IdExFlush
+			IfIdKeep_LW => IfIdKeep,
+			IdExeFlush_LW => LW_IdExFlush
 		);
 		
 	u16 : PCMux
@@ -1019,12 +1015,10 @@ begin
 	
 	u19 : StructConflictUnit
 	port map(
-			IdExMemWrite => IdExMemWrite,
-			ALUResultAsAddr => ALUResult, ----还是给MFPCMuxOut？？
-			PC => PCOut,
-			
-			IfIdFlush => SW_IfIdflush,
-			IdExFlush => SW_IdExFlush,
+			IdExeMemWrite => IdExMemWrite,
+			ALUResult => ALUResult, 
+			IfIdFlush_StructConflict => SW_IfIdflush,
+			IdExeFlush_StructConflict => SW_IdExFlush,
 			PCRollback => PCRollback
 	);
 

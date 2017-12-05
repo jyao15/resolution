@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:18:15 11/22/2016 
+-- Create Date:    20:24:43 11/29/2017 
 -- Design Name: 
--- Module Name:    BMux - Behavioral 
+-- Module Name:    HazardDetectionUnit - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -31,42 +31,32 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity HazardDetectionUnit is
 	port(
-		IdExRd : in std_logic_vector(3 downto 0);
-		IdExMemRead : in std_logic;
+		IdExeMemRead: in std_logic;
+		IdExeWriteReg: in std_logic_vector(3 downto 0);
+		readReg1: in std_logic_vector(3 downto 0);
+		readReg2: in std_logic_vector(3 downto 0);
 		
-		ReadReg1 : in std_logic_vector(3 downto 0);
-		ReadReg2 : in std_logic_vector(3 downto 0);
-		
-		PCKeep : out std_logic;
-		IfIdKeep : out std_logic;
-		IdExFlush : out std_logic
-	);	
+		IdExeFlush_LW: out std_logic;
+		PCKeep: out std_logic;
+		IfIdKeep_LW: out std_logic
+	);
 end HazardDetectionUnit;
 
 architecture Behavioral of HazardDetectionUnit is
-	
-begin
-	process(IdExRd, IdExMemRead, ReadReg1, ReadReg2)
-	begin 
-		if (IdExMemRead = '0') then
-			PCKeep <= '0';
-			IfIdKeep <= '0';
-			IdExFlush <= '0';
-		elsif (ReadReg1 = "1111" and ReadReg2 = "1111") then
-			PCKeep <= '0';
-			IfIdKeep <= '0';
-			IdExFlush <= '0';
-		elsif (ReadReg1 = IdExRd or ReadReg2 = IdExRd) then
-			PCKeep <= '1';
-			IfIdKeep <= '1';
-			IdExFlush <= '1';
-		else
-			PCKeep <= '0';
-			IfIdKeep <= '0';
-			IdExFlush <= '0';
-		end if;
 
+begin
+
+	process(IdExeMemRead, IdExeWriteReg, readReg1, readReg2)
+	begin
+		if ((IdExeMemRead = '1') and ((readReg1 = IdExeWriteReg) or (readReg2 = IdExeWriteReg))) then
+			IdExeFlush_LW <= '1';
+			PCKeep <= '1';
+			IfIdKeep_LW <= '1';
+		else
+			IdExeFlush_LW <= '0';
+			PCKeep <= '0';
+			IfIdKeep_LW <= '0';
+		end if;
 	end process;
 
 end Behavioral;
-

@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.45 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.46 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.45 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.47 secs
  
 --> Reading design: cpu.prj
 
@@ -133,7 +133,8 @@ Architecture behavioral of Entity exmemregisters is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd" in Library work.
 Architecture behavioral of Entity memwbregisters is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd" in Library work.
-Architecture behavioral of Entity hazarddetectionunit is up to date.
+Entity <hazarddetectionunit> compiled.
+Entity <hazarddetectionunit> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd" in Library work.
 Architecture behavioral of Entity pcmux is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/MemoryUnit.vhd" in Library work.
@@ -141,10 +142,10 @@ Architecture behavioral of Entity memoryunit is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd" in Library work.
 Architecture behavioral of Entity clock is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/StructConflictUnit.vhd" in Library work.
-Architecture behavioral of Entity structconflictunit is up to date.
+Entity <structconflictunit> compiled.
+Entity <structconflictunit> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd" in Library work.
-Entity <mfpcmux> compiled.
-Entity <mfpcmux> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity mfpcmux is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg1Mux.vhd" in Library work.
 Architecture behavioral of Entity readreg1mux is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd" in Library work.
@@ -154,8 +155,7 @@ Architecture behave of Entity vga_controller is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ipcore_dir/fontRom.vhd" in Library work.
 Architecture fontrom_a of Entity fontrom is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd" in Library work.
-Entity <MemWriteDataMux> compiled.
-Entity <MemWriteDataMux> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity memwritedatamux is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd" in Library work.
 Architecture behavioral of Entity dcm is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" in Library work.
@@ -213,7 +213,7 @@ Analyzing hierarchy for entity <ReadReg2Mux> in library <work> (architecture <be
 
 Analyzing hierarchy for entity <VGA_Controller> in library <work> (architecture <behave>).
 
-Analyzing hierarchy for entity <MemWriteDataMux> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <MemWriteDataMux> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral>).
 
@@ -222,11 +222,11 @@ Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1103: Instantiating black box module <fontRom>.
-WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1150: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1097: Instantiating black box module <fontRom>.
+WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1144: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <opt>
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1187: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1207: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1181: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1201: Mux is complete : default of case is discarded
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <PCRegister> in library <work> (Architecture <behavioral>).
@@ -319,7 +319,7 @@ Entity <ReadReg2Mux> analyzed. Unit <ReadReg2Mux> generated.
 Analyzing Entity <VGA_Controller> in library <work> (Architecture <behave>).
 Entity <VGA_Controller> analyzed. Unit <VGA_Controller> generated.
 
-Analyzing Entity <MemWriteDataMux> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <MemWriteDataMux> in library <work> (Architecture <behavioral>).
 Entity <MemWriteDataMux> analyzed. Unit <MemWriteDataMux> generated.
 
 Analyzing Entity <dcm> in library <work> (Architecture <behavioral>).
@@ -538,8 +538,8 @@ Unit <MemWbRegisters> synthesized.
 
 Synthesizing Unit <HazardDetectionUnit>.
     Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd".
-    Found 4-bit comparator equal for signal <IdExFlush$cmp_eq0002> created at line 58.
-    Found 4-bit comparator equal for signal <IdExFlush$cmp_eq0003> created at line 58.
+    Found 4-bit comparator equal for signal <PCKeep$cmp_eq0000> created at line 51.
+    Found 4-bit comparator equal for signal <PCKeep$cmp_eq0001> created at line 51.
     Summary:
 	inferred   2 Comparator(s).
 Unit <HazardDetectionUnit> synthesized.
@@ -673,9 +673,8 @@ Unit <Clock> synthesized.
 
 Synthesizing Unit <StructConflictUnit>.
     Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/StructConflictUnit.vhd".
-WARNING:Xst:647 - Input <PC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 16-bit comparator greatequal for signal <PCRollback$cmp_ge0000> created at line 52.
-    Found 16-bit comparator lessequal for signal <PCRollback$cmp_le0000> created at line 52.
+    Found 16-bit comparator greatequal for signal <IfIdFlush_StructConflict$cmp_ge0000> created at line 48.
+    Found 16-bit comparator lessequal for signal <IfIdFlush_StructConflict$cmp_le0000> created at line 48.
     Summary:
 	inferred   2 Comparator(s).
 Unit <StructConflictUnit> synthesized.
@@ -1722,8 +1721,8 @@ Delay:               11.215ns (Levels of Logic = 6)
      FDCE:C->Q            10   0.591   0.886  u3/tmpRx_1 (u3/tmpRx_1)
      LUT4_D:I3->O         17   0.704   1.086  u21/ReadReg1Out<1>_SW2 (N1428)
      LUT3:I2->O           34   0.704   1.267  u21/ReadReg1Out<1> (ReadReg1MuxOut<1>)
-     LUT4:I3->O            1   0.704   0.424  u15/IfIdKeep26 (u15/IfIdKeep26)
-     LUT4:I3->O           18   0.704   1.072  u15/IfIdKeep139 (IfIdKeep)
+     LUT4:I3->O            1   0.704   0.424  u15/PCKeep_and000026 (u15/PCKeep_and000026)
+     LUT4:I3->O           18   0.704   1.072  u15/PCKeep_and0000139 (IfIdKeep)
      LUT4:I3->O           82   0.704   1.357  u8/Reg1Out_or00001 (u8/Reg1Out_or0000)
      LUT2:I1->O            1   0.704   0.000  u8/regWriteOut_mux00011 (u8/regWriteOut_mux0001)
      FDCE:D                    0.308          u8/regWriteOut
@@ -1950,14 +1949,14 @@ Delay:               3.095ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 205.00 secs
-Total CPU time to Xst completion: 205.11 secs
+Total REAL time to Xst completion: 151.00 secs
+Total CPU time to Xst completion: 151.70 secs
  
 --> 
 
-Total memory usage is 459300 kilobytes
+Total memory usage is 459260 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  123 (   0 filtered)
+Number of warnings :  122 (   0 filtered)
 Number of infos    :   77 (   0 filtered)
 
