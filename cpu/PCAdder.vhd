@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    21:15:14 11/22/2016 
+-- Create Date:    15:42:52 11/29/2017 
 -- Design Name: 
--- Module Name:    PCAdder - Behavioral 
+-- Module Name:    PCIncrementer - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -19,7 +19,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use ieee.std_logic_unsigned.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -29,20 +30,18 @@ use ieee.std_logic_unsigned.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity PCAdder is
-	port( adderIn : in std_logic_vector(15 downto 0);
-			adderOut : out std_logic_vector(15 downto 0)
-			);
-end PCAdder;
+entity PCIncrementer is
+	port(
+		PCin: in std_logic_vector(15 downto 0);
+		PCPlusOne: out std_logic_vector(15 downto 0)
+	);
+end PCIncrementer;
 
-architecture Behavioral of PCAdder is
+architecture Behavioral of PCIncrementer is
 
 begin
 
-	process(adderIn)
-	begin
-		adderOut <= adderIn + 1;
-	end process;
+	PCPlusOne <= PCin + "0000000000000001";
 
 end Behavioral;
 

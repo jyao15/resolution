@@ -445,22 +445,23 @@ architecture Behavioral of cpu is
 	end component;
 	
 	--PC加法器 实现PC+1
-	component PCAdder
+	component PCIncrementer
 		port( 
-			adderIn : in std_logic_vector(15 downto 0);
-			adderOut : out std_logic_vector(15 downto 0)
+			PCin : in std_logic_vector(15 downto 0);
+			PCPlusOne : out std_logic_vector(15 downto 0)
 		);
 	end component;
 	
 	--PC寄存器
 	component PCRegister
-		port(	
-			rst,clk : in std_logic;
-			flashFinished : in std_logic;
-			PCKeep : in std_logic;		--由HazardDetectionUnit产生的控制信号
-			PCIn : in std_logic_vector(15 downto 0);		--取PCMux的输出值（选出来的PC值）
-			PCOut : out std_logic_vector(15 downto 0)		--送给IM去取指的PC
-		);
+	port(
+		rst: in std_logic;
+		clk: in std_logic;
+		flashFinished : in std_logic;
+		PCKeep: in std_logic;
+		selectedPC: in std_logic_vector(15 downto 0);
+		nextPC: out std_logic_vector(15 downto 0)
+	);
 	end component;
 	
 	--源寄存器1选择器
@@ -689,14 +690,14 @@ begin
 			clk => clk_3,
 			flashFinished => flashFinished,
 			PCKeep => PCKeep,
-			PCIn => PCMuxOut,
-			PCOut => PCOut
+			selectedPC => PCMuxOut,
+			nextPC => PCOut
 	);
 		
-	u2 : PCAdder
+	u2 : PCIncrementer
 	port map( 
-			adderIn => PCOut,
-			adderOut => PCAddOne
+			PCin => PCOut,
+			PCPlusOne => PCAddOne
 	);
 		
 	u3 : 	IfIdRegisters

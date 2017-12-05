@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    21:51:23 11/22/2016 
+-- Create Date:    20:41:00 11/29/2017 
 -- Design Name: 
 -- Module Name:    PCRegister - Behavioral 
 -- Project Name: 
@@ -30,30 +30,35 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity PCRegister is
-	port(	rst,clk : in std_logic;
-			flashFinished : in std_logic;
-			PCKeep : in std_logic;
-			PCIn : in std_logic_vector(15 downto 0);
-			PCOut : out std_logic_vector(15 downto 0)
-			);
+	port(
+		rst: in std_logic;
+		clk: in std_logic;
+		flashFinished : in std_logic;
+		PCKeep: in std_logic;
+		selectedPC: in std_logic_vector(15 downto 0);
+		nextPC: out std_logic_vector(15 downto 0)
+	);
 end PCRegister;
 
 architecture Behavioral of PCRegister is
 
 begin
-	process(clk,rst)
-	begin
-		if (rst = '0') then 
-		 --PCOut <= "0000000000000000";
-			PCOut <= "1111111111111111";
-			--PCOut <= "0000000001011101";
-		elsif clk'event and clk = '1'then
-			if flashFinished = '1' then
-				if PCKeep = '0' then
-					PCOut <= PCIn;
+
+	process(rst, clk)
+	begin 
+		if (rst = '0') then
+			nextPC <= "1111111111111111";
+		elsif (rising_edge(clk)) then
+			if(flashFinished = '1') then
+				if (PCKeep = '0') then
+					nextPC <= selectedPC;
+				else null;
 				end if;
+			else null;
 			end if;
+		else null;
 		end if;
 	end process;
+
 end Behavioral;
 

@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.46 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.44 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.47 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.44 secs
  
 --> Reading design: cpu.prj
 
@@ -105,9 +105,11 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd" in Library work.
-Architecture behavioral of Entity pcregister is up to date.
+Entity <pcregister> compiled.
+Entity <pcregister> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd" in Library work.
-Architecture behavioral of Entity pcadder is up to date.
+Entity <PCIncrementer> compiled.
+Entity <PCIncrementer> (Architecture <Behavioral>) compiled.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd" in Library work.
 Architecture behavioral of Entity ifidregisters is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd" in Library work.
@@ -133,8 +135,7 @@ Architecture behavioral of Entity exmemregisters is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd" in Library work.
 Architecture behavioral of Entity memwbregisters is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd" in Library work.
-Entity <hazarddetectionunit> compiled.
-Entity <hazarddetectionunit> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity hazarddetectionunit is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd" in Library work.
 Architecture behavioral of Entity pcmux is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/MemoryUnit.vhd" in Library work.
@@ -142,8 +143,7 @@ Architecture behavioral of Entity memoryunit is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd" in Library work.
 Architecture behavioral of Entity clock is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/StructConflictUnit.vhd" in Library work.
-Entity <structconflictunit> compiled.
-Entity <structconflictunit> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity structconflictunit is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd" in Library work.
 Architecture behavioral of Entity mfpcmux is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg1Mux.vhd" in Library work.
@@ -169,7 +169,7 @@ Analyzing hierarchy for entity <cpu> in library <work> (architecture <behavioral
 
 Analyzing hierarchy for entity <PCRegister> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <PCAdder> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <PCIncrementer> in library <work> (architecture <Behavioral>).
 
 Analyzing hierarchy for entity <IfIdRegisters> in library <work> (architecture <behavioral>).
 
@@ -222,18 +222,18 @@ Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1097: Instantiating black box module <fontRom>.
-WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1144: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1098: Instantiating black box module <fontRom>.
+WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1145: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <opt>
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1181: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1201: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1182: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1202: Mux is complete : default of case is discarded
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <PCRegister> in library <work> (Architecture <behavioral>).
 Entity <PCRegister> analyzed. Unit <PCRegister> generated.
 
-Analyzing Entity <PCAdder> in library <work> (Architecture <behavioral>).
-Entity <PCAdder> analyzed. Unit <PCAdder> generated.
+Analyzing Entity <PCIncrementer> in library <work> (Architecture <Behavioral>).
+Entity <PCIncrementer> analyzed. Unit <PCIncrementer> generated.
 
 Analyzing Entity <IfIdRegisters> in library <work> (Architecture <behavioral>).
 Entity <IfIdRegisters> analyzed. Unit <IfIdRegisters> generated.
@@ -357,18 +357,18 @@ INFO:Xst:2561 - Always blocking tristate driving signal <ram1_data> in unit <Mem
 
 Synthesizing Unit <PCRegister>.
     Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd".
-    Found 16-bit register for signal <PCOut>.
+    Found 16-bit register for signal <nextPC>.
     Summary:
 	inferred  16 D-type flip-flop(s).
 Unit <PCRegister> synthesized.
 
 
-Synthesizing Unit <PCAdder>.
+Synthesizing Unit <PCIncrementer>.
     Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd".
-    Found 16-bit adder for signal <adderOut>.
+    Found 16-bit adder for signal <PCPlusOne>.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-Unit <PCAdder> synthesized.
+Unit <PCIncrementer> synthesized.
 
 
 Synthesizing Unit <IfIdRegisters>.
@@ -1623,7 +1623,7 @@ Asynchronous Control Signals Information:
 -----------------------------------------------+------------------------+-------+
 Control Signal                                 | Buffer(FF name)        | Load  |
 -----------------------------------------------+------------------------+-------+
-u1/rst_inv(u8/rdOut_Acst_inv1_INV_0:O)         | NONE(u1/PCOut_0)       | 484   |
+u1/rst_inv(u8/rdOut_Acst_inv1_INV_0:O)         | NONE(u1/nextPC_0)      | 484   |
 u16/PCOut_0__and0000(u16/PCOut_0__and00001:O)  | NONE(u16/PCOut_0)      | 1     |
 u16/PCOut_0__and0001(u16/PCOut_0__and00011:O)  | NONE(u16/PCOut_0)      | 1     |
 u16/PCOut_10__and0000(u16/PCOut_10__and00001:O)| NONE(u16/PCOut_10)     | 1     |
@@ -1949,12 +1949,12 @@ Delay:               3.095ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 151.00 secs
-Total CPU time to Xst completion: 151.70 secs
+Total REAL time to Xst completion: 134.00 secs
+Total CPU time to Xst completion: 133.56 secs
  
 --> 
 
-Total memory usage is 459260 kilobytes
+Total memory usage is 459248 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  122 (   0 filtered)
