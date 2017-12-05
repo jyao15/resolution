@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: cpu.prj
 
@@ -113,12 +113,12 @@ Architecture behavioral of Entity ifidregisters is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/RdMux.vhd" in Library work.
 Architecture behavioral of Entity readdstmux is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/Controller.vhd" in Library work.
-Entity <controller> compiled.
-Entity <controller> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity controller is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/Registers.vhd" in Library work.
 Architecture behavioral of Entity registers is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ImmeExtendUnit.vhd" in Library work.
-Architecture behavioral of Entity immeextendunit is up to date.
+Entity <immeextendunit> compiled.
+Entity <immeextendunit> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/IdExRegisters.vhd" in Library work.
 Architecture behavioral of Entity idexregisters is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/AMux.vhd" in Library work.
@@ -158,7 +158,8 @@ Architecture behavioral of Entity writedatamux is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/dcm.vhd" in Library work.
 Architecture behavioral of Entity dcm is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/cpu.vhd" in Library work.
-Architecture behavioral of Entity cpu is up to date.
+Entity <cpu> compiled.
+Entity <cpu> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -1960,12 +1961,12 @@ Delay:               3.095ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 53.00 secs
-Total CPU time to Xst completion: 52.44 secs
+Total REAL time to Xst completion: 48.00 secs
+Total CPU time to Xst completion: 47.89 secs
  
 --> 
 
-Total memory usage is 538536 kilobytes
+Total memory usage is 537520 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  122 (   0 filtered)
