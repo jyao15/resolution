@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.44 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.44 secs
  
 --> Reading design: cpu.prj
 
@@ -104,66 +104,66 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/PCRegister.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd" in Library work.
 Architecture behavioral of Entity pcregister is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/PCAdder.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd" in Library work.
 Architecture behavioral of Entity pcadder is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/IfIdRegisters.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd" in Library work.
 Architecture behavioral of Entity ifidregisters is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/RdMux.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd" in Library work.
 Architecture behavioral of Entity rdmux is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/Controller.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/Controller.vhd" in Library work.
 Architecture behavioral of Entity controller is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/Registers.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/Registers.vhd" in Library work.
 Architecture behavioral of Entity registers is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ImmeExtendUnit.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ImmeExtendUnit.vhd" in Library work.
 Architecture behavioral of Entity immeextendunit is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/IdExRegisters.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/IdExRegisters.vhd" in Library work.
 Architecture behavioral of Entity idexregisters is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/AMux.vhd" in Library work.
-Architecture behavioral of Entity amux is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/BMux.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd" in Library work.
+Architecture behavioral of Entity alumuxa is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/BMux.vhd" in Library work.
 Architecture behavioral of Entity bmux is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ForwardController.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ForwardController.vhd" in Library work.
 Architecture behavioral of Entity forwardcontroller is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ALU.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ExMemRegisters.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ExMemRegisters.vhd" in Library work.
 Architecture behavioral of Entity exmemregisters is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/MemWbRegisters.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd" in Library work.
 Architecture behavioral of Entity memwbregisters is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/HazardDetectionUnit.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd" in Library work.
 Architecture behavioral of Entity hazarddetectionunit is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/PCMux.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd" in Library work.
 Architecture behavioral of Entity pcmux is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/MemoryUnit.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/MemoryUnit.vhd" in Library work.
 Architecture behavioral of Entity memoryunit is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/clock.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd" in Library work.
 Architecture behavioral of Entity clock is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/StructConflictUnit.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/StructConflictUnit.vhd" in Library work.
 Architecture behavioral of Entity structconflictunit is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/MFPCMux.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd" in Library work.
 Architecture behavioral of Entity mfpcmux is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ReadReg1Mux.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg1Mux.vhd" in Library work.
 Architecture behavioral of Entity readreg1mux is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ReadReg2Mux.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd" in Library work.
 Architecture behavioral of Entity readreg2mux is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/VGA_Controller.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/VGA_Controller.vhd" in Library work.
 Architecture behave of Entity vga_controller is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ipcore_dir/fontRom.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ipcore_dir/fontRom.vhd" in Library work.
 Architecture fontrom_a of Entity fontrom is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/WriteDataMux.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd" in Library work.
 Architecture behavioral of Entity writedatamux is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/dcm.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd" in Library work.
 Architecture behavioral of Entity dcm is up to date.
-Compiling vhdl file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/cpu.vhd" in Library work.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" in Library work.
 Entity <cpu> compiled.
-Entity <cpu> (Architecture <behavioral>) compiled.
+Entity <cpu> (Architecture <Behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <cpu> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <cpu> in library <work> (architecture <Behavioral>).
 
 Analyzing hierarchy for entity <PCRegister> in library <work> (architecture <behavioral>).
 
@@ -181,7 +181,7 @@ Analyzing hierarchy for entity <ImmeExtendUnit> in library <work> (architecture 
 
 Analyzing hierarchy for entity <IdExRegisters> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <AMux> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <ALUMuxA> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <BMux> in library <work> (architecture <behavioral>).
 
@@ -219,12 +219,12 @@ Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/cpu.vhd" line 1105: Instantiating black box module <fontRom>.
-WARNING:Xst:819 - "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/cpu.vhd" line 1151: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+Analyzing Entity <cpu> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1104: Instantiating black box module <fontRom>.
+WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1151: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <opt>
-INFO:Xst:1561 - "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/cpu.vhd" line 1188: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/cpu.vhd" line 1208: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1188: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1208: Mux is complete : default of case is discarded
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <PCRegister> in library <work> (Architecture <behavioral>).
@@ -251,8 +251,8 @@ Entity <ImmeExtendUnit> analyzed. Unit <ImmeExtendUnit> generated.
 Analyzing Entity <IdExRegisters> in library <work> (Architecture <behavioral>).
 Entity <IdExRegisters> analyzed. Unit <IdExRegisters> generated.
 
-Analyzing Entity <AMux> in library <work> (Architecture <behavioral>).
-Entity <AMux> analyzed. Unit <AMux> generated.
+Analyzing Entity <ALUMuxA> in library <work> (Architecture <behavioral>).
+Entity <ALUMuxA> analyzed. Unit <ALUMuxA> generated.
 
 Analyzing Entity <BMux> in library <work> (Architecture <behavioral>).
 Entity <BMux> analyzed. Unit <BMux> generated.
@@ -273,7 +273,7 @@ Analyzing Entity <HazardDetectionUnit> in library <work> (Architecture <behavior
 Entity <HazardDetectionUnit> analyzed. Unit <HazardDetectionUnit> generated.
 
 Analyzing Entity <PCMux> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/PCMux.vhd" line 56: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd" line 56: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <IdExPC>, <PCRollback>
 Entity <PCMux> analyzed. Unit <PCMux> generated.
 
@@ -311,7 +311,7 @@ Analyzing Entity <ReadReg1Mux> in library <work> (Architecture <behavioral>).
 Entity <ReadReg1Mux> analyzed. Unit <ReadReg1Mux> generated.
 
 Analyzing Entity <ReadReg2Mux> in library <work> (Architecture <behavioral>).
-INFO:Xst:1561 - "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ReadReg2Mux.vhd" line 53: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd" line 53: Mux is complete : default of case is discarded
 Entity <ReadReg2Mux> analyzed. Unit <ReadReg2Mux> generated.
 
 Analyzing Entity <VGA_Controller> in library <work> (Architecture <behave>).
@@ -354,7 +354,7 @@ INFO:Xst:2561 - Always blocking tristate driving signal <ram1_data> in unit <Mem
 INFO:Xst:2561 - Always blocking tristate driving signal <ram1_data> in unit <MemoryUnit> is removed.
 
 Synthesizing Unit <PCRegister>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/PCRegister.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd".
     Found 16-bit register for signal <PCOut>.
     Summary:
 	inferred  16 D-type flip-flop(s).
@@ -362,7 +362,7 @@ Unit <PCRegister> synthesized.
 
 
 Synthesizing Unit <PCAdder>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/PCAdder.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd".
     Found 16-bit adder for signal <adderOut>.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -370,7 +370,7 @@ Unit <PCAdder> synthesized.
 
 
 Synthesizing Unit <IfIdRegisters>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/IfIdRegisters.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd".
     Found 16-bit register for signal <tmpCommand>.
     Found 11-bit register for signal <tmpImme>.
     Found 16-bit register for signal <tmpPC>.
@@ -383,19 +383,19 @@ Unit <IfIdRegisters> synthesized.
 
 
 Synthesizing Unit <RdMux>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/RdMux.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd".
 Unit <RdMux> synthesized.
 
 
 Synthesizing Unit <Controller>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/Controller.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/Controller.vhd".
 WARNING:Xst:737 - Found 21-bit latch for signal <controllerOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 Unit <Controller> synthesized.
 
 
 Synthesizing Unit <Registers>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/Registers.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/Registers.vhd".
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 3                                              |
@@ -435,7 +435,7 @@ Unit <Registers> synthesized.
 
 
 Synthesizing Unit <ImmeExtendUnit>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ImmeExtendUnit.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/ImmeExtendUnit.vhd".
 WARNING:Xst:646 - Signal <tmpOut> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <sign> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:736 - Found 1-bit latch for signal <sign$mux0000> created at line 46. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -446,7 +446,7 @@ Unit <ImmeExtendUnit> synthesized.
 
 
 Synthesizing Unit <IdExRegisters>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/IdExRegisters.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/IdExRegisters.vhd".
     Found 4-bit register for signal <Reg2Out>.
     Found 1-bit register for signal <memWriteOut>.
     Found 4-bit register for signal <ALUOpOut>.
@@ -467,18 +467,16 @@ Synthesizing Unit <IdExRegisters>.
 Unit <IdExRegisters> synthesized.
 
 
-Synthesizing Unit <AMux>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/AMux.vhd".
-WARNING:Xst:737 - Found 16-bit latch for signal <AsrcOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 16-bit 3-to-1 multiplexer for signal <AsrcOut$mux0000>.
+Synthesizing Unit <ALUMuxA>.
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd".
+    Found 16-bit 4-to-1 multiplexer for signal <ALUSrcA>.
     Summary:
 	inferred  16 Multiplexer(s).
-Unit <AMux> synthesized.
+Unit <ALUMuxA> synthesized.
 
 
 Synthesizing Unit <BMux>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/BMux.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/BMux.vhd".
 WARNING:Xst:737 - Found 16-bit latch for signal <BsrcOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
     Found 16-bit 3-to-1 multiplexer for signal <BsrcOut$mux0001>.
@@ -488,7 +486,7 @@ Unit <BMux> synthesized.
 
 
 Synthesizing Unit <ForwardController>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ForwardController.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/ForwardController.vhd".
     Found 4-bit comparator equal for signal <ForwardA$cmp_eq0000> created at line 56.
     Found 4-bit comparator equal for signal <ForwardA$cmp_eq0001> created at line 57.
     Found 4-bit comparator equal for signal <ForwardSW$cmp_eq0000> created at line 67.
@@ -499,7 +497,7 @@ Unit <ForwardController> synthesized.
 
 
 Synthesizing Unit <ALU>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ALU.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd".
 WARNING:Xst:653 - Signal <zero> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
 WARNING:Xst:646 - Signal <tmp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:737 - Found 16-bit latch for signal <ALUresult>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -518,7 +516,7 @@ Unit <ALU> synthesized.
 
 
 Synthesizing Unit <ExMemRegisters>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ExMemRegisters.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/ExMemRegisters.vhd".
     Found 1-bit register for signal <memWriteOut>.
     Found 1-bit register for signal <memToRegOut>.
     Found 4-bit register for signal <rdOut>.
@@ -532,7 +530,7 @@ Unit <ExMemRegisters> synthesized.
 
 
 Synthesizing Unit <MemWbRegisters>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/MemWbRegisters.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd".
     Found 16-bit register for signal <dataToWB>.
     Found 4-bit register for signal <rdOut>.
     Found 1-bit register for signal <regWriteOut>.
@@ -542,7 +540,7 @@ Unit <MemWbRegisters> synthesized.
 
 
 Synthesizing Unit <HazardDetectionUnit>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/HazardDetectionUnit.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd".
     Found 4-bit comparator equal for signal <IdExFlush$cmp_eq0002> created at line 58.
     Found 4-bit comparator equal for signal <IdExFlush$cmp_eq0003> created at line 58.
     Summary:
@@ -551,7 +549,7 @@ Unit <HazardDetectionUnit> synthesized.
 
 
 Synthesizing Unit <PCMux>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/PCMux.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd".
 WARNING:Xst:737 - Found 16-bit latch for signal <PCOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 16-bit adder for signal <mux0000$addsub0000> created at line 59.
     Found 16-bit subtractor for signal <PCOut$addsub0000> created at line 64.
@@ -561,7 +559,7 @@ Unit <PCMux> synthesized.
 
 
 Synthesizing Unit <MemoryUnit>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/MemoryUnit.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/MemoryUnit.vhd".
 WARNING:Xst:2563 - Inout <ram1_data<10>> is never assigned. Tied to value Z.
 WARNING:Xst:2563 - Inout <ram1_data<11>> is never assigned. Tied to value Z.
 WARNING:Xst:2563 - Inout <ram1_data<12>> is never assigned. Tied to value Z.
@@ -666,7 +664,7 @@ Unit <MemoryUnit> synthesized.
 
 
 Synthesizing Unit <Clock>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/clock.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd".
     Found 1-bit register for signal <clk1>.
     Found 1-bit register for signal <clk2>.
     Found 2-bit up counter for signal <count>.
@@ -677,7 +675,7 @@ Unit <Clock> synthesized.
 
 
 Synthesizing Unit <StructConflictUnit>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/StructConflictUnit.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/StructConflictUnit.vhd".
 WARNING:Xst:647 - Input <PC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit comparator greatequal for signal <PCRollback$cmp_ge0000> created at line 52.
     Found 16-bit comparator lessequal for signal <PCRollback$cmp_le0000> created at line 52.
@@ -687,22 +685,22 @@ Unit <StructConflictUnit> synthesized.
 
 
 Synthesizing Unit <MFPCMux>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/MFPCMux.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd".
 Unit <MFPCMux> synthesized.
 
 
 Synthesizing Unit <ReadReg1Mux>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ReadReg1Mux.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg1Mux.vhd".
 Unit <ReadReg1Mux> synthesized.
 
 
 Synthesizing Unit <ReadReg2Mux>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ReadReg2Mux.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd".
 Unit <ReadReg2Mux> synthesized.
 
 
 Synthesizing Unit <VGA_Controller>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/VGA_Controller.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/VGA_Controller.vhd".
 WARNING:Xst:646 - Signal <tmp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <inty> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <dx> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -1140,7 +1138,7 @@ Unit <VGA_Controller> synthesized.
 
 
 Synthesizing Unit <WriteDataMux>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/WriteDataMux.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd".
 WARNING:Xst:737 - Found 16-bit latch for signal <WriteDataOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
     Found 16-bit 3-to-1 multiplexer for signal <WriteDataOut$mux0000>.
@@ -1150,12 +1148,12 @@ Unit <WriteDataMux> synthesized.
 
 
 Synthesizing Unit <dcm>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/dcm.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd".
 Unit <dcm> synthesized.
 
 
 Synthesizing Unit <cpu>.
-    Related source file is "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/cpu.vhd".
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd".
 WARNING:Xst:646 - Signal <ram2AddrOutput<17:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <clk_registers> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <always_zero> is used but never assigned. This sourceless signal will be automatically connected to value 0.
@@ -1201,9 +1199,9 @@ Macro Statistics
  23-bit register                                       : 1
  3-bit register                                        : 4
  4-bit register                                        : 6
-# Latches                                              : 11
+# Latches                                              : 10
  1-bit latch                                           : 2
- 16-bit latch                                          : 8
+ 16-bit latch                                          : 7
  21-bit latch                                          : 1
 # Comparators                                          : 147
  10-bit comparator greatequal                          : 9
@@ -1223,7 +1221,8 @@ Macro Statistics
 # Multiplexers                                         : 8
  1-bit 8-to-1 multiplexer                              : 4
  16-bit 11-to-1 multiplexer                            : 1
- 16-bit 3-to-1 multiplexer                             : 3
+ 16-bit 3-to-1 multiplexer                             : 2
+ 16-bit 4-to-1 multiplexer                             : 1
 # Logic shifters                                       : 2
  16-bit shifter arithmetic right                       : 1
  16-bit shifter logical left                           : 1
@@ -1359,9 +1358,9 @@ Macro Statistics
  9-bit up counter                                      : 1
 # Registers                                            : 545
  Flip-Flops                                            : 545
-# Latches                                              : 11
+# Latches                                              : 10
  1-bit latch                                           : 2
- 16-bit latch                                          : 8
+ 16-bit latch                                          : 7
  21-bit latch                                          : 1
 # Comparators                                          : 147
  10-bit comparator greatequal                          : 9
@@ -1381,7 +1380,8 @@ Macro Statistics
 # Multiplexers                                         : 23
  1-bit 11-to-1 multiplexer                             : 16
  1-bit 8-to-1 multiplexer                              : 4
- 16-bit 3-to-1 multiplexer                             : 3
+ 16-bit 3-to-1 multiplexer                             : 2
+ 16-bit 4-to-1 multiplexer                             : 1
 # Logic shifters                                       : 2
  16-bit shifter arithmetic right                       : 1
  16-bit shifter logical left                           : 1
@@ -1449,38 +1449,6 @@ INFO:Xst:2261 - The FF/Latch <immeOut_11> in Unit <ImmeExtendUnit> is equivalent
 WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: ALUresult_shift0001<15>.
 
 Optimizing unit <cpu> ...
-WARNING:Xst:1294 - Latch <u9/AsrcOut_0> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_1> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_2> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_3> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_4> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_5> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_6> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_7> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_8> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_9> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_10> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_11> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_12> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_13> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_14> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_15> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_0> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_1> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_2> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_3> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_4> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_5> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_6> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_7> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_8> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_9> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_10> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_11> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_12> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_13> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_14> is equivalent to a wire in block <cpu>.
-WARNING:Xst:1294 - Latch <u9/AsrcOut_15> is equivalent to a wire in block <cpu>.
 
 Optimizing unit <PCRegister> ...
 
@@ -1568,21 +1536,21 @@ Design Statistics
 # IOs                              : 169
 
 Cell Usage :
-# BELS                             : 3570
+# BELS                             : 3586
 #      GND                         : 1
 #      INV                         : 34
 #      LUT1                        : 86
-#      LUT2                        : 164
+#      LUT2                        : 180
 #      LUT2_D                      : 8
 #      LUT2_L                      : 3
-#      LUT3                        : 688
+#      LUT3                        : 673
 #      LUT3_D                      : 35
 #      LUT3_L                      : 39
 #      LUT4                        : 1573
 #      LUT4_D                      : 56
 #      LUT4_L                      : 127
 #      MUXCY                       : 166
-#      MUXF5                       : 419
+#      MUXF5                       : 434
 #      MUXF6                       : 33
 #      MUXF7                       : 1
 #      VCC                         : 1
@@ -1616,9 +1584,9 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-4 
 
- Number of Slices:                     1546  out of   8672    17%  
+ Number of Slices:                     1544  out of   8672    17%  
  Number of Slice Flip Flops:            704  out of  17344     4%  
- Number of 4 input LUTs:               2813  out of  17344    16%  
+ Number of 4 input LUTs:               2814  out of  17344    16%  
  Number of IOs:                         169
  Number of bonded IOBs:                 169  out of    250    67%  
  Number of GCLKs:                         7  out of     24    29%  
@@ -1763,7 +1731,7 @@ Delay:               11.215ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q            10   0.591   0.886  u3/tmpRx_1 (u3/tmpRx_1)
-     LUT4_D:I3->O         17   0.704   1.086  u21/ReadReg1Out<1>_SW2 (N1491)
+     LUT4_D:I3->O         17   0.704   1.086  u21/ReadReg1Out<1>_SW2 (N1459)
      LUT3:I2->O           34   0.704   1.267  u21/ReadReg1Out<1> (ReadReg1MuxOut<1>)
      LUT4:I3->O            1   0.704   0.424  u15/IfIdKeep26 (u15/IfIdKeep26)
      LUT4:I3->O           18   0.704   1.072  u15/IfIdKeep139 (IfIdKeep)
@@ -1993,14 +1961,14 @@ Delay:               3.095ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 41.00 secs
-Total CPU time to Xst completion: 40.70 secs
+Total REAL time to Xst completion: 137.00 secs
+Total CPU time to Xst completion: 136.78 secs
  
 --> 
 
-Total memory usage is 453192 kilobytes
+Total memory usage is 459252 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  158 (   0 filtered)
-Number of infos    :   80 (   0 filtered)
+Number of warnings :  125 (   0 filtered)
+Number of infos    :   79 (   0 filtered)
 

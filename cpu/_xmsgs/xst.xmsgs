@@ -5,20 +5,20 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1105</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fontRom</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1104</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fontRom</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1151</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1151</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;opt&gt;</arg>
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1188</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1188</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1208</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1208</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/PCMux.vhd</arg>&quot; line <arg fmt="%d" index="2">56</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd</arg>&quot; line <arg fmt="%d" index="2">56</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;IdExPC&gt;, &lt;PCRollback&gt;</arg>
 </msg>
 
@@ -76,7 +76,7 @@
 <msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">ram1_data&lt;8&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">MemoryUnit</arg>&gt; has a constant value of <arg fmt="%s" index="3">Z</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ReadReg2Mux.vhd</arg>&quot; line <arg fmt="%d" index="2">53</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd</arg>&quot; line <arg fmt="%d" index="2">53</arg>: Mux is complete : default of case is discarded
 </msg>
 
 <msg type="info" file="Xst" num="2561" delta="new" >Always blocking tristate driving signal &lt;<arg fmt="%s" index="1">ram1_data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">MemoryUnit</arg>&gt; is removed.
@@ -134,12 +134,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">16</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">immeOut</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="info" file="Xst" num="2371" delta="new" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">16</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">AsrcOut</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
 <msg type="info" file="Xst" num="2371" delta="new" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
@@ -589,102 +583,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="warning" file="Xst" num="2170" delta="new" >Unit <arg fmt="%s" index="1">ALU</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_1</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_2</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_3</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_4</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_5</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_6</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_7</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_8</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_9</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_10</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_11</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_12</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_13</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_14</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_15</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_1</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_2</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_3</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_4</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_5</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_6</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_7</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_8</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_9</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_10</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_11</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_12</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_13</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_14</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">u9/AsrcOut_15</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
-</msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">count_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Clock</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;clk1&gt; </arg>
 </msg>

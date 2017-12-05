@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : xaw2vhdl
 --  /   /         Filename : dcm.vhd
--- /___/   /\     Timestamp : 11/29/2016 23:25:36
+-- /___/   /\     Timestamp : 12/06/2017 00:16:58
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: xaw2vhdl-intstyle D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ipcore_dir/dcm.xaw -st dcm.vhd
+--Command: xaw2vhdl-intstyle C:/Users/thinkpad/Desktop/resolution/cpu/ipcore_dir/dcm.xaw -st dcm.vhd
 --Design Name: dcm
 --Device: xc3s1200e-4fg320
 --

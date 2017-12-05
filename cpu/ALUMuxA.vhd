@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    15:17:10 11/22/2016 
+-- Create Date:    11:33:57 11/29/2017 
 -- Design Name: 
--- Module Name:    AMux - Behavioral 
+-- Module Name:    ALUMuxA - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,34 +29,34 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity AMux is
+entity ALUMuxA is
 	port(
 		--控制信号
 		ForwardA : in std_logic_vector(1 downto 0);
 		--供选择数据
-		ReadData1 : in std_logic_vector(15 downto 0);
-		ExMemALUResult : in std_logic_vector(15 downto 0);	--上条指令的ALU结果
-		MemWbResult : in std_logic_vector(15 downto 0);	--上上条指令的结果
-		--MemWbMemResult : in std_logic_vector(15 downto 0);	--上上条指令的读DM结果
+		readData1 : in std_logic_vector(15 downto 0);
+		ExeMemALUResult : in std_logic_vector(15 downto 0);	-- 上条指令的ALU结果（严格说是MFPCMux的结果）
+		MemWbWriteData : in std_logic_vector(15 downto 0);	   -- 上上条指令（包括插入的NOP）将写回的寄存器值(WriteData)
 		--选择结果输出
-		AsrcOut : out std_logic_vector(15 downto 0)
+		ALUSrcA : out std_logic_vector(15 downto 0)
 	);
-end AMux;
+end ALUMuxA;
 
-architecture Behavioral of AMux is
-
+architecture Behavioral of ALUMuxA is
+	
 begin
-	process(ForwardA,ReadData1,ExMemALUResult,MemWbResult)
+	
+	process(ForwardA, readData1, ExeMemALUResult, MemWbWriteData)
 	begin
 		case ForwardA is
-			when "00" =>
-				AsrcOut <= ReadData1;
 			when "01" =>
-				AsrcOut <= ExMemALUResult;
+				ALUSrcA <= ExeMemALUResult;
 			when "10" =>
-				AsrcOut <= MemWbResult;
+				ALUSrcA <= MemWbWriteData;
 			when others =>
+				ALUSrcA <= readData1;
 		end case;
 	end process;
+
 end Behavioral;
 

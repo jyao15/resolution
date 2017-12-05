@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=D:\Junior\ComputerOrganization\CPU\jiyuan\cpu\cpu.ncd
-OUTFILE=D:\Junior\ComputerOrganization\CPU\jiyuan\cpu\cpu.bit
+INFILE=C:\Users\thinkpad\Desktop\resolution\cpu\cpu.ncd
+OUTFILE=C:\Users\thinkpad\Desktop\resolution\cpu\cpu.bit
 FAMILY=Spartan3E
 PART=xc3s1200e-4fg320
-WORKINGDIR=D:\Junior\ComputerOrganization\CPU\jiyuan\cpu
+WORKINGDIR=C:\Users\thinkpad\Desktop\resolution\cpu
 LICENSE=WebPack
-USER_INFO=211256548_0_0_118
+USER_INFO=__0_0_0

@@ -209,17 +209,16 @@ architecture Behavioral of cpu is
 	end component;
 	
 	--选择器：ALU的第一个计算数
-	component AMux
+	component ALUMuxA is 
 	port(
 		--控制信号
 		ForwardA : in std_logic_vector(1 downto 0);
 		--供选择数据
-		ReadData1 : in std_logic_vector(15 downto 0);
-		ExMemALUResult : in std_logic_vector(15 downto 0);	--上条指令的ALU结果
-		MemWbResult : in std_logic_vector(15 downto 0);		--上上条指令的结果
-		--MemWbMemResult : in std_logic_vector(15 downto 0);	--上上条指令的读DM结果
+		readData1 : in std_logic_vector(15 downto 0);
+		ExeMemALUResult : in std_logic_vector(15 downto 0);	-- 上条指令的ALU结果（严格说是MFPCMux的结果）
+		MemWbWriteData : in std_logic_vector(15 downto 0);	   -- 上上条指令（包括插入的NOP）将写回的寄存器值(WriteData)
 		--选择结果输出
-		AsrcOut : out std_logic_vector(15 downto 0)
+		ALUSrcA : out std_logic_vector(15 downto 0)
 	);
 	end component;
 	
@@ -831,15 +830,15 @@ begin
 			ALUOpOut => IdExALUOp
 		);
 		
-	u9 : AMux
+	u9 : ALUMuxA
 		port map(
 			ForwardA => ForwardA,
 			
-			ReadData1 => IdExReadData1,
-			ExMemALUResult => ExMemALUResult,
-			MemWbResult => dataToWB,
+			readData1 => IdExReadData1,
+			ExeMemALUResult => ExMemALUResult,
+			MemWbWriteData => dataToWB,
 			
-			AsrcOut => AMuxOut
+			ALUSrcA => AMuxOut
 		);
 		
 	u10 : BMux
