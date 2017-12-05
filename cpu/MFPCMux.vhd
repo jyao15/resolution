@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    23:29:37 11/20/2016 
+-- Create Date:    12:22:21 11/29/2017 
 -- Design Name: 
 -- Module Name:    MFPCMux - Behavioral 
 -- Project Name: 
@@ -30,27 +30,28 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity MFPCMux is
-	--（MFPC指令）从PC+1和ALUResult中选择一个作为“真正的ALUResult”
+	--（MFPC指令）从PC+1和ALUResult中选择一个作为"真正的ALUResult" ???
 	port(
 		PCAddOne  : in std_logic_vector(15 downto 0);	
-		ALUResult : in std_logic_vector(15 downto 0);
-		MFPC		 : in std_logic;		--MFPC = '1'的时候选择PC+1的值
+		RawALUResult : in std_logic_vector(15 downto 0); -- ALU计算结果
+		isMFPC		 : in std_logic;		-- isMFPC = '1' 表示当前指令是MFPC，选择PC+1的值
 		
-		MFPCMuxOut : out std_logic_vector(15 downto 0)
+		RealALUResult : out std_logic_vector(15 downto 0)
 	);
 end MFPCMux;
 
 architecture Behavioral of MFPCMux is
 
 begin
-	process(PCAddOne, ALUResult, MFPC)
+	
+	process(PCAddOne, RawALUResult, isMFPC)
 	begin
-		if (MFPC = '1') then
-			MFPCMuxOut <= PCAddOne;
-		elsif (MFPC = '0') then
-			MFPCMuxOut <= ALUResult;
+		if (isMFPC = '1') then
+			RealALUResult <= PCAddOne;
+		else
+			RealALUResult <= RawALUResult;
 		end if;
-		
 	end process;
+
 end Behavioral;
 

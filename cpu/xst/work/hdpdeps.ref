@@ -1,186 +1,187 @@
-V3 113
+V3 115
 FL C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd 2016/11/26.21:51:40 P.20131013
-EN work/ALU 1512492865 FL C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd \
+EN work/ALU 1512494235 FL C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/ALU/Behavioral 1512492866 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd EN work/ALU 1512492865
+AR work/ALU/Behavioral 1512494236 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd EN work/ALU 1512494235
 FL C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd 2017/11/30.16:32:28 P.20131013
-EN work/ALUMuxA 1512492859 \
+EN work/ALUMuxA 1512494229 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ALUMuxA/Behavioral 1512492860 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd EN work/ALUMuxA 1512492859
+AR work/ALUMuxA/Behavioral 1512494230 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd EN work/ALUMuxA 1512494229
 FL C:/Users/thinkpad/Desktop/resolution/cpu/BMux.vhd 2017/12/06.00:49:13 P.20131013
-AR work/BMux/Behavioral 1512491577 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/BMux.vhd EN work/BMux 1512491576
-EN work/ALUMuxB 1512492861 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/BMux.vhd PB ieee/std_logic_1164 1381692176
-AR work/ALUMuxB/Behavioral 1512492862 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/BMux.vhd EN work/ALUMuxB 1512492861
+EN work/ALUMuxB 1512494231 FL C:/Users/thinkpad/Desktop/resolution/cpu/BMux.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ALUMuxB/Behavioral 1512494232 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/BMux.vhd EN work/ALUMuxB 1512494231
 FL C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd 2016/11/29.23:14:36 P.20131013
-EN work/clock 1512492877 FL C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd \
+EN work/clock 1512494247 FL C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/clock/Behavioral 1512492878 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd EN work/clock 1512492877
+AR work/clock/Behavioral 1512494248 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd EN work/clock 1512494247
 FL C:/Users/thinkpad/Desktop/resolution/cpu/Controller.vhd 2016/11/26.10:54:10 P.20131013
-EN work/Controller 1512492851 \
+EN work/Controller 1512494221 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/Controller.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Controller/Behavioral 1512492852 \
+AR work/Controller/Behavioral 1512494222 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/Controller.vhd \
-      EN work/Controller 1512492851
-FL C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd 2017/12/06.00:51:28 P.20131013
-EN work/cpu 1512492895 FL C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd \
+      EN work/Controller 1512494221
+FL C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd 2017/12/06.01:16:26 P.20131013
+EN work/cpu 1512494265 FL C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/cpu/Behavioral 1512492896 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd EN work/cpu 1512492895 \
+AR work/cpu/Behavioral 1512494266 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd EN work/cpu 1512494265 \
       CP PCRegister CP PCAdder CP IfIdRegisters CP RdMux CP Controller CP Registers \
       CP ImmeExtendUnit CP IdExRegisters CP ALUMuxA CP ALUMuxB CP ForwardController \
       CP ALU CP ExMemRegisters CP MemWbRegisters CP HazardDetectionUnit CP PCMux \
       CP MemoryUnit CP Clock CP StructConflictUnit CP MFPCMux CP ReadReg1Mux \
-      CP ReadReg2Mux CP VGA_Controller CP fontRom CP WriteDataMux CP dcm
+      CP ReadReg2Mux CP VGA_Controller CP fontRom CP MemWriteDataMux CP dcm
 FL C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd 2017/12/06.00:16:58 P.20131013
-EN work/dcm 1512492893 FL C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd \
+EN work/dcm 1512494263 FL C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/dcm/BEHAVIORAL 1512492894 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd EN work/dcm 1512492893 \
+AR work/dcm/BEHAVIORAL 1512494264 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd EN work/dcm 1512494263 \
       CP BUFG CP DCM_SP
 FL C:/Users/thinkpad/Desktop/resolution/cpu/ExMemRegisters.vhd 2016/11/28.19:29:02 P.20131013
-EN work/ExMemRegisters 1512492867 \
+EN work/ExMemRegisters 1512494237 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ExMemRegisters.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ExMemRegisters/Behavioral 1512492868 \
+AR work/ExMemRegisters/Behavioral 1512494238 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ExMemRegisters.vhd \
-      EN work/ExMemRegisters 1512492867
+      EN work/ExMemRegisters 1512494237
 FL C:/Users/thinkpad/Desktop/resolution/cpu/ForwardController.vhd 2016/11/26.21:51:34 P.20131013
-EN work/ForwardController 1512492863 \
+EN work/ForwardController 1512494233 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ForwardController.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ForwardController/Behavioral 1512492864 \
+AR work/ForwardController/Behavioral 1512494234 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ForwardController.vhd \
-      EN work/ForwardController 1512492863
+      EN work/ForwardController 1512494233
 FL C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd 2016/11/26.21:51:54 P.20131013
-EN work/HazardDetectionUnit 1512492871 \
+EN work/HazardDetectionUnit 1512494241 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/HazardDetectionUnit/Behavioral 1512492872 \
+AR work/HazardDetectionUnit/Behavioral 1512494242 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd \
-      EN work/HazardDetectionUnit 1512492871
+      EN work/HazardDetectionUnit 1512494241
 FL C:/Users/thinkpad/Desktop/resolution/cpu/IdExRegisters.vhd 2016/11/28.19:29:02 P.20131013
-EN work/IdExRegisters 1512492857 \
+EN work/IdExRegisters 1512494227 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/IdExRegisters.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/IdExRegisters/Behavioral 1512492858 \
+AR work/IdExRegisters/Behavioral 1512494228 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/IdExRegisters.vhd \
-      EN work/IdExRegisters 1512492857
+      EN work/IdExRegisters 1512494227
 FL C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd 2016/11/28.19:29:02 P.20131013
-EN work/IfIdRegisters 1512492847 \
+EN work/IfIdRegisters 1512494217 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/IfIdRegisters/Behavioral 1512492848 \
+AR work/IfIdRegisters/Behavioral 1512494218 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd \
-      EN work/IfIdRegisters 1512492847
+      EN work/IfIdRegisters 1512494217
 FL C:/Users/thinkpad/Desktop/resolution/cpu/ImmeExtendUnit.vhd 2016/11/26.21:50:58 P.20131013
-EN work/ImmeExtendUnit 1512492855 \
+EN work/ImmeExtendUnit 1512494225 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ImmeExtendUnit.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ImmeExtendUnit/Behavioral 1512492856 \
+AR work/ImmeExtendUnit/Behavioral 1512494226 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ImmeExtendUnit.vhd \
-      EN work/ImmeExtendUnit 1512492855
+      EN work/ImmeExtendUnit 1512494225
 FL C:/Users/thinkpad/Desktop/resolution/cpu/ipcore_dir/fontRom.vhd 2015/12/01.14:03:20 P.20131013
-EN work/fontRom 1512492889 \
+EN work/fontRom 1512494259 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ipcore_dir/fontRom.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/fontRom/fontRom_a 1512492890 \
+AR work/fontRom/fontRom_a 1512494260 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ipcore_dir/fontRom.vhd \
-      EN work/fontRom 1512492889
+      EN work/fontRom 1512494259
 FL C:/Users/thinkpad/Desktop/resolution/cpu/MemoryUnit.vhd 2016/12/08.21:12:10 P.20131013
-EN work/MemoryUnit 1512492875 \
+EN work/MemoryUnit 1512494245 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/MemoryUnit.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/MemoryUnit/Behavioral 1512492876 \
+AR work/MemoryUnit/Behavioral 1512494246 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/MemoryUnit.vhd \
-      EN work/MemoryUnit 1512492875
+      EN work/MemoryUnit 1512494245
 FL C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd 2016/11/28.19:29:02 P.20131013
-EN work/MemWbRegisters 1512492869 \
+EN work/MemWbRegisters 1512494239 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/MemWbRegisters/Behavioral 1512492870 \
+AR work/MemWbRegisters/Behavioral 1512494240 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd \
-      EN work/MemWbRegisters 1512492869
-FL C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd 2016/11/23.18:44:46 P.20131013
-EN work/MFPCMux 1512492881 \
+      EN work/MemWbRegisters 1512494239
+FL C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd 2017/12/06.01:09:56 P.20131013
+EN work/MFPCMux 1512494251 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/MFPCMux/Behavioral 1512492882 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd EN work/MFPCMux 1512492881
+AR work/MFPCMux/Behavioral 1512494252 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd EN work/MFPCMux 1512494251
 FL C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd 2016/11/26.21:50:26 P.20131013
-EN work/PCAdder 1512492845 \
+EN work/PCAdder 1512494215 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/PCAdder/Behavioral 1512492846 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd EN work/PCAdder 1512492845
+AR work/PCAdder/Behavioral 1512494216 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd EN work/PCAdder 1512494215
 FL C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd 2016/11/24.21:47:22 P.20131013
-EN work/PCMux 1512492873 FL C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd \
+EN work/PCMux 1512494243 FL C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/PCMux/Behavioral 1512492874 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd EN work/PCMux 1512492873
+AR work/PCMux/Behavioral 1512494244 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd EN work/PCMux 1512494243
 FL C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd 2016/11/28.19:29:02 P.20131013
-EN work/PCRegister 1512492843 \
+EN work/PCRegister 1512494213 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/PCRegister/Behavioral 1512492844 \
+AR work/PCRegister/Behavioral 1512494214 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd \
-      EN work/PCRegister 1512492843
+      EN work/PCRegister 1512494213
 FL C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd 2016/11/26.21:50:40 P.20131013
-EN work/RdMux 1512492849 FL C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd \
+EN work/RdMux 1512494219 FL C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/RdMux/Behavioral 1512492850 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd EN work/RdMux 1512492849
+AR work/RdMux/Behavioral 1512494220 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd EN work/RdMux 1512494219
 FL C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg1Mux.vhd 2016/11/23.18:44:46 P.20131013
-EN work/ReadReg1Mux 1512492883 \
+EN work/ReadReg1Mux 1512494253 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg1Mux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ReadReg1Mux/Behavioral 1512492884 \
+AR work/ReadReg1Mux/Behavioral 1512494254 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg1Mux.vhd \
-      EN work/ReadReg1Mux 1512492883
+      EN work/ReadReg1Mux 1512494253
 FL C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd 2016/11/24.17:07:30 P.20131013
-EN work/ReadReg2Mux 1512492885 \
+EN work/ReadReg2Mux 1512494255 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ReadReg2Mux/Behavioral 1512492886 \
+AR work/ReadReg2Mux/Behavioral 1512494256 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd \
-      EN work/ReadReg2Mux 1512492885
+      EN work/ReadReg2Mux 1512494255
 FL C:/Users/thinkpad/Desktop/resolution/cpu/Registers.vhd 2016/12/07.20:23:16 P.20131013
-EN work/Registers 1512492853 \
+EN work/Registers 1512494223 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/Registers.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Registers/Behavioral 1512492854 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/Registers.vhd EN work/Registers 1512492853
+AR work/Registers/Behavioral 1512494224 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/Registers.vhd EN work/Registers 1512494223
 FL C:/Users/thinkpad/Desktop/resolution/cpu/StructConflictUnit.vhd 2016/11/29.17:05:42 P.20131013
-EN work/StructConflictUnit 1512492879 \
+EN work/StructConflictUnit 1512494249 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/StructConflictUnit.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/StructConflictUnit/Behavioral 1512492880 \
+AR work/StructConflictUnit/Behavioral 1512494250 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/StructConflictUnit.vhd \
-      EN work/StructConflictUnit 1512492879
+      EN work/StructConflictUnit 1512494249
 FL C:/Users/thinkpad/Desktop/resolution/cpu/VGA_Controller.vhd 2016/11/30.13:21:40 P.20131013
-EN work/VGA_Controller 1512492887 \
+EN work/VGA_Controller 1512494257 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/VGA_Controller.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/VGA_Controller/behave 1512492888 \
+AR work/VGA_Controller/behave 1512494258 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/VGA_Controller.vhd \
-      EN work/VGA_Controller 1512492887
-FL C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd 2016/11/26.20:19:16 P.20131013
-EN work/WriteDataMux 1512492891 \
-      FL C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd \
-      PB ieee/std_logic_1164 1381692176
+      EN work/VGA_Controller 1512494257
+FL C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd 2017/12/06.01:14:26 P.20131013
 AR work/WriteDataMux/Behavioral 1512492892 \
       FL C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd \
       EN work/WriteDataMux 1512492891
+EN work/MemWriteDataMux 1512494261 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/MemWriteDataMux/Behavioral 1512494262 \
+      FL C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd \
+      EN work/MemWriteDataMux 1512494261

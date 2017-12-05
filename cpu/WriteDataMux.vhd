@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    20:16:47 11/26/2016 
+-- Create Date:    12:31:10 11/29/2017 
 -- Design Name: 
--- Module Name:    WriteDataMux - Behavioral 
+-- Module Name:    MemWriteDataMux - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,35 +29,34 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity WriteDataMux is
-	port(
+entity MemWriteDataMux is
+		port(
 		--控制信号
 		ForwardSW : in std_logic_vector(1 downto 0);
 		--供选择数据
-		ReadData2 : in std_logic_vector(15 downto 0);
-		ExMemALUResult : in std_logic_vector(15 downto 0);	--上条指令的ALU结果
-		MemWbResult : in std_logic_vector(15 downto 0);	--上上条指令的结果
+		readData2 : in std_logic_vector(15 downto 0);
+		ExeMemALUResult : in std_logic_vector(15 downto 0);	-- 上条指令的ALU结果（严格说是MFPCMux的结果）
+		MemWbResult : in std_logic_vector(15 downto 0);	   -- 上上条指令（包括插入的NOP）将写回的寄存器值(WriteData)
 		--选择结果输出
-		WriteDataOut : out std_logic_vector(15 downto 0)
+		WriteData : out std_logic_vector(15 downto 0)
 	);
-end WriteDataMux;
+end MemWriteDataMux;
 
-architecture Behavioral of WriteDataMux is
+architecture Behavioral of MemWriteDataMux is
 
 begin
-	process(ForwardSW,ReadData2,ExMemALUResult,MemWbResult)
+
+	process(ForwardSW, readData2, ExeMemALUResult, MemWbResult)
 	begin
 		case ForwardSW is
-			when "00" =>
-				WriteDataOut <= ReadData2;
 			when "01" =>
-				WriteDataOut <= ExMemALUResult;
+				WriteData <= ExeMemALUResult;
 			when "10" =>
-				WriteDataOut <= MemWbResult;
+				WriteData <= MemWbResult;
 			when others =>
+				WriteData <= readData2;
 		end case;
 	end process;
 
-
-end Behavioral;
+end Behavioral; 
 

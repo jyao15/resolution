@@ -271,10 +271,10 @@ architecture Behavioral of cpu is
 	component MFPCMux
 	port(
 		PCAddOne  : in std_logic_vector(15 downto 0);	
-		ALUResult : in std_logic_vector(15 downto 0);
-		MFPC		 : in std_logic;		--MFPC = '1'的时候选择PC+1的值
+		RawALUResult : in std_logic_vector(15 downto 0); -- ALU计算结果
+		isMFPC		 : in std_logic;		-- isMFPC = '1' 表示当前指令是MFPC，选择PC+1的值
 		
-		MFPCMuxOut : out std_logic_vector(15 downto 0)
+		RealALUResult : out std_logic_vector(15 downto 0)
 	);
 	end component;
 	
@@ -541,16 +541,16 @@ architecture Behavioral of cpu is
 	);
 	end component;
 	
-	component WriteDataMux
+	component MemWriteDataMux
 	port(
 		--控制信号
 		ForwardSW : in std_logic_vector(1 downto 0);
 		--供选择数据
-		ReadData2 : in std_logic_vector(15 downto 0);
-		ExMemALUResult : in std_logic_vector(15 downto 0);	--上条指令的ALU结果
-		MemWbResult : in std_logic_vector(15 downto 0);	--上上条指令的结果
+		readData2 : in std_logic_vector(15 downto 0);
+		ExeMemALUResult : in std_logic_vector(15 downto 0);	-- 上条指令的ALU结果（严格说是MFPCMux的结果）
+		MemWbResult : in std_logic_vector(15 downto 0);	   -- 上上条指令（包括插入的NOP）将写回的寄存器值(WriteData)
 		--选择结果输出
-		WriteDataOut : out std_logic_vector(15 downto 0)
+		WriteData : out std_logic_vector(15 downto 0)
 	);
 	end component;
 
@@ -1033,10 +1033,10 @@ begin
 	u20 : MFPCMux
 	port map(
 			PCAddOne => IdExPC,
-			ALUResult => ALUResult,
-			MFPC => IdExMFPC,
+			RawALUResult => ALUResult,
+			isMFPC => IdExMFPC,
 		
-			MFPCMuxOut => MFPCMuxOut
+			RealALUResult => MFPCMuxOut
 	);
 	
 	u21 : ReadReg1Mux
@@ -1107,15 +1107,15 @@ begin
 		douta => fontRomData
 		);
 	
-	u26 : WriteDataMux 
+	u26 : MemWriteDataMux 
 	port map(
 			ForwardSW => ForwardSW,
 			
-			ReadData2 => IdExReadData2,
-			ExMemALUResult => ExMemALUResult,
+			readData2 => IdExReadData2,
+			ExeMemALUResult => ExMemALUResult,
 			MemWbResult => dataToWB,
 			
-			WriteDataOut => WriteDataOut
+			WriteData => WriteDataOut
 		);
 	
 	u27 : dcm

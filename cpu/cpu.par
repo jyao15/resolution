@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-THINKPAD-PC::  Wed Dec 06 00:57:22 2017
+THINKPAD-PC::  Wed Dec 06 01:21:47 2017
 
 par -w -intstyle ise -ol high -t 1 cpu_map.ncd cpu.ncd cpu.pcf 
 
@@ -47,7 +47,7 @@ Design Summary Report:
    Number of BUFGMUXs                        6 out of 24     25%
    Number of DCMs                            1 out of 8      12%
    Number of RAMB16s                         1 out of 28      3%
-   Number of Slices                       1666 out of 8672   19%
+   Number of Slices                       1665 out of 8672   19%
       Number of SLICEMs                      2 out of 4336    1%
 
 
@@ -57,53 +57,53 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 6 secs 
-Finished initial Timing Analysis.  REAL time: 6 secs 
+Starting initial Timing Analysis.  REAL time: 15 secs 
+Finished initial Timing Analysis.  REAL time: 15 secs 
 
 
 Starting Placer
-Total REAL time at the beginning of Placer: 6 secs 
-Total CPU  time at the beginning of Placer: 6 secs 
+Total REAL time at the beginning of Placer: 15 secs 
+Total CPU  time at the beginning of Placer: 9 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:dfe903e5) REAL time: 7 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:10b3045f) REAL time: 18 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:dfe903e5) REAL time: 7 secs 
+Phase 2.7  Design Feasibility Check (Checksum:10b3045f) REAL time: 19 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:dfe903e5) REAL time: 7 secs 
+Phase 3.31  Local Placement Optimization (Checksum:10b3045f) REAL time: 19 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:d4fd973) REAL time: 8 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:7fb0a712) REAL time: 21 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:d4fd973) REAL time: 8 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:7fb0a712) REAL time: 21 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:d4fd973) REAL time: 8 secs 
+Phase 6.36  Local Placement Optimization (Checksum:7fb0a712) REAL time: 21 secs 
 
 Phase 7.8  Global Placement
 ........
-....................................
-..................
-.........................................
-................................................................
-.......................................................................................
-Phase 7.8  Global Placement (Checksum:71b2f2a) REAL time: 21 secs 
+...................
+...........
+........................................
+.....................................................
+...................................................
+Phase 7.8  Global Placement (Checksum:e210222b) REAL time: 48 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:71b2f2a) REAL time: 21 secs 
+Phase 8.5  Local Placement Optimization (Checksum:e210222b) REAL time: 48 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:a50e1b1c) REAL time: 24 secs 
+Phase 9.18  Placement Optimization (Checksum:fc045ff3) REAL time: 1 mins 9 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:a50e1b1c) REAL time: 24 secs 
+Phase 10.5  Local Placement Optimization (Checksum:fc045ff3) REAL time: 1 mins 9 secs 
 
-Total REAL time to Placer completion: 24 secs 
-Total CPU  time to Placer completion: 24 secs 
+Total REAL time to Placer completion: 1 mins 9 secs 
+Total CPU  time to Placer completion: 44 secs 
 Writing design to file cpu.ncd
 
 
@@ -111,38 +111,40 @@ Writing design to file cpu.ncd
 Starting Router
 
 
-Phase  1  : 12053 unrouted;      REAL time: 33 secs 
+Phase  1  : 12074 unrouted;      REAL time: 1 mins 45 secs 
 
-Phase  2  : 11568 unrouted;      REAL time: 33 secs 
+Phase  2  : 11592 unrouted;      REAL time: 1 mins 47 secs 
 
-Phase  3  : 3370 unrouted;      REAL time: 35 secs 
+Phase  3  : 3417 unrouted;      REAL time: 1 mins 53 secs 
 
-Phase  4  : 3723 unrouted; (Par is working to improve performance)     REAL time: 37 secs 
+Phase  4  : 3591 unrouted; (Par is working to improve performance)     REAL time: 2 mins 3 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 47 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 14 secs 
 
 Updating file: cpu.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 49 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 21 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 50 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 mins 49 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 16 secs 
+Updating file: cpu.ncd with current fully routed design.
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 16 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 mins 59 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 19 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 mins 59 secs 
 
-Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 19 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 mins 
 
-Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 20 secs 
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 mins 
+
+Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 mins 1 secs 
 WARNING:Route:455 - CLK Net:clk_50_IBUFG may have excessive skew because 
       2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:u8/jumpOut may have excessive skew because 
       0 CLK pins and 68 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 2 mins 21 secs 
-Total CPU time to Router completion: 2 mins 20 secs 
+Total REAL time to Router completion: 6 mins 1 secs 
+Total CPU time to Router completion: 4 mins 4 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -160,28 +162,28 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
+|           u23/CLK_2 |  BUFGMUX_X1Y0| No   |   40 |  0.148     |  0.326      |
++---------------------+--------------+------+------+------------+-------------+
+|                 clk | BUFGMUX_X1Y11| No   |  200 |  0.128     |  0.297      |
++---------------------+--------------+------+------+------------+-------------+
 |u5/controllerOut_not |              |      |      |            |             |
-|                0001 |  BUFGMUX_X2Y1| No   |   19 |  0.085     |  0.258      |
+|                0001 |  BUFGMUX_X2Y1| No   |   19 |  0.024     |  0.286      |
 +---------------------+--------------+------+------+------------+-------------+
-|           u23/CLK_2 |  BUFGMUX_X1Y0| No   |   40 |  0.190     |  0.374      |
+|        u18/count<0> |  BUFGMUX_X1Y1| No   |  108 |  0.127     |  0.296      |
 +---------------------+--------------+------+------+------------+-------------+
-|                 clk | BUFGMUX_X1Y11| No   |  201 |  0.121     |  0.296      |
+|      u7/sign_or0000 |         Local|      |   10 |  0.043     |  1.485      |
 +---------------------+--------------+------+------+------------+-------------+
-|        u18/count<0> |  BUFGMUX_X1Y1| No   |  108 |  0.134     |  0.303      |
-+---------------------+--------------+------+------+------------+-------------+
-|      u7/sign_or0000 |         Local|      |   10 |  0.145     |  2.180      |
-+---------------------+--------------+------+------+------------+-------------+
-|          u8/jumpOut |         Local|      |   84 |  1.050     |  3.027      |
+|          u8/jumpOut |         Local|      |   84 |  0.183     |  2.175      |
 +---------------------+--------------+------+------+------------+-------------+
 |u12/ALUresult_not000 |              |      |      |            |             |
-|                   1 |         Local|      |   16 |  0.132     |  1.839      |
+|                   1 |         Local|      |   16 |  0.292     |  1.983      |
 +---------------------+--------------+------+------+------------+-------------+
-|        clk_50_IBUFG |         Local|      |    3 |  0.097     |  2.157      |
+|        clk_50_IBUFG |         Local|      |    3 |  0.607     |  2.764      |
 +---------------------+--------------+------+------+------------+-------------+
-| u6/ReadData1_or0000 |         Local|      |   16 |  0.166     |  1.997      |
+| u6/ReadData1_or0000 |         Local|      |   16 |  0.068     |  1.797      |
 +---------------------+--------------+------+------+------------+-------------+
 |u12/branchJudge_not0 |              |      |      |            |             |
-|                 001 |         Local|      |    1 |  0.000     |  0.629      |
+|                 001 |         Local|      |    1 |  0.000     |  0.800      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -201,17 +203,17 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net u23 | SETUP       |         N/A|    14.496ns|     N/A|           0
-  /CLK_2                                    | HOLD        |     1.446ns|            |       0|           0
+  Autotimespec constraint for clock net u23 | SETUP       |         N/A|    13.491ns|     N/A|           0
+  /CLK_2                                    | HOLD        |     1.572ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     7.147ns|     N/A|           0
-                                            | HOLD        |     1.017ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     7.441ns|     N/A|           0
+                                            | HOLD        |     0.979ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net u18 | SETUP       |         N/A|     8.441ns|     N/A|           0
-  /count<0>                                 | HOLD        |     1.043ns|            |       0|           0
+  Autotimespec constraint for clock net u7/ | SETUP       |         N/A|     3.176ns|     N/A|           0
+  sign_or0000                               | HOLD        |     1.327ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net u7/ | SETUP       |         N/A|     3.277ns|     N/A|           0
-  sign_or0000                               | HOLD        |     1.556ns|            |       0|           0
+  Autotimespec constraint for clock net u18 | SETUP       |         N/A|     8.466ns|     N/A|           0
+  /count<0>                                 | HOLD        |     1.008ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   Autotimespec constraint for clock net clk | SETUP       |         N/A|     2.224ns|     N/A|           0
   _50_IBUFG                                 | HOLD        |     1.543ns|            |       0|           0
@@ -245,8 +247,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 2 mins 24 secs 
-Total CPU time to PAR completion: 2 mins 23 secs 
+Total REAL time to PAR completion: 6 mins 3 secs 
+Total CPU time to PAR completion: 4 mins 7 secs 
 
 Peak Memory Usage:  373 MB
 
