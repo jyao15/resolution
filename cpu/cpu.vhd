@@ -246,7 +246,7 @@ architecture Behavioral of cpu is
 	port(	
 		commandIn : in std_logic_vector(15 downto 0);
 		rst : in std_logic;
-		controllerOut :  out std_logic_vector(20 downto 0)
+		controllerOut :  out std_logic_vector(21 downto 0)
 		-- RegWrite(1) RegDst(3) ReadReg1(3) ReadReg2(1) immeSelect(3) ALUSrcB(1) 
 		-- ALUOp(4) MemRead(1) MemWrite(1) MemToReg(1) jump(1) MFPC(1)
 	);
@@ -482,10 +482,10 @@ architecture Behavioral of cpu is
 	--源寄存器2选择器
 	component ReadReg2Mux
 		port(
-			rx : in std_logic_vector(2 downto 0);
-			ry : in std_logic_vector(2 downto 0);			--R0~R7中的一个
+			ten_downto_eight : in std_logic_vector(2 downto 0);
+			seven_downto_five : in std_logic_vector(2 downto 0);			--R0~R7中的一个
 			
-			ReadReg2 : in std_logic;					--由总控制器Controller生成的控制信号
+			ReadReg2 : in std_logic_vector(1 downto 0);					--由总控制器Controller生成的控制信号
 			
 			ReadReg2Out : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7, "1111"=没有
 		);
@@ -595,7 +595,7 @@ architecture Behavioral of cpu is
 	signal rdMuxOut : std_logic_vector(3 downto 0);
 	
 	--controller
-	signal controllerOut : std_logic_vector(20 downto 0);
+	signal controllerOut : std_logic_vector(21 downto 0);
 	
 	--Registers
 	signal ReadData1, ReadData2 : std_logic_vector(15 downto 0);
@@ -731,7 +731,7 @@ begin
 			ry => ry,
 			rz => rz,
 			
-			RegDst => controllerOut(19 downto 17),
+			RegDst => controllerOut(20 downto 18),
 			rdOut => rdMuxOut
 		);
 		
@@ -806,7 +806,7 @@ begin
 			immeIn => extendedImme,
 			
 			MFPCIn => controllerOut(0),
-			regWriteIn => controllerOut(20),
+			regWriteIn => controllerOut(21),
 			memWriteIn => controllerOut(3),
 			memReadIn => controllerOut(4),
 			memToRegIn => controllerOut(2),
@@ -1045,16 +1045,16 @@ begin
 	port map(
 			rx => rx,
 			ry => ry,
-			ReadReg1 => controllerOut(16 downto 14),
+			ReadReg1 => controllerOut(17 downto 15),
 			
 			ReadReg1Out => ReadReg1MuxOut
 	);
 	
 	u22 : ReadReg2Mux
 	port map(
-			rx => rx,
-			ry => ry,
-			ReadReg2 => controllerOut(13),
+			ten_downto_eight => rx,
+			seven_downto_five => ry,
+			ReadReg2 => controllerOut(14 downto 13),
 			
 			ReadReg2Out => ReadReg2MuxOut
 
