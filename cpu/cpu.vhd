@@ -253,17 +253,22 @@ architecture Behavioral of cpu is
 	--选择新PC的单元
 	component PCMux
 	port(
-		PCAddOne : in std_logic_vector(15 downto 0);	 --PC+1
-		IdEximme : in std_logic_vector(15 downto 0);  --用于计算Branch跳转的PC值=IdEXEimme+IdExPC
-		IdExPC : in std_logic_vector(15 downto 0);	 --用于计算Branch跳转的PC值=IdEXEimme+IdExPC
-		AsrcOut : in std_logic_vector(15 downto 0);	 --对于JR指令，跳转地址为ASrcOut
+		PCPlusOne: in std_logic_vector(15 downto 0);
+		ALUResult: in std_logic_vector(15 downto 0);
+		PCAfterBranch: in std_logic_vector(15 downto 0);
+		isJump: in std_logic;
+		willBranch: in std_logic;
+		PCRollBack: in std_logic;
 		
-		jump : in std_logic;					--jump是由总控制器Controller产生的信号
-		BranchJudge : in std_logic;		--是由ALU产生的控制信号，表示B型跳转成功
-		PCRollback : in std_logic;			--SW数据冲突时，PC需要回退到SW下一条指令①的地址，
-													--而当前的PC+1是③的地址，所以此时PCOut = PCAddOne - 2;
-		
-		PCOut : out std_logic_vector(15 downto 0)
+		selectedPC: out std_logic_vector(15 downto 0)
+	);
+	end component;
+	
+	component PCBranchAdder
+	port(
+		PCPlusOne: in std_logic_vector(15 downto 0);
+		IdExeImme: in std_logic_vector(15 downto 0);
+		PCAfterBranch: out std_logic_vector(15 downto 0)
 	);
 	end component;
 	
@@ -637,6 +642,9 @@ architecture Behavioral of cpu is
 	signal ALUResult : std_logic_vector(15 downto 0);
 	signal BranchJudge : std_logic;
 	
+	--PCBranchAdder
+	signal PCBranchAdderOut : std_logic_vector(15 downto 0);
+	
 	--PCMux
 	signal PCMuxOut : std_logic_vector(15 downto 0);
 	
@@ -938,16 +946,15 @@ begin
 		
 	u16 : PCMux
 	port map( 
-			PCAddOne => PCAddOne,
-			IdExPC => IdExPC,
-			IdEximme => IdExImme,
-			AsrcOut => AMuxOut,
+			PCPlusOne => PCAddOne,
+			PCAfterBranch => PCBranchAdderOut,
+			ALUResult => AMuxOut,
 			
-			jump => IdExJump,
-			BranchJudge => BranchJudge,
+			isjump => IdExJump,
+			willBranch => BranchJudge,
 			PCRollback => PCRollback,
 			
-			PCOut => PCMuxOut
+			selectedPC => PCMuxOut
 		);
 	
 	u17 : MemoryUnit
@@ -1112,8 +1119,15 @@ begin
 			
 			WriteData => WriteDataOut
 		);
-	
-	u27 : dcm
+		
+	u27 : PCBranchAdder
+	port map(
+		PCPlusOne => IdExPC,
+		IdExeImme => IdExImme,
+		PCAfterBranch => PCBranchAdderOut
+	);
+
+	u28 : dcm
 	port map( 
 				 CLKIN_IN   => clk_50,
 				 RST_IN     => always_zero,

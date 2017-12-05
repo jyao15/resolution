@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    20:51:04 11/29/2017 
+-- Create Date:    16:12:30 11/29/2017 
 -- Design Name: 
--- Module Name:    PCMux - Behavioral 
+-- Module Name:    PCBrancherAdder - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -30,35 +30,19 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity PCMux is
+entity PCBranchAdder is
 	port(
 		PCPlusOne: in std_logic_vector(15 downto 0);
-		ALUResult: in std_logic_vector(15 downto 0);
-		PCAfterBranch: in std_logic_vector(15 downto 0);
-		isJump: in std_logic;
-		willBranch: in std_logic;
-		PCRollBack: in std_logic;
-		
-		selectedPC: out std_logic_vector(15 downto 0)
+		IdExeImme: in std_logic_vector(15 downto 0);
+		PCAfterBranch: out std_logic_vector(15 downto 0)
 	);
-end PCMux;
+end PCBranchAdder;
 
-architecture Behavioral of PCMux is
+architecture Behavioral of PCBranchAdder is
 
 begin
 
-	process(PCPlusOne, ALUResult, PCAfterBranch, isJump, willBranch, PCRollBack)
-	begin
-		if (willBranch = '1') then
-			selectedPC <= PCAfterBranch;
-		elsif (isJump = '1') then
-			selectedPC <= ALUResult;
-		elsif (PCRollBack = '1') then
-			selectedPC <= PCPlusOne - "0000000000000010";
-		else
-			selectedPC <= PCPlusOne;
-		end if;
-	end process;
+		PCAfterBranch <= PCPlusOne + IdExeImme;
 
 end Behavioral;
 

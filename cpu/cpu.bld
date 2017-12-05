@@ -16,7 +16,7 @@ Checking Constraint Associations...
 Done...
 
 Checking expanded design ...
-WARNING:NgdBuild:478 - clock net CLKFX_OUT with clock driver u27/CLKFX_BUFG_INST
+WARNING:NgdBuild:478 - clock net CLKFX_OUT with clock driver u28/CLKFX_BUFG_INST
    drives no clock pins
 
 Partition Implementation Status
@@ -30,7 +30,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   1
 
-Total memory usage is 192900 kilobytes
+Total memory usage is 192884 kilobytes
 
 Writing NGD file "cpu.ngd" ...
 Total REAL time to NGDBUILD completion:  15 sec

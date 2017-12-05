@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Dec 06 03:38:52 2017
+Wed Dec 06 04:41:25 2017
 
 drc -z cpu.ncd cpu.pcf
 
@@ -18,7 +18,7 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net u12/branchJudge_not0001 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
-   with the CLKFX and CLKFX180 outputs of the DCM comp u27/DCM_SP_INST, consult
+   with the CLKFX and CLKFX180 outputs of the DCM comp u28/DCM_SP_INST, consult
    the device Interactive Data Sheet.
 DRC detected 0 errors and 4 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

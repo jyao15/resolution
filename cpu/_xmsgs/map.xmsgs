@@ -35,11 +35,8 @@
 <msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
-<msg type="warning" file="LIT" num="178" delta="old" >Clock buffer <arg fmt="%s" index="1">BUFGMUX symbol &quot;physical_group_CLKFX_OUT/u27/CLKFX_BUFG_INST&quot; (output signal=CLKFX_OUT)</arg> does not drive clock loads. Driving only non-clock loads with a clock buffer will cause ALL of the dedicated clock routing resources for this buffer to be wasted. The non-clock loads are:
+<msg type="warning" file="LIT" num="178" delta="new" >Clock buffer <arg fmt="%s" index="1">BUFGMUX symbol &quot;physical_group_CLKFX_OUT/u28/CLKFX_BUFG_INST&quot; (output signal=CLKFX_OUT)</arg> does not drive clock loads. Driving only non-clock loads with a clock buffer will cause ALL of the dedicated clock routing resources for this buffer to be wasted. The non-clock loads are:
 <arg fmt="%s" index="2">Pin I2 of clkIn_clock1</arg>
-</msg>
-
-<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">u23/romAddr_mux0053&lt;4&gt;36</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">u23/romAddr_mux0053&lt;4&gt;1784_SW0</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">u23/romAddr_mux0053&lt;3&gt;32</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">u23/romAddr_mux0053&lt;3&gt;21_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
@@ -60,7 +57,7 @@
 <msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">u12/branchJudge_not0001</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
-<msg type="info" file="PhysDesignRules" num="772" delta="old" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">u27/DCM_SP_INST</arg>, consult the device Interactive Data Sheet.
+<msg type="info" file="PhysDesignRules" num="772" delta="new" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">u28/DCM_SP_INST</arg>, consult the device Interactive Data Sheet.
 </msg>
 
 </messages>

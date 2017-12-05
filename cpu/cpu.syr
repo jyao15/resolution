@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.44 secs
+Total CPU time to Xst completion: 0.40 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.44 secs
+Total CPU time to Xst completion: 0.40 secs
  
 --> Reading design: cpu.prj
 
@@ -105,11 +105,9 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd" in Library work.
-Entity <pcregister> compiled.
-Entity <pcregister> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity pcregister is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd" in Library work.
-Entity <PCIncrementer> compiled.
-Entity <PCIncrementer> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity pcincrementer is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd" in Library work.
 Architecture behavioral of Entity ifidregisters is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd" in Library work.
@@ -156,11 +154,13 @@ Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ipcore_dir/fontRom
 Architecture fontrom_a of Entity fontrom is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd" in Library work.
 Architecture behavioral of Entity memwritedatamux is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCBranchAdder.vhd" in Library work.
+Entity <PCBranchAdder> compiled.
+Entity <PCBranchAdder> (Architecture <Behavioral>) compiled.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd" in Library work.
 Architecture behavioral of Entity dcm is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" in Library work.
-Entity <cpu> compiled.
-Entity <cpu> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity cpu is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -169,7 +169,7 @@ Analyzing hierarchy for entity <cpu> in library <work> (architecture <behavioral
 
 Analyzing hierarchy for entity <PCRegister> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <PCIncrementer> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <PCIncrementer> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <IfIdRegisters> in library <work> (architecture <behavioral>).
 
@@ -215,6 +215,8 @@ Analyzing hierarchy for entity <VGA_Controller> in library <work> (architecture 
 
 Analyzing hierarchy for entity <MemWriteDataMux> in library <work> (architecture <behavioral>).
 
+Analyzing hierarchy for entity <PCBranchAdder> in library <work> (architecture <Behavioral>).
+
 Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral>).
 
 
@@ -222,17 +224,17 @@ Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1098: Instantiating black box module <fontRom>.
-WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1145: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1105: Instantiating black box module <fontRom>.
+WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1159: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <opt>
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1182: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1202: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1196: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1216: Mux is complete : default of case is discarded
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <PCRegister> in library <work> (Architecture <behavioral>).
 Entity <PCRegister> analyzed. Unit <PCRegister> generated.
 
-Analyzing Entity <PCIncrementer> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <PCIncrementer> in library <work> (Architecture <behavioral>).
 Entity <PCIncrementer> analyzed. Unit <PCIncrementer> generated.
 
 Analyzing Entity <IfIdRegisters> in library <work> (Architecture <behavioral>).
@@ -275,8 +277,6 @@ Analyzing Entity <HazardDetectionUnit> in library <work> (Architecture <behavior
 Entity <HazardDetectionUnit> analyzed. Unit <HazardDetectionUnit> generated.
 
 Analyzing Entity <PCMux> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd" line 56: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <IdExPC>, <PCRollback>
 Entity <PCMux> analyzed. Unit <PCMux> generated.
 
 Analyzing Entity <MemoryUnit> in library <work> (Architecture <behavioral>).
@@ -321,6 +321,9 @@ Entity <VGA_Controller> analyzed. Unit <VGA_Controller> generated.
 
 Analyzing Entity <MemWriteDataMux> in library <work> (Architecture <behavioral>).
 Entity <MemWriteDataMux> analyzed. Unit <MemWriteDataMux> generated.
+
+Analyzing Entity <PCBranchAdder> in library <work> (Architecture <Behavioral>).
+Entity <PCBranchAdder> analyzed. Unit <PCBranchAdder> generated.
 
 Analyzing Entity <dcm> in library <work> (Architecture <behavioral>).
     Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <dcm>.
@@ -547,11 +550,9 @@ Unit <HazardDetectionUnit> synthesized.
 
 Synthesizing Unit <PCMux>.
     Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd".
-WARNING:Xst:737 - Found 16-bit latch for signal <PCOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 16-bit adder for signal <mux0000$addsub0000> created at line 59.
-    Found 16-bit subtractor for signal <PCOut$addsub0000> created at line 64.
+    Found 16-bit subtractor for signal <selectedPC$addsub0000> created at line 57.
     Summary:
-	inferred   2 Adder/Subtractor(s).
+	inferred   1 Adder/Subtractor(s).
 Unit <PCMux> synthesized.
 
 
@@ -1141,6 +1142,14 @@ Synthesizing Unit <MemWriteDataMux>.
 Unit <MemWriteDataMux> synthesized.
 
 
+Synthesizing Unit <PCBranchAdder>.
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/PCBranchAdder.vhd".
+    Found 16-bit adder for signal <PCAfterBranch>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <PCBranchAdder> synthesized.
+
+
 Synthesizing Unit <dcm>.
     Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd".
 Unit <dcm> synthesized.
@@ -1193,9 +1202,9 @@ Macro Statistics
  23-bit register                                       : 1
  3-bit register                                        : 4
  4-bit register                                        : 6
-# Latches                                              : 8
+# Latches                                              : 7
  1-bit latch                                           : 2
- 16-bit latch                                          : 5
+ 16-bit latch                                          : 4
  21-bit latch                                          : 1
 # Comparators                                          : 147
  10-bit comparator greatequal                          : 9
@@ -1351,9 +1360,9 @@ Macro Statistics
  9-bit up counter                                      : 1
 # Registers                                            : 545
  Flip-Flops                                            : 545
-# Latches                                              : 8
+# Latches                                              : 7
  1-bit latch                                           : 2
- 16-bit latch                                          : 5
+ 16-bit latch                                          : 4
  21-bit latch                                          : 1
 # Comparators                                          : 147
  10-bit comparator greatequal                          : 9
@@ -1446,6 +1455,8 @@ Optimizing unit <PCRegister> ...
 
 Optimizing unit <IfIdRegisters> ...
 
+Optimizing unit <PCMux> ...
+
 Optimizing unit <Clock> ...
 INFO:Xst:2261 - The FF/Latch <count_0> in Unit <Clock> is equivalent to the following FF/Latch, which will be removed : <clk1> 
 INFO:Xst:2261 - The FF/Latch <count_1> in Unit <Clock> is equivalent to the following FF/Latch, which will be removed : <clk2> 
@@ -1472,23 +1483,16 @@ Optimizing unit <ExMemRegisters> ...
 
 Optimizing unit <MemWbRegisters> ...
 
-Optimizing unit <PCMux> ...
-
 Mapping all equations...
 Building and optimizing final netlist ...
 INFO:Xst:2261 - The FF/Latch <u8/memReadOut> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <u8/memToRegOut> 
 INFO:Xst:2261 - The FF/Latch <u8/immeOut_15> in Unit <cpu> is equivalent to the following 4 FFs/Latches, which will be removed : <u8/immeOut_14> <u8/immeOut_13> <u8/immeOut_12> <u8/immeOut_11> 
 INFO:Xst:2261 - The FF/Latch <u13/memReadOut> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <u13/memToRegOut> 
 Found area constraint ratio of 100 (+ 5) on block cpu, actual ratio is 21.
-FlipFlop u23/x_0 has been replicated 1 time(s)
-FlipFlop u23/x_1 has been replicated 1 time(s)
-FlipFlop u23/x_3 has been replicated 1 time(s)
 FlipFlop u23/y_3 has been replicated 2 time(s)
 FlipFlop u23/y_4 has been replicated 2 time(s)
 FlipFlop u23/y_5 has been replicated 1 time(s)
 FlipFlop u23/y_6 has been replicated 1 time(s)
-FlipFlop u23/y_7 has been replicated 1 time(s)
-FlipFlop u23/y_8 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -1496,8 +1500,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 590
- Flip-Flops                                            : 590
+# Registers                                            : 585
+ Flip-Flops                                            : 585
 
 =========================================================================
 
@@ -1526,34 +1530,33 @@ Design Statistics
 # IOs                              : 169
 
 Cell Usage :
-# BELS                             : 3597
+# BELS                             : 3559
 #      GND                         : 1
-#      INV                         : 34
+#      INV                         : 32
 #      LUT1                        : 86
-#      LUT2                        : 178
-#      LUT2_D                      : 8
-#      LUT2_L                      : 3
-#      LUT3                        : 711
-#      LUT3_D                      : 35
-#      LUT3_L                      : 39
-#      LUT4                        : 1564
-#      LUT4_D                      : 56
+#      LUT2                        : 205
+#      LUT2_D                      : 5
+#      LUT2_L                      : 5
+#      LUT3                        : 723
+#      LUT3_D                      : 32
+#      LUT3_L                      : 27
+#      LUT4                        : 1506
+#      LUT4_D                      : 86
 #      LUT4_L                      : 127
 #      MUXCY                       : 166
-#      MUXF5                       : 418
+#      MUXF5                       : 387
 #      MUXF6                       : 33
 #      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 136
-# FlipFlops/Latches                : 672
-#      FDC                         : 17
-#      FDCE                        : 425
+# FlipFlops/Latches                : 651
+#      FDC                         : 14
+#      FDCE                        : 423
 #      FDE                         : 105
 #      FDP                         : 2
 #      FDPE                        : 40
 #      FDR                         : 1
 #      LD                          : 66
-#      LDCPE_1                     : 16
 # Clock Buffers                    : 7
 #      BUFG                        : 7
 # IO Buffers                       : 169
@@ -1573,9 +1576,9 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-4 
 
- Number of Slices:                     1552  out of   8672    17%  
- Number of Slice Flip Flops:            672  out of  17344     3%  
- Number of 4 input LUTs:               2841  out of  17344    16%  
+ Number of Slices:                     1531  out of   8672    17%  
+ Number of Slice Flip Flops:            651  out of  17344     3%  
+ Number of 4 input LUTs:               2834  out of  17344    16%  
  Number of IOs:                         169
  Number of bonded IOBs:                 169  out of    250    67%  
  Number of GCLKs:                         7  out of     24    29%  
@@ -1604,14 +1607,13 @@ Clock Signal                                            | Clock buffer(FF name) 
 --------------------------------------------------------+---------------------------------+-------+
 clk1(clkIn_clock1:O)                                    | BUFG(*)(u17/flashstate_FSM_FFd1)| 353   |
 u18/count_01                                            | BUFG                            | 190   |
-u23/CLK_21                                              | BUFG                            | 46    |
+u23/CLK_21                                              | BUFG                            | 41    |
 clk_50                                                  | IBUFG                           | 1     |
 u5/controllerOut_not00011(u5/controllerOut_not0001235:O)| BUFG(*)(u5/controllerOut_20)    | 20    |
 u6/ReadData1_or0000(u6/ReadData1_or00001:O)             | NONE(*)(u6/ReadData1_15)        | 16    |
 u7/sign_or0000(u7/sign_or00001:O)                       | NONE(*)(u7/immeOut_11)          | 13    |
 u12/ALUresult_not0001(u12/ALUresult_not00011:O)         | NONE(*)(u12/ALUresult_15)       | 16    |
 u12/branchJudge_not0001(u12/branchJudge_not00011:O)     | NONE(*)(u12/branchJudge)        | 1     |
-u8/jumpOut                                              | NONE(u16/PCOut_15)              | 16    |
 --------------------------------------------------------+---------------------------------+-------+
 (*) These 6 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -1620,49 +1622,17 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------------------+------------------------+-------+
-Control Signal                                 | Buffer(FF name)        | Load  |
------------------------------------------------+------------------------+-------+
-u1/rst_inv(u8/rdOut_Acst_inv1_INV_0:O)         | NONE(u1/nextPC_0)      | 484   |
-u16/PCOut_0__and0000(u16/PCOut_0__and00001:O)  | NONE(u16/PCOut_0)      | 1     |
-u16/PCOut_0__and0001(u16/PCOut_0__and00011:O)  | NONE(u16/PCOut_0)      | 1     |
-u16/PCOut_10__and0000(u16/PCOut_10__and00001:O)| NONE(u16/PCOut_10)     | 1     |
-u16/PCOut_10__and0001(u16/PCOut_10__and00011:O)| NONE(u16/PCOut_10)     | 1     |
-u16/PCOut_11__and0000(u16/PCOut_11__and00001:O)| NONE(u16/PCOut_11)     | 1     |
-u16/PCOut_11__and0001(u16/PCOut_11__and00011:O)| NONE(u16/PCOut_11)     | 1     |
-u16/PCOut_12__and0000(u16/PCOut_12__and00001:O)| NONE(u16/PCOut_12)     | 1     |
-u16/PCOut_12__and0001(u16/PCOut_12__and00011:O)| NONE(u16/PCOut_12)     | 1     |
-u16/PCOut_13__and0000(u16/PCOut_13__and00001:O)| NONE(u16/PCOut_13)     | 1     |
-u16/PCOut_13__and0001(u16/PCOut_13__and00011:O)| NONE(u16/PCOut_13)     | 1     |
-u16/PCOut_14__and0000(u16/PCOut_14__and00001:O)| NONE(u16/PCOut_14)     | 1     |
-u16/PCOut_14__and0001(u16/PCOut_14__and00011:O)| NONE(u16/PCOut_14)     | 1     |
-u16/PCOut_15__and0000(u16/PCOut_15__and00001:O)| NONE(u16/PCOut_15)     | 1     |
-u16/PCOut_15__and0001(u16/PCOut_15__and00011:O)| NONE(u16/PCOut_15)     | 1     |
-u16/PCOut_1__and0000(u16/PCOut_1__and00001:O)  | NONE(u16/PCOut_1)      | 1     |
-u16/PCOut_1__and0001(u16/PCOut_1__and00011:O)  | NONE(u16/PCOut_1)      | 1     |
-u16/PCOut_2__and0000(u16/PCOut_2__and00001:O)  | NONE(u16/PCOut_2)      | 1     |
-u16/PCOut_2__and0001(u16/PCOut_2__and00011:O)  | NONE(u16/PCOut_2)      | 1     |
-u16/PCOut_3__and0000(u16/PCOut_3__and00001:O)  | NONE(u16/PCOut_3)      | 1     |
-u16/PCOut_3__and0001(u16/PCOut_3__and00011:O)  | NONE(u16/PCOut_3)      | 1     |
-u16/PCOut_4__and0000(u16/PCOut_4__and00001:O)  | NONE(u16/PCOut_4)      | 1     |
-u16/PCOut_4__and0001(u16/PCOut_4__and00011:O)  | NONE(u16/PCOut_4)      | 1     |
-u16/PCOut_5__and0000(u16/PCOut_5__and00001:O)  | NONE(u16/PCOut_5)      | 1     |
-u16/PCOut_5__and0001(u16/PCOut_5__and00011:O)  | NONE(u16/PCOut_5)      | 1     |
-u16/PCOut_6__and0000(u16/PCOut_6__and00001:O)  | NONE(u16/PCOut_6)      | 1     |
-u16/PCOut_6__and0001(u16/PCOut_6__and00011:O)  | NONE(u16/PCOut_6)      | 1     |
-u16/PCOut_7__and0000(u16/PCOut_7__and00001:O)  | NONE(u16/PCOut_7)      | 1     |
-u16/PCOut_7__and0001(u16/PCOut_7__and00011:O)  | NONE(u16/PCOut_7)      | 1     |
-u16/PCOut_8__and0000(u16/PCOut_8__and00001:O)  | NONE(u16/PCOut_8)      | 1     |
-u16/PCOut_8__and0001(u16/PCOut_8__and00011:O)  | NONE(u16/PCOut_8)      | 1     |
-u16/PCOut_9__and0000(u16/PCOut_9__and00001:O)  | NONE(u16/PCOut_9)      | 1     |
-u16/PCOut_9__and0001(u16/PCOut_9__and00011:O)  | NONE(u16/PCOut_9)      | 1     |
------------------------------------------------+------------------------+-------+
+--------------------------------------+------------------------+-------+
+Control Signal                        | Buffer(FF name)        | Load  |
+--------------------------------------+------------------------+-------+
+u1/rst_inv(u8/rdOut_Acst_inv1_INV_0:O)| NONE(u1/nextPC_0)      | 479   |
+--------------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 13.636ns (Maximum Frequency: 73.335MHz)
+   Minimum period: 13.947ns (Maximum Frequency: 71.701MHz)
    Minimum input arrival time before clock: 11.295ns
    Maximum output required time after clock: 6.009ns
    Maximum combinational path delay: 3.095ns
@@ -1674,7 +1644,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk1'
   Clock period: 7.889ns (frequency: 126.759MHz)
-  Total number of paths / destination ports: 7525 / 495
+  Total number of paths / destination ports: 7530 / 495
 -------------------------------------------------------------------------
 Delay:               7.889ns (Levels of Logic = 11)
   Source:            u17/cnt_8 (FF)
@@ -1706,7 +1676,7 @@ Delay:               7.889ns (Levels of Logic = 11)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'u18/count_01'
   Clock period: 11.215ns (frequency: 89.168MHz)
-  Total number of paths / destination ports: 4186 / 222
+  Total number of paths / destination ports: 5866 / 238
 -------------------------------------------------------------------------
 Delay:               11.215ns (Levels of Logic = 6)
   Source:            u3/tmpRx_1 (FF)
@@ -1719,7 +1689,7 @@ Delay:               11.215ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q            10   0.591   0.886  u3/tmpRx_1 (u3/tmpRx_1)
-     LUT4_D:I3->O         17   0.704   1.086  u21/ReadReg1Out<1>_SW2 (N1428)
+     LUT4_D:I3->O         17   0.704   1.086  u21/ReadReg1Out<1>_SW2 (N1378)
      LUT3:I2->O           34   0.704   1.267  u21/ReadReg1Out<1> (ReadReg1MuxOut<1>)
      LUT4:I3->O            1   0.704   0.424  u15/PCKeep_and000026 (u15/PCKeep_and000026)
      LUT4:I3->O           18   0.704   1.072  u15/PCKeep_and0000139 (IfIdKeep)
@@ -1732,43 +1702,36 @@ Delay:               11.215ns (Levels of Logic = 6)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'u23/CLK_21'
-  Clock period: 13.636ns (frequency: 73.335MHz)
-  Total number of paths / destination ports: 11101 / 75
+  Clock period: 13.947ns (frequency: 71.701MHz)
+  Total number of paths / destination ports: 10610 / 68
 -------------------------------------------------------------------------
-Delay:               13.636ns (Levels of Logic = 19)
-  Source:            u23/y_0 (FF)
+Delay:               13.947ns (Levels of Logic = 12)
+  Source:            u23/y_7 (FF)
   Destination:       u23/romAddr_8 (FF)
   Source Clock:      u23/CLK_21 rising
   Destination Clock: u23/CLK_21 rising
 
-  Data Path: u23/y_0 to u23/romAddr_8
+  Data Path: u23/y_7 to u23/romAddr_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             3   0.591   0.706  u23/y_0 (u23/y_0)
-     LUT1:I0->O            1   0.704   0.000  u23/Madd_romAddr_add0001_cy<0>_rt (u23/Madd_romAddr_add0001_cy<0>_rt)
-     MUXCY:S->O            1   0.464   0.000  u23/Madd_romAddr_add0001_cy<0> (u23/Madd_romAddr_add0001_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  u23/Madd_romAddr_add0001_cy<1> (u23/Madd_romAddr_add0001_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  u23/Madd_romAddr_add0001_cy<2> (u23/Madd_romAddr_add0001_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  u23/Madd_romAddr_add0001_cy<3> (u23/Madd_romAddr_add0001_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  u23/Madd_romAddr_add0001_cy<4> (u23/Madd_romAddr_add0001_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  u23/Madd_romAddr_add0001_cy<5> (u23/Madd_romAddr_add0001_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  u23/Madd_romAddr_add0001_cy<6> (u23/Madd_romAddr_add0001_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  u23/Madd_romAddr_add0001_cy<7> (u23/Madd_romAddr_add0001_cy<7>)
-     XORCY:CI->O          13   0.804   0.987  u23/Madd_romAddr_add0001_xor<8> (u23/romAddr_add0001<8>)
-     LUT4:I3->O            1   0.704   0.000  u23/romAddr_mux0053<8>141_SW5_F (N1148)
-     MUXF5:I0->O           2   0.321   0.451  u23/romAddr_mux0053<8>141_SW5 (N520)
+     FDCE:C->Q           107   0.591   1.365  u23/y_7 (u23/y_7)
+     LUT2:I1->O            1   0.704   0.000  u23/Madd_romAddr_not0000<7>11 (u23/Madd_romAddr_not0000<7>)
+     MUXCY:S->O            1   0.464   0.000  u23/Madd_romAddr_add0001_cy<7> (u23/Madd_romAddr_add0001_cy<7>)
+     XORCY:CI->O          15   0.804   1.021  u23/Madd_romAddr_add0001_xor<8> (u23/romAddr_add0001<8>)
+     LUT4:I3->O            1   0.704   0.000  u23/romAddr_mux0053<8>141_SW5_F (N1044)
+     MUXF5:I0->O           2   0.321   0.451  u23/romAddr_mux0053<8>141_SW5 (N466)
      LUT4:I3->O            1   0.704   0.424  u23/romAddr_mux0053<8>173 (u23/romAddr_mux0053<8>1148)
      LUT4:I3->O            1   0.704   0.424  u23/romAddr_mux0053<8>189 (u23/romAddr_mux0053<8>189)
      LUT4:I3->O            1   0.704   0.424  u23/romAddr_mux0053<8>1209 (u23/romAddr_mux0053<8>1209)
      LUT4_L:I3->LO         1   0.704   0.104  u23/romAddr_mux0053<8>1304 (u23/romAddr_mux0053<8>1304)
-     LUT4:I3->O            1   0.704   0.424  u23/romAddr_mux0053<8>1350 (u23/romAddr_mux0053<8>1350)
-     LUT4:I3->O            1   0.704   0.420  u23/romAddr_mux0053<8>1395 (u23/romAddr_mux0053<8>1395)
+     LUT4:I3->O            1   0.704   0.455  u23/romAddr_mux0053<8>1350 (u23/romAddr_mux0053<8>1350)
+     LUT4:I2->O            1   0.704   0.420  u23/romAddr_mux0053<8>1395 (u23/romAddr_mux0053<8>1395)
      MUXF5:S->O            1   0.739   0.000  u23/romAddr_mux0053<8>1473 (u23/romAddr_mux0053<8>)
      FDE:D                     0.308          u23/romAddr_8
     ----------------------------------------
-    Total                     13.636ns (9.272ns logic, 4.364ns route)
-                                       (68.0% logic, 32.0% route)
+    Total                     13.947ns (8.859ns logic, 5.088ns route)
+                                       (63.5% logic, 36.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_50'
@@ -1816,26 +1779,24 @@ Delay:               3.766ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk1'
-  Total number of paths / destination ports: 170 / 142
+  Total number of paths / destination ports: 171 / 142
 -------------------------------------------------------------------------
-Offset:              5.508ns (Levels of Logic = 5)
-  Source:            dataReady (PAD)
-  Destination:       u17/dataOut_1 (FF)
+Offset:              5.292ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       u17/Mtrien_ram2_data (FF)
   Destination Clock: clk1 rising
 
-  Data Path: dataReady to u17/dataOut_1
+  Data Path: rst to u17/Mtrien_ram2_data
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.218   0.499  dataReady_IBUF (dataReady_IBUF)
-     LUT3:I1->O            1   0.704   0.595  u17/dataOut_1_mux00013 (u17/dataOut_1_mux00013)
-     LUT4:I0->O            1   0.704   0.000  u17/dataOut_1_mux000130_G (N1907)
-     MUXF5:I1->O           1   0.321   0.455  u17/dataOut_1_mux000130 (u17/dataOut_1_mux000130)
-     LUT3:I2->O            1   0.704   0.000  u17/dataOut_1_mux000140 (u17/dataOut_1_mux0001)
-     FDCE:D                    0.308          u17/dataOut_1
+     IBUF:I->O            50   1.218   1.443  rst_IBUF (rst_IBUF)
+     LUT3:I0->O            1   0.704   0.000  u17/Mtridata_ram2_data_and000053_F (N1586)
+     MUXF5:I0->O          17   0.321   1.051  u17/Mtridata_ram2_data_and000053 (u17/Mtridata_ram2_data_and0000)
+     FDE:CE                    0.555          u17/Mtridata_ram2_data_0
     ----------------------------------------
-    Total                      5.508ns (3.959ns logic, 1.549ns route)
-                                       (71.9% logic, 28.1% route)
+    Total                      5.292ns (2.798ns logic, 2.494ns route)
+                                       (52.9% logic, 47.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'u23/CLK_21'
@@ -1854,12 +1815,12 @@ Offset:              11.295ns (Levels of Logic = 11)
      LUT3:I0->O            1   0.704   0.000  u23/Mmux_romData_mux0003_51 (u23/Mmux_romData_mux0000_4)
      MUXF5:I0->O           4   0.321   0.591  u23/Mmux_romData_mux0002_3_f5 (u23/Mmux_romData_mux0002_3_f5)
      LUT4_D:I3->O          6   0.704   0.673  u23/bt_mux0000<1>211 (u23/bt_mux0000<1>_bdd45)
-     LUT4:I3->O            1   0.704   0.000  u23/bt_mux0000<1>1995_F (N1276)
+     LUT4:I3->O            1   0.704   0.000  u23/bt_mux0000<1>1995_F (N1184)
      MUXF5:I0->O           1   0.321   0.424  u23/bt_mux0000<1>1995 (u23/bt_mux0000<1>1995)
-     LUT4:I3->O            1   0.704   0.595  u23/bt_mux0000<1>11035_SW0 (N1099)
-     LUT3:I0->O            1   0.704   0.424  u23/bt_mux0000<1>11061_SW0 (N1117)
+     LUT4:I3->O            1   0.704   0.595  u23/bt_mux0000<1>11035_SW0 (N988)
+     LUT3:I0->O            1   0.704   0.424  u23/bt_mux0000<1>11061_SW0 (N1023)
      LUT4:I3->O            1   0.704   0.499  u23/bt_mux0000<1>11216 (u23/bt_mux0000<1>11216)
-     LUT2:I1->O            1   0.704   0.000  u23/bt_mux0000<1>11463_G (N1281)
+     LUT2:I1->O            1   0.704   0.000  u23/bt_mux0000<1>11463_G (N1191)
      MUXF5:I1->O           1   0.321   0.424  u23/bt_mux0000<1>11463 (u23/bt_mux0000<1>11463)
      LUT4:I3->O            1   0.704   0.000  u23/bt_mux0000<1>11737 (u23/bt_mux0000<1>)
      FDCE:D                    0.308          u23/bt_0
@@ -1949,14 +1910,14 @@ Delay:               3.095ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 134.00 secs
-Total CPU time to Xst completion: 133.56 secs
+Total REAL time to Xst completion: 132.00 secs
+Total CPU time to Xst completion: 131.88 secs
  
 --> 
 
-Total memory usage is 459248 kilobytes
+Total memory usage is 459288 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  122 (   0 filtered)
+Number of warnings :  120 (   0 filtered)
 Number of infos    :   77 (   0 filtered)
 
