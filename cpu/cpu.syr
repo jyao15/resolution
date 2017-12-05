@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: cpu.prj
 
@@ -117,8 +117,7 @@ Architecture behavioral of Entity controller is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/Registers.vhd" in Library work.
 Architecture behavioral of Entity registers is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ImmeExtendUnit.vhd" in Library work.
-Entity <immeextendunit> compiled.
-Entity <immeextendunit> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity immeextendunit is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/IdExRegisters.vhd" in Library work.
 Architecture behavioral of Entity idexregisters is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/AMux.vhd" in Library work.
@@ -1961,12 +1960,12 @@ Delay:               3.095ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 48.00 secs
-Total CPU time to Xst completion: 47.89 secs
+Total REAL time to Xst completion: 46.00 secs
+Total CPU time to Xst completion: 46.52 secs
  
 --> 
 
-Total memory usage is 537520 kilobytes
+Total memory usage is 537596 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  122 (   0 filtered)
