@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/youqu_isim_beh.exe" -prj "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/youqu_beh.prj" "work.youqu" 

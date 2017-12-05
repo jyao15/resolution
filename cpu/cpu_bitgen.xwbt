@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Junior\ComputerOrganization\CPU\jiyuan\cpu\cpu.ncd
+OUTFILE=D:\Junior\ComputerOrganization\CPU\jiyuan\cpu\cpu.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=D:\Junior\ComputerOrganization\CPU\jiyuan\cpu
+LICENSE=WebPack
+USER_INFO=211256548_0_0_118

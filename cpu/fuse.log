@@ -1,0 +1,68 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/youqu_isim_beh.exe -prj D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/youqu_beh.prj work.youqu 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+WARNING:Simulator:1010 - One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/StructConflictUnit.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/Registers.vhd" into library work
+WARNING:HDLCompiler:1369 - "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/Registers.vhd" Line 101: Possible infinite loop; process does not have a wait statement
+WARNING:HDLCompiler:1369 - "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/Registers.vhd" Line 119: Possible infinite loop; process does not have a wait statement
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ReadReg2Mux.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ReadReg1Mux.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/RdMux.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/PCRegister.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/PCMux.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/PCAdder.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/MFPCMux.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/MemWbRegisters.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/MemoryUnit.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ImmeExtendUnit.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/IfIdRegisters.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/IdExRegisters.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/HazardDetectionUnit.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ForwardController.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ExMemRegisters.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/Controller.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/clock.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/BMux.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/AMux.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ALU.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/cpu.vhd" into library work
+Parsing VHDL file "D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/youqu.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity PCRegister [pcregister_default]
+Compiling architecture behavioral of entity PCAdder [pcadder_default]
+Compiling architecture behavioral of entity IfIdRegisters [ifidregisters_default]
+Compiling architecture behavioral of entity RdMux [rdmux_default]
+Compiling architecture behavioral of entity Controller [controller_default]
+Compiling architecture behavioral of entity Registers [registers_default]
+Compiling architecture behavioral of entity ImmeExtendUnit [immeextendunit_default]
+Compiling architecture behavioral of entity IdExRegisters [idexregisters_default]
+Compiling architecture behavioral of entity AMux [amux_default]
+Compiling architecture behavioral of entity BMux [bmux_default]
+Compiling architecture behavioral of entity ForwardController [forwardcontroller_default]
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavioral of entity ExMemRegisters [exmemregisters_default]
+Compiling architecture behavioral of entity MemWbRegisters [memwbregisters_default]
+Compiling architecture behavioral of entity HazardDetectionUnit [hazarddetectionunit_default]
+Compiling architecture behavioral of entity PCMux [pcmux_default]
+Compiling architecture behavioral of entity MemoryUnit [memoryunit_default]
+Compiling architecture behavioral of entity clock [clock_default]
+Compiling architecture behavioral of entity StructConflictUnit [structconflictunit_default]
+Compiling architecture behavioral of entity MFPCMux [mfpcmux_default]
+Compiling architecture behavioral of entity ReadReg1Mux [readreg1mux_default]
+Compiling architecture behavioral of entity ReadReg2Mux [readreg2mux_default]
+Compiling architecture behavioral of entity cpu [cpu_default]
+Compiling architecture behavior of entity youqu
+Time Resolution for simulation is 1ps.
+Waiting for 20 sub-compilation(s) to finish...
+Compiled 51 VHDL Units
+Built simulation executable D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/youqu_isim_beh.exe
+Fuse Memory Usage: 34892 KB
+Fuse CPU Usage: 701 ms
