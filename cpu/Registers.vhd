@@ -101,7 +101,7 @@ begin
 								when "1000" => SP <= WriteData;
 								when "1001" => IH <= WriteData;
 								when "1010" => T <= WriteData;
-								when others => null;
+								when others =>
 							end case;
 						else null;
 						end if;
