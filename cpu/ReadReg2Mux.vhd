@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    15:03:40 11/21/2016 
+-- Create Date:    16:57:44 11/27/2017 
 -- Design Name: 
--- Module Name:    ReadReg2Mux - Behavioral 
+-- Module Name:    ReadReg2MUX - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,31 +29,31 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ReadReg2Mux is
-	--源寄存器2选择器
+entity ReadReg2MUX is
 	port(
-		rx : in std_logic_vector(2 downto 0);
-		ry : in std_logic_vector(2 downto 0);			--R0~R7中的一个
-		
-		ReadReg2 : in std_logic;							--由总控制器Controller生成的控制信号
-		
-		ReadReg2Out : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7, "1111"=没有
-	);
-end ReadReg2Mux;
+			ten_downto_eight : in std_logic_vector(2 downto 0);
+			seven_downto_five : in std_logic_vector(2 downto 0);
+			
+			ReadReg2 : in std_logic_vector(1 downto 0);
+			
+			ReadReg2Out : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7，"1111"=没有
+		);
+end ReadReg2MUX;
 
-architecture Behavioral of ReadReg2Mux is
+architecture Behavioral of ReadReg2MUX is
 
 begin
-	process(rx, ry, ReadReg2)
+	process(ten_downto_eight,seven_downto_five,ReadReg2)
 	begin
 		case ReadReg2 is
-			when '0' =>			--rx
-				ReadReg2Out <= '0' & rx;
-			when '1' =>			--ry
-				ReadReg2Out <= '0' & ry;
-			when others =>		--No ReadReg2（不需要源寄存器2）
+			when "10" =>		--(10,8)
+				ReadReg2Out <= '0' & ten_downto_eight;
+			when "11" =>		--(7,5)
+				ReadReg2Out <= '0' & seven_downto_five;
+			when others =>		--No ReadReg2
 				ReadReg2Out <= "1111";
 		end case;
 	end process;
+
 end Behavioral;
 

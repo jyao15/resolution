@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    18:59:09 11/22/2016 
+-- Create Date:    17:04:30 11/27/2017 
 -- Design Name: 
--- Module Name:    RdMux - Behavioral 
+-- Module Name:    ReadDstMUX - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,41 +29,40 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity RdMux is
+entity ReadDstMUX is
 	port(
-		rx : in std_logic_vector(2 downto 0);
-		ry : in std_logic_vector(2 downto 0);
-		rz : in std_logic_vector(2 downto 0);		--R0~R7ä¸­çš„ä¸€ä¸
+			ten_downto_eight : in std_logic_vector(2 downto 0);
+			seven_downto_five : in std_logic_vector(2 downto 0);
+			four_downto_two : in std_logic_vector(2 downto 0);
+			RegDst : in std_logic_vector(2 downto 0);
 			
-		RegDst : in std_logic_vector(2 downto 0);	--ç”±æ€»æŽ§åˆ¶å™¨Controllerç”Ÿæˆçš„æŽ§åˆ¶ä¿¡å
-			
-		rdOut : out std_logic_vector(3 downto 0)	--"0XXX"ä»£è¡¨R0~R7ï¼1000"=SP,"1001"=IH, "1010"=T, "1110"=æ²¡æœ‰
-	);
-end RdMux;
+			ReadDstOut : out std_logic_vector(3 downto 0)  --"0XXX"´ú±íR0~R7£¬"1000"=SP,"1001"=IH, "1010"=T, "1110"=Ã»ÓÐ
+		);
+end ReadDstMUX;
 
-architecture Behavioral of RdMux is
+architecture Behavioral of ReadDstMUX is
 
 begin
-
-	process(rx, ry, rz, RegDst)
+	process(ten_downto_eight,seven_downto_five,four_downto_two,RegDst)
 	begin
 		case RegDst is
-			when "001" =>--rx
-				rdOut <= '0' & rx;
-			when "010" =>--ry
-				rdOut <= '0' & ry;
-			when "011" =>--rz
-				rdOut <= '0' & rz;
-			when "100" =>--T
-				rdOut <= "1010";
-			when "101" =>--SP
-				rdOut <= "1000";
-			when "110" =>--IH
-				rdOut <= "1001";
-			
-			when others =>
-				rdOut <= "1110";
+			when "001" =>		--(10,8)
+				ReadDstOut <= '0' & ten_downto_eight;
+			when "010" =>		--(7,5)
+				ReadDstOut <= '0' & seven_downto_five;
+			when "011" =>		--(4,2)
+				ReadDstOut <= '0' & four_downto_two;
+			when "100" =>		--T
+				ReadDstOut <= "1010";
+			when "101" =>		--SP
+				ReadDstOut <= "1000";
+			when "110" =>		--IH
+				ReadDstOut <= "1001";
+			when others =>		--No ReadDst
+				ReadDstOut <= "1110";
 		end case;
 	end process;
+
 end Behavioral;
+
 
