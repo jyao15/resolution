@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.52 secs
+Total CPU time to Xst completion: 0.55 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.53 secs
+Total CPU time to Xst completion: 0.55 secs
  
 --> Reading design: cpu.prj
 
@@ -104,14 +104,6 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/ALUMuxB is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/BMux.vhd", and is now defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxB.vhd".
-WARNING:HDLParsers:3607 - Unit work/ALUMuxB/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/BMux.vhd", and is now defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxB.vhd".
-WARNING:HDLParsers:3607 - Unit work/ExeMemRegisters is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ExMemRegisters.vhd", and is now defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ExeMemRegisters.vhd".
-WARNING:HDLParsers:3607 - Unit work/ExeMemRegisters/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ExMemRegisters.vhd", and is now defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ExeMemRegisters.vhd".
-WARNING:HDLParsers:3607 - Unit work/MemWriteDataMux is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd", and is now defined in "C:/Users/thinkpad/Desktop/resolution/cpu/MemWriteDataMux.vhd".
-WARNING:HDLParsers:3607 - Unit work/MemWriteDataMux/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd", and is now defined in "C:/Users/thinkpad/Desktop/resolution/cpu/MemWriteDataMux.vhd".
-WARNING:HDLParsers:3607 - Unit work/PCIncrementer is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd", and is now defined in "C:/Users/thinkpad/Desktop/resolution/cpu/PCIncrementer.vhd".
-WARNING:HDLParsers:3607 - Unit work/PCIncrementer/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd", and is now defined in "C:/Users/thinkpad/Desktop/resolution/cpu/PCIncrementer.vhd".
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd" in Library work.
 Architecture behavioral of Entity pcregister is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCIncrementer.vhd" in Library work.
@@ -132,8 +124,9 @@ Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd" in Li
 Architecture behavioral of Entity alumuxa is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxB.vhd" in Library work.
 Architecture behavioral of Entity alumuxb is up to date.
-Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ForwardController.vhd" in Library work.
-Architecture behavioral of Entity forwardcontroller is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ForwardingUnit.vhd" in Library work.
+Entity <ForwardingUnit> compiled.
+Entity <ForwardingUnit> (Architecture <Behavioral>) compiled.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ExeMemRegisters.vhd" in Library work.
@@ -195,7 +188,7 @@ Analyzing hierarchy for entity <ALUMuxA> in library <work> (architecture <behavi
 
 Analyzing hierarchy for entity <ALUMuxB> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <ForwardController> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <ForwardingUnit> in library <work> (architecture <Behavioral>).
 
 Analyzing hierarchy for entity <ALU> in library <work> (architecture <behavioral>).
 
@@ -232,11 +225,11 @@ Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1091: Instantiating black box module <fontRom>.
-WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1144: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1082: Instantiating black box module <fontRom>.
+WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1135: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <opt>
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1181: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1201: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1172: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1192: Mux is complete : default of case is discarded
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <PCRegister> in library <work> (Architecture <behavioral>).
@@ -269,8 +262,8 @@ Entity <ALUMuxA> analyzed. Unit <ALUMuxA> generated.
 Analyzing Entity <ALUMuxB> in library <work> (Architecture <behavioral>).
 Entity <ALUMuxB> analyzed. Unit <ALUMuxB> generated.
 
-Analyzing Entity <ForwardController> in library <work> (Architecture <behavioral>).
-Entity <ForwardController> analyzed. Unit <ForwardController> generated.
+Analyzing Entity <ForwardingUnit> in library <work> (Architecture <Behavioral>).
+Entity <ForwardingUnit> analyzed. Unit <ForwardingUnit> generated.
 
 Analyzing Entity <ALU> in library <work> (Architecture <behavioral>).
 Entity <ALU> analyzed. Unit <ALU> generated.
@@ -493,15 +486,15 @@ Synthesizing Unit <ALUMuxB>.
 Unit <ALUMuxB> synthesized.
 
 
-Synthesizing Unit <ForwardController>.
-    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/ForwardController.vhd".
-    Found 4-bit comparator equal for signal <ForwardA$cmp_eq0000> created at line 56.
-    Found 4-bit comparator equal for signal <ForwardA$cmp_eq0001> created at line 57.
-    Found 4-bit comparator equal for signal <ForwardSW$cmp_eq0000> created at line 67.
-    Found 4-bit comparator equal for signal <ForwardSW$cmp_eq0001> created at line 68.
+Synthesizing Unit <ForwardingUnit>.
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/ForwardingUnit.vhd".
+    Found 4-bit comparator equal for signal <ForwardA$cmp_eq0000> created at line 54.
+    Found 4-bit comparator equal for signal <ForwardA$cmp_eq0001> created at line 55.
+    Found 4-bit comparator equal for signal <ForwardSW$cmp_eq0000> created at line 71.
+    Found 4-bit comparator equal for signal <ForwardSW$cmp_eq0001> created at line 63.
     Summary:
 	inferred   4 Comparator(s).
-Unit <ForwardController> synthesized.
+Unit <ForwardingUnit> synthesized.
 
 
 Synthesizing Unit <ALU>.
@@ -1918,14 +1911,14 @@ Delay:               3.095ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 129.00 secs
-Total CPU time to Xst completion: 128.85 secs
+Total REAL time to Xst completion: 167.00 secs
+Total CPU time to Xst completion: 167.51 secs
  
 --> 
 
-Total memory usage is 460336 kilobytes
+Total memory usage is 459296 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  128 (   0 filtered)
+Number of warnings :  120 (   0 filtered)
 Number of infos    :   77 (   0 filtered)
 

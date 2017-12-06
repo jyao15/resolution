@@ -63,10 +63,6 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="19"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="24"/>
     </file>
-    <file xil_pn:name="ForwardController.vhd" xil_pn:type="FILE_VHDL">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="16"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="21"/>
-    </file>
     <file xil_pn:name="HazardDetectionUnit.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="15"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="20"/>
@@ -139,6 +135,10 @@
     <file xil_pn:name="PCIncrementer.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="88"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="9"/>
+    </file>
+    <file xil_pn:name="ForwardingUnit.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="89"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="21"/>
     </file>
   </files>
 

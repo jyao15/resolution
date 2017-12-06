@@ -309,24 +309,19 @@ architecture Behavioral of cpu is
 	end component;
 	
 	--转发单元
-	component ForwardController
+	component ForwardingUnit
 	port(
-		ExMemRd : in std_logic_vector(3 downto 0);   --
-		MemWbRd : in std_logic_vector(3 downto 0);   --
+		ExeMemWriteReg : in std_logic_vector(3 downto 0);   -- 上条指令写回的寄存器 
+		MemWbWriteReg : in std_logic_vector(3 downto 0);    -- 上上条指令写回的寄存器 
 		
-		--ExMemRegWrite : in std_logic;
-		--MemWbRegWrite : in std_logic;    --由"1111"判断没有源寄存器
+		IdExeMemWrite : in std_logic;
 		
-		IdExALUsrcB : in std_logic;
-		IdExMemWrite : in std_logic;
-		
-		IdExReg1 : in std_logic_vector(3 downto 0);  --本条指令的源寄存器1
-		IdExReg2 : in std_logic_vector(3 downto 0);  --本条指令的源寄存器2
+		IdExeReadReg1 : in std_logic_vector(3 downto 0);  -- 本条指令的源寄存器1
+		IdExeReadReg2 : in std_logic_vector(3 downto 0);  -- 本条指令的源寄存器2
 		
 		ForwardA : out std_logic_vector(1 downto 0);
 		ForwardB : out std_logic_vector(1 downto 0);
-		ForwardSW : out std_logic_vector(1 downto 0)
-
+		ForwardSW : out std_logic_vector(1 downto 0)	     -- 选择SW/SW_SP的WriteData
 	);
 	end component;
 	
@@ -850,19 +845,15 @@ begin
 			ALUSrcB => BMuxOut
 		);	
 		
-	u11 : ForwardController
+	u11 : ForwardingUnit
 	port map(
-			ExMemRd => ExMemRd,
-			MemWbRd => rdToWB,
+			ExeMemWriteReg => ExMemRd,
+			MemWbWriteReg => rdToWB,
 			
-			--ExMemRegWrite => ExMemRegWrite,
-			--MemWbRegWrite => WB,
-			
-			IdExALUsrcB => IdExALUSrcB,
-			IdExMemWrite => IdExMemWrite,
-			
-			IdExReg1 => IdExReg1,
-			IdExReg2 => IdExReg2,
+			IdExeMemWrite => IdExMemWrite,
+
+			IdExeReadReg1 => IdExReg1,
+			IdExeReadReg2 => IdExReg2,
 			
 			ForwardA => ForwardA,
 			ForwardB => ForWardB,

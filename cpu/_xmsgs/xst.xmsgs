@@ -5,41 +5,17 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ALUMuxB</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/BMux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxB.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1082</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fontRom</arg>&gt;.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ALUMuxB/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/BMux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxB.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ExeMemRegisters</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ExMemRegisters.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/thinkpad/Desktop/resolution/cpu/ExeMemRegisters.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ExeMemRegisters/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ExMemRegisters.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/thinkpad/Desktop/resolution/cpu/ExeMemRegisters.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MemWriteDataMux</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/thinkpad/Desktop/resolution/cpu/MemWriteDataMux.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MemWriteDataMux/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/thinkpad/Desktop/resolution/cpu/MemWriteDataMux.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/PCIncrementer</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/thinkpad/Desktop/resolution/cpu/PCIncrementer.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/PCIncrementer/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/PCAdder.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/thinkpad/Desktop/resolution/cpu/PCIncrementer.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1091</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fontRom</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1144</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1135</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;opt&gt;</arg>
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1181</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1172</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1201</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1192</arg>: Mux is complete : default of case is discarded
 </msg>
 
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_addr</arg>&gt; in unit &lt;<arg fmt="%s" index="2">MemoryUnit</arg>&gt; has a constant value of <arg fmt="%s" index="3">000000000000000000</arg> during circuit operation. The register is replaced by logic.
