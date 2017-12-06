@@ -35,12 +35,12 @@ entity Registers is
 		rst:in std_logic;
 		flashFinished : in std_logic;
 		RegWrite:in std_logic;
-		readReg1:in std_logic_vector(3 downto 0);--"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T
-		readReg2:in std_logic_vector(3 downto 0);--"0XXX"代表R0~R7
+		ReadReg1In:in std_logic_vector(3 downto 0);--"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T
+		ReadReg2In:in std_logic_vector(3 downto 0);--"0XXX"代表R0~R7
 		WriteReg:in std_logic_vector(3 downto 0);--"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T
 		WriteData:in std_logic_vector(15 downto 0);
-		readData1:out std_logic_vector(15 downto 0);
-		readData2:out std_logic_vector(15 downto 0);
+		ReadData1:out std_logic_vector(15 downto 0);
+		ReadData2:out std_logic_vector(15 downto 0);
 		r0Out, r1Out, r2Out,r3Out,r4Out,r5Out,r6Out,r7Out : out std_logic_vector(15 downto 0);
 		dataT : out std_logic_vector(15 downto 0);
 		dataSP : out std_logic_vector(15 downto 0);
@@ -115,33 +115,33 @@ begin
 		end if;
 	end process;
 	
-	process(readReg1,readReg2,r0,r1,r2,r3,r4,r5,r6,r7,SP,IH,T)
+	process(ReadReg1In,ReadReg2In,r0,r1,r2,r3,r4,r5,r6,r7,SP,IH,T)
 	begin
-		case readReg1 is 
-			when "0000" => readData1 <= r0;
-			when "0001" => readData1 <= r1;
-			when "0010" => readData1 <= r2;
-			when "0011" => readData1 <= r3;
-			when "0100" => readData1 <= r4;
-			when "0101" => readData1 <= r5;
-			when "0110" => readData1 <= r6;
-			when "0111" => readData1 <= r7;
-			when "1000" => readData1 <= SP;
-			when "1001" => readData1 <= IH;
-			when "1010" => readData1 <= T;
-			when others => readData1 <= (others => '0');
+		case ReadReg1In is 
+			when "0000" => ReadData1 <= r0;
+			when "0001" => ReadData1 <= r1;
+			when "0010" => ReadData1 <= r2;
+			when "0011" => ReadData1 <= r3;
+			when "0100" => ReadData1 <= r4;
+			when "0101" => ReadData1 <= r5;
+			when "0110" => ReadData1 <= r6;
+			when "0111" => ReadData1 <= r7;
+			when "1000" => ReadData1 <= SP;
+			when "1001" => ReadData1 <= IH;
+			when "1010" => ReadData1 <= T;
+			when others => ReadData1 <= (others => '0');
 		end case;
 		
-		case readReg2 is
-			when "0000" => readData2 <= r0;
-			when "0001" => readData2 <= r1;
-			when "0010" => readData2 <= r2;
-			when "0011" => readData2 <= r3;
-			when "0100" => readData2 <= r4;
-			when "0101" => readData2 <= r5;
-			when "0110" => readData2 <= r6;
-			when "0111" => readData2 <= r7;
-			when others => readData2 <= (others => '0');
+		case ReadReg2In is
+			when "0000" => ReadData2 <= r0;
+			when "0001" => ReadData2 <= r1;
+			when "0010" => ReadData2 <= r2;
+			when "0011" => ReadData2 <= r3;
+			when "0100" => ReadData2 <= r4;
+			when "0101" => ReadData2 <= r5;
+			when "0110" => ReadData2 <= r6;
+			when "0111" => ReadData2 <= r7;
+			when others => ReadData2 <= (others => '0');
 		end case;
 		
 	end process;

@@ -511,8 +511,8 @@ architecture Behavioral of cpu is
 			rst : in std_logic;
 			flashFinished : in std_logic;
 			
-			readReg1 : in std_logic_vector(3 downto 0);  --"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T
-			readReg2 : in std_logic_vector(3 downto 0);  --"0XXX"代表R0~R7
+			ReadReg1In : in std_logic_vector(3 downto 0);  --"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T
+			ReadReg2In : in std_logic_vector(3 downto 0);  --"0XXX"代表R0~R7
 			
 			WriteReg : in std_logic_vector(3 downto 0);	  --由WB阶段传回：目的寄存器
 			WriteData : in std_logic_vector(15 downto 0);  --由WB阶段传回：写目的寄存器的值
@@ -520,8 +520,8 @@ architecture Behavioral of cpu is
 			
 			r0Out, r1Out, r2Out,r3Out,r4Out,r5Out,r6Out,r7Out : out std_logic_vector(15 downto 0);	--8个普通寄存器
 			
-			readData1 : out std_logic_vector(15 downto 0); --读出的寄存器1的值
-			readData2 : out std_logic_vector(15 downto 0); --读出的寄存器2的值
+			ReadData1 : out std_logic_vector(15 downto 0); --读出的寄存器1的值
+			ReadData2 : out std_logic_vector(15 downto 0); --读出的寄存器2的值
 			dataT : out std_logic_vector(15 downto 0);
 			dataSP : out std_logic_vector(15 downto 0);
 			dataIH : out std_logic_vector(15 downto 0);
@@ -750,8 +750,8 @@ begin
 			clk => clk,
 			rst => rst,
 			
-			readReg1 => ReadReg1MuxOut,
-			readReg2 => ReadReg2MuxOut,
+			ReadReg1In => ReadReg1MuxOut,
+			ReadReg2In => ReadReg2MuxOut,
 			
 			--这三条来自MEM/WB段寄存器（因为发生在写回段）
 			WriteReg => rdToWB,
@@ -773,8 +773,8 @@ begin
 			dataIH => dataIH,
 			RegisterState => RegisterState,
 			
-			readData1 => ReadData1,
-			readData2 => ReadData2
+			ReadData1 => ReadData1,
+			ReadData2 => ReadData2
 		);
 		
 	u7 : ImmeExtendUnit
