@@ -5,17 +5,185 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1082</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fontRom</arg>&gt;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/cpu</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/cpu.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1135</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/cpu/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/cpu.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ALU</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ALU.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ALU/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ALU.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ALUMuxA</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ALUMuxA.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ALUMuxA/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ALUMuxA.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ALUMuxB</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxB.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ALUMuxB.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ALUMuxB/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxB.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ALUMuxB.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/clock</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/clock.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/clock/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/clock.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Controller</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/Controller.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/Controller.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Controller/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/Controller.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/Controller.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ExeMemRegisters</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ExeMemRegisters.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ExeMemRegisters.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ExeMemRegisters/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ExeMemRegisters.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ExeMemRegisters.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ForwardingUnit</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ForwardingUnit.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ForwardingUnit.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ForwardingUnit/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ForwardingUnit.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ForwardingUnit.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/HazardDetectionUnit</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/HazardDetectionUnit.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/HazardDetectionUnit/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/HazardDetectionUnit.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/IdExeRegisters</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/IdExeRegisters.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/IdExeRegisters.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/IdExeRegisters/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/IdExeRegisters.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/IdExeRegisters.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/IfIdRegisters</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/IfIdRegisters.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/IfIdRegisters/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/IfIdRegisters.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ImmeExtendUnit</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ImmeExtendUnit.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ImmeExtendUnit.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ImmeExtendUnit/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ImmeExtendUnit.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ImmeExtendUnit.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/dcm</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/dcm.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/dcm/BEHAVIORAL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/dcm.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/fontRom</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ipcore_dir/fontRom.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ipcore_dir/fontRom.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/fontRom/fontRom_a</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ipcore_dir/fontRom.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ipcore_dir/fontRom.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MemoryUnit</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/MemoryUnit.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MemoryUnit.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MemoryUnit/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/MemoryUnit.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MemoryUnit.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MemWbRegisters</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MemWbRegisters.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MemWbRegisters/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MemWbRegisters.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MemWriteDataMux</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/MemWriteDataMux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MemWriteDataMux.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MemWriteDataMux/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/MemWriteDataMux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MemWriteDataMux.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MFPCMux</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MFPCMux.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MFPCMux/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MFPCMux.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/PCBranchAdder</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/PCBranchAdder.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCBranchAdder.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/PCBranchAdder/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/PCBranchAdder.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCBranchAdder.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/PCIncrementer</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/PCIncrementer.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCIncrementer.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/PCIncrementer/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/PCIncrementer.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCIncrementer.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/PCMux</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCMux.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/PCMux/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCMux.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/PCRegister</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCRegister.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/PCRegister/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCRegister.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/RdMux</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/RdMux.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/RdMux/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/RdMux.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ReadReg1Mux</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg1Mux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ReadReg1Mux.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ReadReg1Mux/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg1Mux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ReadReg1Mux.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ReadReg2MUX</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ReadReg2Mux.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ReadReg2MUX/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ReadReg2Mux.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Registers</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/Registers.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/Registers.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Registers/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/Registers.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/Registers.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/StructConflictUnit</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/StructConflictUnit.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/StructConflictUnit.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/StructConflictUnit/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/StructConflictUnit.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/StructConflictUnit.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/VGA_Controller</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/VGA_Controller.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/VGA_Controller.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/VGA_Controller/behave</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/thinkpad/Desktop/resolution/cpu/VGA_Controller.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/VGA_Controller.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1082</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fontRom</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1135</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;opt&gt;</arg>
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1172</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1172</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1192</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/yjn/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1192</arg>: Mux is complete : default of case is discarded
 </msg>
 
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_addr</arg>&gt; in unit &lt;<arg fmt="%s" index="2">MemoryUnit</arg>&gt; has a constant value of <arg fmt="%s" index="3">000000000000000000</arg> during circuit operation. The register is replaced by logic.
@@ -72,9 +240,6 @@
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_data&lt;8&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">MemoryUnit</arg>&gt; has a constant value of <arg fmt="%s" index="3">Z</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd</arg>&quot; line <arg fmt="%d" index="2">53</arg>: Mux is complete : default of case is discarded
-</msg>
-
 <msg type="info" file="Xst" num="2561" delta="old" >Always blocking tristate driving signal &lt;<arg fmt="%s" index="1">ram1_data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">MemoryUnit</arg>&gt; is removed.
 </msg>
 
@@ -99,7 +264,7 @@
 <msg type="info" file="Xst" num="2561" delta="old" >Always blocking tristate driving signal &lt;<arg fmt="%s" index="1">ram1_data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">MemoryUnit</arg>&gt; is removed.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">21</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">controllerOut</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">22</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">controllerOut</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
 <msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
@@ -340,54 +505,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">ram2AddrOutput_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">u17</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">1</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">2</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">3</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">4</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">5</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">6</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">7</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">8</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">9</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">10</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">11</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">12</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">13</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">14</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">15</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">flash_addr</arg>&lt;<arg fmt="%d" index="2">22</arg>:<arg fmt="%d" index="3">17</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">MemoryUnit</arg>&gt;.
 </msg>
 
@@ -485,54 +602,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LPM_LATCH_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;2&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_1</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_2</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_3</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_4</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_5</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_6</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_7</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_8</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_9</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_10</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_11</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_12</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_13</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_14</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">ReadData2_15</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">Registers</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u17/ram2AddrOutput_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
 </msg>
 
@@ -586,10 +655,10 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">bt_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGA_Controller</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;bt_1&gt; &lt;bt_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">u8/MemReadOut</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;u8/WBSrcOut&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">u8/MemReadOut</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;u8/WBSrcOut&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">u8/ImmeOut_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;u8/ImmeOut_14&gt; &lt;u8/ImmeOut_13&gt; &lt;u8/ImmeOut_12&gt; &lt;u8/ImmeOut_11&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">u8/ImmeOut_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;u8/ImmeOut_14&gt; &lt;u8/ImmeOut_13&gt; &lt;u8/ImmeOut_12&gt; &lt;u8/ImmeOut_11&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">u13/ExeMemMemRead</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;u13/ExeMemWBSrc&gt; </arg>
