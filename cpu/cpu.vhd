@@ -340,50 +340,50 @@ architecture Behavioral of cpu is
 	end component;
 	
 	--ID/EX阶段寄存器
-	component IdExRegisters
+	component IdExeRegisters
 	port(
-		clk : in std_logic;
 		rst : in std_logic;
+		clk : in std_logic;
 		flashFinished : in std_logic;
-		LW_IdExFlush : in std_logic;		--LW数据冲突用
-		Branch_IdExFlush : in std_logic;	--跳转时用
-		Jump_IdExFlush : in std_logic;	--JR跳转时用
-		SW_IdExFlush : in std_logic;		--SW结构冲突用
+		IdExeFlush_LW : in std_logic;		            --LW数据冲突用
+		IdExeFlush_StructConflict : in std_logic;		--SW结构冲突用
+		IdExeFlush_Jump : in std_logic;
+		IdExeFlush_Branch : in std_logic;
 		
-		PCIn : in std_logic_vector(15 downto 0);
-		rdIn : in std_logic_vector(3 downto 0);		--目的寄存器："0xxx"-R0~R7,"1000"-SP,"1001"-IH,"1010"-T,"1110"-没有目的寄存器
-		Reg1In : in std_logic_vector(3 downto 0);		--源寄存器1："0xxx"-R0~R7,"1000"-SP,"1001"-IH,"1010"-T,"1111"-没有源寄存器1
-		Reg2In : in std_logic_vector(3 downto 0);		--源寄存器2："0xxx"-R0~R7,"1111"-没有源寄存器2
-		ALUSrcBIn : in std_logic;							--控制信号ALUSrcB：'0'-Reg2,'1'-imme
-		ReadData1In : in std_logic_vector(15 downto 0);	--源寄存器1的值
-		ReadData2In : in std_logic_vector(15 downto 0);	--源寄存器2的值
-		immeIn : in std_logic_vector(15 downto 0);		--扩展后的立即数
+		RegWriteIn : in std_logic;
+		WBSrcIn : in std_logic;
+		MemWriteIn : in std_logic;
+		MemReadIn : in std_logic;
+		isMFPCIn : in std_logic;
+		isJumpIn : in std_logic;
+		ALUOpIn : in std_logic_vector(3 downto 0);
+		ALUSrcBIsImmeIn : in std_logic;
 		
-		MFPCIn : in std_logic;
-		regWriteIn : in std_logic;
-		memWriteIn : in std_logic;
-		memReadIn : in std_logic;
-		memToRegIn : in std_logic;
-		jumpIn : in std_logic;
-		ALUOpIn : in std_logic_vector(3 downto 0);		--Controller生成的控制信号
+		PCPlusOneIn : in std_logic_vector(15 downto 0);
+		ReadReg1In : in std_logic_vector(3 downto 0);		
+		ReadReg2In : in std_logic_vector(3 downto 0);
+		ReadData1In : in std_logic_vector(15 downto 0);	
+		ReadData2In : in std_logic_vector(15 downto 0);			
+		ImmeIn : in std_logic_vector(15 downto 0);	
+		WriteRegIn : in std_logic_vector(3 downto 0);
 		
-	
-		PCOut : out std_logic_vector(15 downto 0);
-		rdOut : out std_logic_vector(3 downto 0);
-		Reg1Out : out std_logic_vector(3 downto 0);
-		Reg2Out : out std_logic_vector(3 downto 0);
-		ALUSrcBOut : out std_logic;
-		ReadData1Out : out std_logic_vector(15 downto 0);
+		
+		RegWriteOut : out std_logic;
+		WBSrcOut : out std_logic;
+		MemWriteOut : out std_logic;
+		MemReadOut : out std_logic;
+		isMFPCOut : out std_logic;
+		isJumpOut : out std_logic;
+		ALUOpOut : out std_logic_vector(3 downto 0);
+		ALUSrcBIsImmeOut : out std_logic;
+		
+		PCPlusOneOut : out std_logic_vector(15 downto 0);
+		ReadReg1Out : out std_logic_vector(3 downto 0);		
+		ReadReg2Out : out std_logic_vector(3 downto 0);
+		ReadData1Out : out std_logic_vector(15 downto 0);	
 		ReadData2Out : out std_logic_vector(15 downto 0);			
-		immeOut : out std_logic_vector(15 downto 0);
-		
-		MFPCOut : out std_logic;
-		regWriteOut : out std_logic;
-		memWriteOut : out std_logic;
-		memReadOut : out std_logic;
-		memToRegOut : out std_logic;
-		jumpOut : out std_logic;
-		ALUOpOut : out std_logic_vector(3 downto 0)
+		ImmeOut : out std_logic_vector(15 downto 0);	
+		WriteRegOut : out std_logic_vector(3 downto 0)
 	);
 	end component;
 	
@@ -776,50 +776,51 @@ begin
 			 immeOut => extendedImme
 		);
 		
-	u8 : IdExRegisters
+	u8 : IdExeRegisters
 	port map(
-			clk => clk_3,
 			rst => rst,
+			clk => clk_3,
 			flashFinished => flashFinished,
 			
-			LW_IdExFlush => LW_IdExFlush,
-			Branch_IdExFlush => BranchJudge,
-			Jump_IdExFlush => IdExJump,
-			SW_IdExFlush => SW_IdExFlush,
+			IdExeFlush_LW => LW_IdExFlush,
+			IdExeFlush_StructConflict => SW_IdExFlush,
+			IdExeFlush_Jump => IdExJump,
+			IdExeFlush_Branch => BranchJudge,
+					
+			RegWriteIn => controllerOut(20),
+			WBSrcIn => controllerOut(2),
+			MemWriteIn => controllerOut(3),
+			MemReadIn => controllerOut(4),
+			isMFPCIn => controllerOut(0),
+			isJumpIn => controllerOut(1),
+			ALUOpIn => controllerOut(8 downto 5),
+			ALUSrcBIsImmeIn => controllerOut(9),
 			
-			PCIn => IfIdPC,
-			rdIn => rdMuxOut,
-			Reg1In => ReadReg1MuxOut,
-			Reg2In => ReadReg2MuxOut,
-			ALUSrcBIn => controllerOut(9),
+			PCPlusOneIn => IfIdPC,
+			ReadReg1In => ReadReg1MuxOut,
+			ReadReg2In => ReadReg2MuxOut,
 			ReadData1In => ReadData1,
 			ReadData2In => ReadData2,
-			immeIn => extendedImme,
-			
-			MFPCIn => controllerOut(0),
-			regWriteIn => controllerOut(20),
-			memWriteIn => controllerOut(3),
-			memReadIn => controllerOut(4),
-			memToRegIn => controllerOut(2),
-			jumpIn => controllerOut(1),
-			ALUOpIn => controllerOut(8 downto 5),
+			ImmeIn => extendedImme,
+			WriteRegIn => rdMuxOut,
 		
-			PCOut => IdExPC,
-			rdOut => IdExRd,
-			Reg1Out => IdExReg1,
-			Reg2Out => IdExReg2,
-			ALUSrcBOut => IdExALUSrcB,
+		
+			RegWriteOut => IdExRegWrite,
+			WBSrcOut => IdExMemToReg,
+			MemWriteOut => IdExMemWrite,
+			MemReadOut => IdExMemRead,
+			isMFPCOut => IdExMFPC,
+			isJumpOut => IdExJump,
+			ALUOpOut => IdExALUOp,
+			ALUSrcBIsImmeOut => IdExALUSrcB,
+			
+			PCPlusOneOut => IdExPC,
+			ReadReg1Out => IdExReg1,
+			ReadReg2Out => IdExReg2,			
 			ReadData1Out => IdExReadData1,
 			ReadData2Out => IdExReadData2,
-			immeOut => IdExImme,
-			
-			MFPCOut => IdExMFPC,
-			regWriteOut => IdExRegWrite,
-			memWriteOut => IdExMemWrite,
-			memReadOut => IdExMemRead,
-			memToRegOut => IdExMemToReg,
-			jumpOut => IdExJump,
-			ALUOpOut => IdExALUOp
+			ImmeOut => IdExImme,	
+			WriteRegOut => IdExRd		
 		);
 		
 	u9 : ALUMuxA

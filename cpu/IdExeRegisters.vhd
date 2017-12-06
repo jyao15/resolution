@@ -34,6 +34,7 @@ entity IdExeRegisters is
 		rst : in std_logic;
 		clk : in std_logic;
 		flashFinished : in std_logic;
+		
 		IdExeFlush_LW : in std_logic;		            --LW数据冲突用
 		IdExeFlush_StructConflict : in std_logic;		--SW结构冲突用
 		IdExeFlush_Jump : in std_logic;
@@ -103,8 +104,9 @@ begin
 			
 		elsif (rising_edge(clk)) then
 			if(flashFinished = '1') then
-				if ((IdExeFlush_LW = '1') or (IdExeFlush_StructConflict = '1') or (IdExeFlush_Jump = '1')
-						or (IdExeFlush_Branch = '1')) then
+				if ((IdExeFlush_LW = '1') or (IdExeFlush_StructConflict = '1') or (IdExeFlush_Jump = '1') or
+						(IdExeFlush_Branch = '1')) then
+					
 					RegWriteOut <= '0';
 					WBSrcOut <= '0';
 					MemWriteOut <= '0';

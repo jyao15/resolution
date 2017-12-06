@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.49 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.48 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.50 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.48 secs
  
 --> Reading design: cpu.prj
 
@@ -109,8 +109,7 @@ Architecture behavioral of Entity pcregister is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCIncrementer.vhd" in Library work.
 Architecture behavioral of Entity pcincrementer is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd" in Library work.
-Entity <ifidregisters> compiled.
-Entity <ifidregisters> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity ifidregisters is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd" in Library work.
 Architecture behavioral of Entity rdmux is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/Controller.vhd" in Library work.
@@ -119,8 +118,9 @@ Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/Registers.vhd" in 
 Architecture behavioral of Entity registers is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ImmeExtendUnit.vhd" in Library work.
 Architecture behavioral of Entity immeextendunit is up to date.
-Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/IdExRegisters.vhd" in Library work.
-Architecture behavioral of Entity idexregisters is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/IdExeRegisters.vhd" in Library work.
+Entity <IdExeRegisters> compiled.
+Entity <IdExeRegisters> (Architecture <Behavioral>) compiled.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd" in Library work.
 Architecture behavioral of Entity alumuxa is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxB.vhd" in Library work.
@@ -182,7 +182,7 @@ Analyzing hierarchy for entity <Registers> in library <work> (architecture <beha
 
 Analyzing hierarchy for entity <ImmeExtendUnit> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <IdExRegisters> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <IdExeRegisters> in library <work> (architecture <Behavioral>).
 
 Analyzing hierarchy for entity <ALUMuxA> in library <work> (architecture <behavioral>).
 
@@ -225,11 +225,11 @@ Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1081: Instantiating black box module <fontRom>.
-WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1134: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1082: Instantiating black box module <fontRom>.
+WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1135: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <opt>
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1171: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1191: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1172: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1192: Mux is complete : default of case is discarded
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <PCRegister> in library <work> (Architecture <behavioral>).
@@ -253,8 +253,8 @@ Entity <Registers> analyzed. Unit <Registers> generated.
 Analyzing Entity <ImmeExtendUnit> in library <work> (Architecture <behavioral>).
 Entity <ImmeExtendUnit> analyzed. Unit <ImmeExtendUnit> generated.
 
-Analyzing Entity <IdExRegisters> in library <work> (Architecture <behavioral>).
-Entity <IdExRegisters> analyzed. Unit <IdExRegisters> generated.
+Analyzing Entity <IdExeRegisters> in library <work> (Architecture <Behavioral>).
+Entity <IdExeRegisters> analyzed. Unit <IdExeRegisters> generated.
 
 Analyzing Entity <ALUMuxA> in library <work> (Architecture <behavioral>).
 Entity <ALUMuxA> analyzed. Unit <ALUMuxA> generated.
@@ -451,26 +451,26 @@ INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and 
 Unit <ImmeExtendUnit> synthesized.
 
 
-Synthesizing Unit <IdExRegisters>.
-    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/IdExRegisters.vhd".
-    Found 4-bit register for signal <Reg2Out>.
-    Found 1-bit register for signal <memWriteOut>.
+Synthesizing Unit <IdExeRegisters>.
+    Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/IdExeRegisters.vhd".
+    Found 1-bit register for signal <MemWriteOut>.
+    Found 4-bit register for signal <ReadReg1Out>.
     Found 4-bit register for signal <ALUOpOut>.
-    Found 1-bit register for signal <memToRegOut>.
-    Found 1-bit register for signal <jumpOut>.
     Found 16-bit register for signal <ReadData1Out>.
-    Found 16-bit register for signal <PCOut>.
-    Found 4-bit register for signal <Reg1Out>.
-    Found 4-bit register for signal <rdOut>.
-    Found 1-bit register for signal <MFPCOut>.
-    Found 16-bit register for signal <immeOut>.
-    Found 1-bit register for signal <ALUSrcBOut>.
-    Found 1-bit register for signal <regWriteOut>.
-    Found 1-bit register for signal <memReadOut>.
+    Found 4-bit register for signal <WriteRegOut>.
+    Found 1-bit register for signal <isJumpOut>.
+    Found 16-bit register for signal <ImmeOut>.
+    Found 4-bit register for signal <ReadReg2Out>.
+    Found 1-bit register for signal <RegWriteOut>.
+    Found 1-bit register for signal <isMFPCOut>.
+    Found 1-bit register for signal <MemReadOut>.
     Found 16-bit register for signal <ReadData2Out>.
+    Found 1-bit register for signal <ALUSrcBIsImmeOut>.
+    Found 1-bit register for signal <WBSrcOut>.
+    Found 16-bit register for signal <PCPlusOneOut>.
     Summary:
 	inferred  83 D-type flip-flop(s).
-Unit <IdExRegisters> synthesized.
+Unit <IdExeRegisters> synthesized.
 
 
 Synthesizing Unit <ALUMuxA>.
@@ -1476,7 +1476,7 @@ Optimizing unit <Registers> ...
 
 Optimizing unit <ImmeExtendUnit> ...
 
-Optimizing unit <IdExRegisters> ...
+Optimizing unit <IdExeRegisters> ...
 
 Optimizing unit <ALU> ...
 
@@ -1486,8 +1486,8 @@ Optimizing unit <MemWbRegisters> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <u8/memReadOut> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <u8/memToRegOut> 
-INFO:Xst:2261 - The FF/Latch <u8/immeOut_15> in Unit <cpu> is equivalent to the following 4 FFs/Latches, which will be removed : <u8/immeOut_14> <u8/immeOut_13> <u8/immeOut_12> <u8/immeOut_11> 
+INFO:Xst:2261 - The FF/Latch <u8/MemReadOut> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <u8/WBSrcOut> 
+INFO:Xst:2261 - The FF/Latch <u8/ImmeOut_15> in Unit <cpu> is equivalent to the following 4 FFs/Latches, which will be removed : <u8/ImmeOut_14> <u8/ImmeOut_13> <u8/ImmeOut_12> <u8/ImmeOut_11> 
 INFO:Xst:2261 - The FF/Latch <u13/ExeMemMemRead> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <u13/ExeMemWBSrc> 
 Found area constraint ratio of 100 (+ 5) on block cpu, actual ratio is 21.
 FlipFlop u23/y_3 has been replicated 2 time(s)
@@ -1538,8 +1538,8 @@ Cell Usage :
 #      LUT2                        : 205
 #      LUT2_D                      : 5
 #      LUT2_L                      : 5
-#      LUT3                        : 726
-#      LUT3_D                      : 31
+#      LUT3                        : 725
+#      LUT3_D                      : 32
 #      LUT3_L                      : 27
 #      LUT4                        : 1506
 #      LUT4_D                      : 86
@@ -1577,7 +1577,7 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-4 
 
- Number of Slices:                     1533  out of   8672    17%  
+ Number of Slices:                     1532  out of   8672    17%  
  Number of Slice Flip Flops:            651  out of  17344     3%  
  Number of 4 input LUTs:               2836  out of  17344    16%  
  Number of IOs:                         169
@@ -1623,11 +1623,11 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
---------------------------------------+------------------------+-------+
-Control Signal                        | Buffer(FF name)        | Load  |
---------------------------------------+------------------------+-------+
-u1/rst_inv(u8/rdOut_Acst_inv1_INV_0:O)| NONE(u1/nextPC_0)      | 479   |
---------------------------------------+------------------------+-------+
+--------------------------------------------+------------------------+-------+
+Control Signal                              | Buffer(FF name)        | Load  |
+--------------------------------------------+------------------------+-------+
+u1/rst_inv(u8/WriteRegOut_Acst_inv1_INV_0:O)| NONE(u1/nextPC_0)      | 479   |
+--------------------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -1681,11 +1681,11 @@ Timing constraint: Default period analysis for Clock 'u18/count_01'
 -------------------------------------------------------------------------
 Delay:               11.232ns (Levels of Logic = 6)
   Source:            u3/CommandOut_9 (FF)
-  Destination:       u8/regWriteOut (FF)
+  Destination:       u8/ALUOpOut_3 (FF)
   Source Clock:      u18/count_01 rising
   Destination Clock: u18/count_01 rising
 
-  Data Path: u3/CommandOut_9 to u8/regWriteOut
+  Data Path: u3/CommandOut_9 to u8/ALUOpOut_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -1694,9 +1694,9 @@ Delay:               11.232ns (Levels of Logic = 6)
      LUT3:I2->O           34   0.704   1.267  u21/ReadReg1Out<1> (ReadReg1MuxOut<1>)
      LUT4:I3->O            1   0.704   0.424  u15/PCKeep_and000026 (u15/PCKeep_and000026)
      LUT4:I3->O           19   0.704   1.089  u15/PCKeep_and0000139 (IfIdKeep)
-     LUT4:I3->O           82   0.704   1.357  u8/Reg1Out_or00001 (u8/Reg1Out_or0000)
-     LUT2:I1->O            1   0.704   0.000  u8/regWriteOut_mux00011 (u8/regWriteOut_mux0001)
-     FDCE:D                    0.308          u8/regWriteOut
+     LUT4:I3->O           82   0.704   1.357  u8/isJumpOut_or00001 (u8/isJumpOut_or0000)
+     LUT2:I1->O            1   0.704   0.000  u8/isMFPCOut_mux00011 (u8/isMFPCOut_mux0001)
+     FDCE:D                    0.308          u8/isMFPCOut
     ----------------------------------------
     Total                     11.232ns (5.123ns logic, 6.109ns route)
                                        (45.6% logic, 54.4% route)
@@ -1912,11 +1912,11 @@ Delay:               3.095ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 131.00 secs
-Total CPU time to Xst completion: 130.62 secs
+Total CPU time to Xst completion: 131.08 secs
  
 --> 
 
-Total memory usage is 459268 kilobytes
+Total memory usage is 459336 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  120 (   0 filtered)
