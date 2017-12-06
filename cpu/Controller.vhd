@@ -69,11 +69,13 @@ begin
 					controllerOut <= "1001001001011000100000";
 				when "01100" =>
 					if (commandIn(10 downto 8) = "011") then	 --ADDSP
-						controllerOut <= "1101101001011000100000";
+						controllerOut <= "1101100001011000100000";
 					elsif (commandIn(10 downto 8) = "000") then--BTEQZ
 						controllerOut <= "0000011001010100100000";
 					elsif (commandIn(10 downto 8) = "100") then--MTSP
 						controllerOut <= "1101010000000111000000";
+					else
+						controllerOut <= "0000000000000000000000";
 					end if;
 				when "01101" =>		--LI
 					controllerOut <= "1001000001001111100000";
@@ -94,6 +96,8 @@ begin
 						controllerOut <= "1011001110000000100000";
 					elsif (commandIn(1 downto 0) = "11") then --SUBU
 						controllerOut <= "1011001110000001000000";
+					else
+						controllerOut <= "0000000000000000000000";
 					end if;
 				when "11101" =>
 					if (commandIn(4 downto 0) = "01100") then		--AND
@@ -112,12 +116,16 @@ begin
 						controllerOut <= "0000001000000000000010";
 					elsif (commandIn(7 downto 0) = "01000000") then --MFPC
 						controllerOut <= "1001000000000000000001";
+					else
+						controllerOut <= "0000000000000000000000";
 					end if;
 				when "11110" =>
 					if (commandIn(7 downto 0) = "00000000") then 	--MFIH
 						controllerOut <= "1001101000000111000000";
 					elsif (commandIn(7 downto 0) = "00000001") then --MTIH
 						controllerOut <= "1110001000000111000000";
+					else
+						controllerOut <= "0000000000000000000000";
 					end if;
 				when others =>			--Error
 					controllerOut <= "0000000000000000000000";

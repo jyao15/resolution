@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.46 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.48 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.46 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.48 secs
  
 --> Reading design: cpu.prj
 
@@ -113,7 +113,8 @@ Architecture behavioral of Entity ifidregisters is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/RdMux.vhd" in Library work.
 Architecture behavioral of Entity readdstmux is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/Controller.vhd" in Library work.
-Architecture behavioral of Entity controller is up to date.
+Entity <controller> compiled.
+Entity <controller> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/Registers.vhd" in Library work.
 Entity <registers> compiled.
 Entity <registers> (Architecture <behavioral>) compiled.
@@ -158,8 +159,7 @@ Architecture behavioral of Entity writedatamux is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/dcm.vhd" in Library work.
 Architecture behavioral of Entity dcm is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/cpu.vhd" in Library work.
-Entity <cpu> compiled.
-Entity <cpu> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity cpu is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -1397,7 +1397,6 @@ INFO:Xst:2261 - The FF/Latch <tmpRx_0> in Unit <IfIdRegisters> is equivalent to 
 INFO:Xst:2261 - The FF/Latch <tmpRy_2> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_7> <tmpImme_7> 
 INFO:Xst:2261 - The FF/Latch <tmpRy_1> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_6> <tmpImme_6> 
 INFO:Xst:2261 - The FF/Latch <15> in Unit <LPM_LATCH_3> is equivalent to the following 4 FFs/Latches, which will be removed : <14> <13> <12> <11> 
-INFO:Xst:2261 - The FF/Latch <4> in Unit <LPM_LATCH_1> is equivalent to the following FF/Latch, which will be removed : <2> 
 WARNING:Xst:2677 - Node <u17/ram2AddrOutput_15> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <u17/ram2AddrOutput_14> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <u17/ram2AddrOutput_13> of sequential type is unconnected in block <cpu>.
@@ -1406,6 +1405,7 @@ WARNING:Xst:2677 - Node <u17/ram2AddrOutput_11> of sequential type is unconnecte
 WARNING:Xst:2677 - Node <u17/ram2AddrOutput_10> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <u17/ram2AddrOutput_9> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <u17/ram2AddrOutput_8> of sequential type is unconnected in block <cpu>.
+INFO:Xst:2261 - The FF/Latch <controllerOut_2> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <controllerOut_4> 
 WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: result_shift0005<15>.
 
 Optimizing unit <cpu> ...
@@ -1521,21 +1521,21 @@ Design Statistics
 # IOs                              : 169
 
 Cell Usage :
-# BELS                             : 3526
+# BELS                             : 3505
 #      GND                         : 1
 #      INV                         : 35
 #      LUT1                        : 86
-#      LUT2                        : 177
-#      LUT2_D                      : 8
+#      LUT2                        : 167
+#      LUT2_D                      : 9
 #      LUT2_L                      : 2
-#      LUT3                        : 559
-#      LUT3_D                      : 31
+#      LUT3                        : 576
+#      LUT3_D                      : 30
 #      LUT3_L                      : 21
-#      LUT4                        : 1750
-#      LUT4_D                      : 45
+#      LUT4                        : 1732
+#      LUT4_D                      : 44
 #      LUT4_L                      : 98
 #      MUXCY                       : 182
-#      MUXF5                       : 376
+#      MUXF5                       : 367
 #      MUXF6                       : 17
 #      MUXF7                       : 1
 #      VCC                         : 1
@@ -1569,9 +1569,9 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-4 
 
- Number of Slices:                     1521  out of   8672    17%  
+ Number of Slices:                     1517  out of   8672    17%  
  Number of Slice Flip Flops:            663  out of  17344     3%  
- Number of 4 input LUTs:               2812  out of  17344    16%  
+ Number of 4 input LUTs:               2800  out of  17344    16%  
  Number of IOs:                         169
  Number of bonded IOBs:                 169  out of    250    67%  
  Number of GCLKs:                         7  out of     24    29%  
@@ -1595,18 +1595,18 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
---------------------------------------------------------+---------------------------------+-------+
-Clock Signal                                            | Clock buffer(FF name)           | Load  |
---------------------------------------------------------+---------------------------------+-------+
-led_0_OBUF                                              | NONE(u26/WriteDataOut_0)        | 34    |
-clk1(clkIn_clock1:O)                                    | BUFG(*)(u17/flashstate_FSM_FFd1)| 353   |
-u18/count_01                                            | BUFG                            | 190   |
-u23/CLK_21                                              | BUFG                            | 35    |
-clk_50                                                  | IBUFG                           | 1     |
-u5/controllerOut_not00011(u5/controllerOut_not0001100:O)| BUFG(*)(u5/controllerOut_21)    | 21    |
-u7/sign_or0000(u7/sign_or00001:O)                       | NONE(*)(u7/immeOut_15)          | 13    |
-u8/jumpOut                                              | NONE(u16/PCOut_15)              | 16    |
---------------------------------------------------------+---------------------------------+-------+
+------------------------------------------------------+---------------------------------+-------+
+Clock Signal                                          | Clock buffer(FF name)           | Load  |
+------------------------------------------------------+---------------------------------+-------+
+led_0_OBUF                                            | NONE(u26/WriteDataOut_0)        | 34    |
+clk1(clkIn_clock1:O)                                  | BUFG(*)(u17/flashstate_FSM_FFd1)| 353   |
+u18/count_01                                          | BUFG                            | 190   |
+u23/CLK_21                                            | BUFG                            | 35    |
+clk_50                                                | IBUFG                           | 1     |
+u5/controllerOut_not00011(u5/controllerOut_not00011:O)| BUFG(*)(u5/controllerOut_21)    | 21    |
+u7/sign_or0000(u7/sign_or00001:O)                     | NONE(*)(u7/immeOut_15)          | 13    |
+u8/jumpOut                                            | NONE(u16/PCOut_15)              | 16    |
+------------------------------------------------------+---------------------------------+-------+
 (*) These 3 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -1700,7 +1700,7 @@ Delay:               7.889ns (Levels of Logic = 11)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'u18/count_01'
   Clock period: 21.852ns (frequency: 45.763MHz)
-  Total number of paths / destination ports: 1685741 / 222
+  Total number of paths / destination ports: 1675679 / 222
 -------------------------------------------------------------------------
 Delay:               21.852ns (Levels of Logic = 16)
   Source:            u8/Reg2Out_3 (FF)
@@ -1719,13 +1719,13 @@ Delay:               21.852ns (Levels of Logic = 16)
      LUT3:I2->O            1   0.704   0.000  u10/Mmux_BsrcOut_mux00011239 (u10/BsrcOut_mux0001<14>)
      LD_1:D->Q             6   0.452   0.844  u10/BsrcOut_14 (u10/BsrcOut_14)
      LUT4:I0->O            1   0.704   0.455  u12/result_cmp_eq000650 (u12/result_cmp_eq000650)
-     LUT4:I2->O            1   0.704   0.424  u12/result_cmp_eq000663_SW0_SW0 (N1512)
-     LUT4:I3->O            1   0.704   0.424  u12/result_cmp_eq000663_SW0 (N1342)
+     LUT4:I2->O            1   0.704   0.424  u12/result_cmp_eq000663_SW0_SW0 (N1510)
+     LUT4:I3->O            1   0.704   0.424  u12/result_cmp_eq000663_SW0 (N1354)
      LUT4_D:I3->O         12   0.704   1.040  u12/result_cmp_eq000663 (u12/result_cmp_eq0006)
-     LUT2_D:I1->LO         1   0.704   0.104  u12/result<0>51 (N1799)
+     LUT2_D:I1->LO         1   0.704   0.104  u12/result<0>51 (N1784)
      LUT4:I3->O            1   0.704   0.455  u12/result<15>10 (u12/result<15>10)
      LUT4_L:I2->LO         1   0.704   0.104  u12/result<15>25 (u12/result<15>25)
-     LUT4:I3->O            1   0.704   0.424  u12/result<15>153_SW0 (N505)
+     LUT4:I3->O            1   0.704   0.424  u12/result<15>153_SW0 (N521)
      LUT4_D:I3->O          2   0.704   0.451  u12/result<15>153 (ALUResult<15>)
      LUT4_D:I3->O         81   0.704   1.357  u8/Reg1Out_or00001 (u8/Reg1Out_or0000)
      LUT2:I1->O            1   0.704   0.000  u8/memWriteOut_mux00011 (u8/memWriteOut_mux0001)
@@ -1737,7 +1737,7 @@ Delay:               21.852ns (Levels of Logic = 16)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'u23/CLK_21'
   Clock period: 15.821ns (frequency: 63.207MHz)
-  Total number of paths / destination ports: 9534 / 56
+  Total number of paths / destination ports: 9545 / 56
 -------------------------------------------------------------------------
 Delay:               15.821ns (Levels of Logic = 13)
   Source:            u23/y_4 (FF)
@@ -1750,18 +1750,18 @@ Delay:               15.821ns (Levels of Logic = 13)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q           212   0.591   1.494  u23/y_4 (u23/y_4)
-     LUT3:I0->O            1   0.704   0.499  u23/romAddr_mux0053<7>5123_SW0 (N378)
-     LUT3_D:I1->LO         1   0.704   0.135  u23/romAddr_mux0053<7>5123 (N1836)
+     LUT3:I0->O            1   0.704   0.499  u23/romAddr_mux0053<7>5123_SW0 (N394)
+     LUT3_D:I1->LO         1   0.704   0.135  u23/romAddr_mux0053<7>5123 (N1820)
      LUT4:I2->O           18   0.704   1.147  u23/romAddr_mux0053<7>5154 (u23/romAddr_mux0053<7>_bdd8)
      LUT4:I1->O            2   0.704   0.451  u23/romAddr_mux0053<7>14496 (u23/romAddr_mux0053<7>14496)
      LUT4:I3->O            4   0.704   0.587  u23/romAddr_mux0053<7>144137 (u23/romAddr_mux0053<7>_bdd278)
-     MUXF5:S->O            3   0.739   0.706  u23/romAddr_mux0053<9>1272_SW1 (N711)
-     LUT4:I0->O            1   0.704   0.000  u23/romAddr_mux0053<9>1226_SW0_F (N1172)
-     MUXF5:I0->O           1   0.321   0.424  u23/romAddr_mux0053<9>1226_SW0 (N897)
+     MUXF5:S->O            3   0.739   0.706  u23/romAddr_mux0053<9>1272_SW1 (N727)
+     LUT4:I0->O            1   0.704   0.000  u23/romAddr_mux0053<9>1226_SW0_F (N1188)
+     MUXF5:I0->O           1   0.321   0.424  u23/romAddr_mux0053<9>1226_SW0 (N913)
      LUT4:I3->O            1   0.704   0.455  u23/romAddr_mux0053<9>1316 (u23/romAddr_mux0053<9>1316)
-     LUT3:I2->O            1   0.704   0.000  u23/romAddr_mux0053<9>1365_F (N1634)
+     LUT3:I2->O            1   0.704   0.000  u23/romAddr_mux0053<9>1365_F (N1630)
      MUXF5:I0->O           1   0.321   0.499  u23/romAddr_mux0053<9>1365 (u23/romAddr_mux0053<9>1365)
-     LUT3_L:I1->LO         1   0.704   0.104  u23/romAddr_mux0053<9>1456_SW0 (N1490)
+     LUT3_L:I1->LO         1   0.704   0.104  u23/romAddr_mux0053<9>1456_SW0 (N1488)
      LUT4:I3->O            1   0.704   0.000  u23/romAddr_mux0053<9>1456 (u23/romAddr_mux0053<9>)
      FDE:D                     0.308          u23/romAddr_9
     ----------------------------------------
@@ -1816,7 +1816,7 @@ Delay:               3.906ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk1'
   Total number of paths / destination ports: 171 / 142
 -------------------------------------------------------------------------
-Offset:              5.291ns (Levels of Logic = 3)
+Offset:              5.290ns (Levels of Logic = 3)
   Source:            rst (PAD)
   Destination:       u17/Mtrien_ram2_data (FF)
   Destination Clock: clk1 rising
@@ -1825,12 +1825,12 @@ Offset:              5.291ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            47   1.218   1.442  rst_IBUF (rst_IBUF)
+     IBUF:I->O            45   1.218   1.441  rst_IBUF (rst_IBUF)
      LUT3:I0->O            1   0.704   0.000  u17/Mtridata_ram2_data_and0000511 (u17/Mtridata_ram2_data_and000051)
      MUXF5:I1->O          17   0.321   1.051  u17/Mtridata_ram2_data_and000051_f5 (u17/Mtridata_ram2_data_and0000)
      FDE:CE                    0.555          u17/Mtridata_ram2_data_0
     ----------------------------------------
-    Total                      5.291ns (2.798ns logic, 2.493ns route)
+    Total                      5.290ns (2.798ns logic, 2.492ns route)
                                        (52.9% logic, 47.1% route)
 
 =========================================================================
@@ -1850,12 +1850,12 @@ Offset:              12.162ns (Levels of Logic = 11)
      LUT3:I1->O            1   0.704   0.000  u23/Mmux_romData_mux0003_4_f51 (u23/Mmux_romData_mux0003_4_f51)
      MUXF5:I0->O           6   0.321   0.704  u23/Mmux_romData_mux0003_4_f5 (u23/Mmux_romData_mux0003_4_f5)
      LUT4:I2->O            3   0.704   0.610  u23/bt_mux0000<1>311 (u23/bt_mux0000<1>_bdd65)
-     LUT3:I1->O            1   0.704   0.499  u23/bt_mux0000<1>1312_SW0 (N1045)
+     LUT3:I1->O            1   0.704   0.499  u23/bt_mux0000<1>1312_SW0 (N1061)
      LUT4:I1->O            1   0.704   0.424  u23/bt_mux0000<1>1351 (u23/bt_mux0000<1>1351)
      LUT4:I3->O            1   0.704   0.595  u23/bt_mux0000<1>1479 (u23/bt_mux0000<1>1479)
-     LUT4:I0->O            1   0.704   0.000  u23/bt_mux0000<1>1895_F (N1154)
+     LUT4:I0->O            1   0.704   0.000  u23/bt_mux0000<1>1895_F (N1170)
      MUXF5:I0->O           1   0.321   0.455  u23/bt_mux0000<1>1895 (u23/bt_mux0000<1>1895)
-     LUT3:I2->O            1   0.704   0.499  u23/bt_mux0000<1>1939_SW0 (N963)
+     LUT3:I2->O            1   0.704   0.499  u23/bt_mux0000<1>1939_SW0 (N979)
      LUT4:I1->O            1   0.704   0.424  u23/bt_mux0000<1>11463 (u23/bt_mux0000<1>11463)
      LUT4:I3->O            1   0.704   0.000  u23/bt_mux0000<1>11737 (u23/bt_mux0000<1>)
      FDCE:D                    0.308          u23/bt_0
@@ -1865,26 +1865,24 @@ Offset:              12.162ns (Levels of Logic = 11)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'u5/controllerOut_not00011'
-  Total number of paths / destination ports: 48 / 21
+  Total number of paths / destination ports: 27 / 21
 -------------------------------------------------------------------------
-Offset:              7.584ns (Levels of Logic = 5)
+Offset:              4.997ns (Levels of Logic = 3)
   Source:            rst (PAD)
-  Destination:       u5/controllerOut_18 (LATCH)
+  Destination:       u5/controllerOut_21 (LATCH)
   Destination Clock: u5/controllerOut_not00011 falling
 
-  Data Path: rst to u5/controllerOut_18
+  Data Path: rst to u5/controllerOut_21
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            47   1.218   1.442  rst_IBUF (rst_IBUF)
-     LUT2:I0->O            3   0.704   0.706  u5/controllerOut_mux0010<10>26 (u5/N371)
-     LUT4:I0->O            1   0.704   0.499  u5/controllerOut_mux0010<18>79 (u5/controllerOut_mux0010<18>79)
-     LUT4:I1->O            1   0.704   0.595  u5/controllerOut_mux0010<18>112_SW0 (N1444)
-     LUT4:I0->O            1   0.704   0.000  u5/controllerOut_mux0010<18>112 (u5/controllerOut_mux0010<18>)
-     LD:D                      0.308          u5/controllerOut_18
+     IBUF:I->O            45   1.218   1.441  rst_IBUF (rst_IBUF)
+     LUT4:I0->O            2   0.704   0.622  u5/controllerOut_mux0011<21>3 (u5/N12)
+     LUT4:I0->O            1   0.704   0.000  u5/controllerOut_mux0011<15>23 (u5/controllerOut_mux0011<15>)
+     LD:D                      0.308          u5/controllerOut_15
     ----------------------------------------
-    Total                      7.584ns (4.342ns logic, 3.242ns route)
-                                       (57.3% logic, 42.7% route)
+    Total                      4.997ns (2.934ns logic, 2.063ns route)
+                                       (58.7% logic, 41.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk1'
@@ -1947,12 +1945,12 @@ Delay:               3.095ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 50.00 secs
-Total CPU time to Xst completion: 49.65 secs
+Total REAL time to Xst completion: 53.00 secs
+Total CPU time to Xst completion: 52.92 secs
  
 --> 
 
-Total memory usage is 553660 kilobytes
+Total memory usage is 553692 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  120 (   0 filtered)
