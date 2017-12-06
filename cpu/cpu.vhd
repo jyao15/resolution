@@ -831,11 +831,10 @@ begin
 	u9 : ALUMuxA
 		port map(
 			ForwardA => ForwardA,
-			
 			readData1 => IdExReadData1,
 			ExeMemALUResult => ExMemALUResult,
 			MemWbWriteData => dataToWB,
-			
+
 			ALUSrcA => AMuxOut
 		);
 		
@@ -843,7 +842,6 @@ begin
 	port map(
 			ForwardB => ForwardB,
 			ALUSrcBIsImme => IdExALUSrcB,
-			
 			readData2 => IdExReadData2,
 			imme => IdExImme,
 			ExeMemALUResult => ExMemALUResult,
@@ -923,23 +921,21 @@ begin
 	
 	u15 : HazardDetectionUnit
 	port map(
-			IdExeWriteReg => IdExRd,
 			IdExeMemRead => IdExMemRead,
-			
+			IdExeWriteReg => IdExRd,
 			readReg1 => ReadReg1MuxOut,
 			readReg2 => ReadReg2MuxOut,
 			
+			IdExeFlush_LW => LW_IdExFlush,
 			PCKeep => PCKeep,
-			IfIdKeep_LW => IfIdKeep,
-			IdExeFlush_LW => LW_IdExFlush
+			IfIdKeep_LW => IfIdKeep
 		);
 		
 	u16 : PCMux
 	port map( 
 			PCPlusOne => PCAddOne,
-			PCAfterBranch => PCBranchAdderOut,
 			ALUResult => AMuxOut,
-			
+			PCAfterBranch => PCBranchAdderOut,	
 			isjump => IdExJump,
 			willBranch => BranchJudge,
 			PCRollback => PCRollback,
@@ -1102,7 +1098,6 @@ begin
 	u26 : MemWriteDataMux 
 	port map(
 			ForwardSW => ForwardSW,
-			
 			readData2 => IdExReadData2,
 			ExeMemALUResult => ExMemALUResult,
 			MemWbResult => dataToWB,
