@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    08:53:17 11/21/2016 
+-- Create Date:    01:59:14 11/30/2017 
 -- Design Name: 
 -- Module Name:    IfIdRegisters - Behavioral 
 -- Project Name: 
@@ -30,75 +30,76 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity IfIdRegisters is
-	--IF/ID阶段寄存器
 	port(
-		rst : in std_logic;
-		clk : in std_logic;
+		rst: in std_logic;
+		clk: in std_logic;
 		flashFinished : in std_logic;
-		commandIn : in std_logic_vector(15 downto 0);
-		PCIn : in std_logic_vector(15 downto 0); 
-		IfIdKeep : in std_logic;		--LW数据冲突用
-		Branch_IfIdFlush : in std_logic;		--跳转时用
-		Jump_IfIdFlush : in std_logic;		--JR跳转时用
-		SW_IfIdFlush : in std_logic;			--SW结构冲突用
+		isJump: in std_logic;
+		willBranch: in std_logic;
+		IfIdFlush_StructConflict: in std_logic;
+		IfIdKeep_LW: in std_logic;
+		PCPlusOneIn: in std_logic_vector(15 downto 0);
+		CommandIn: in std_logic_vector(15 downto 0);
 		
-		rx : out std_logic_vector(2 downto 0);		--Command[10:8]
-		ry : out std_logic_vector(2 downto 0);		--Command[7:5]
-		rz : out std_logic_vector(2 downto 0);		--Command[4:2]
-		imme_10_0 : out std_logic_vector(10 downto 0);	--Command[10:0]
-		commandOut : out std_logic_vector(15 downto 0);
-		PCOut : out std_logic_vector(15 downto 0)  --PC+1用于MFPC指令的EXE段
+		PCPlusOneOut: out std_logic_vector(15 downto 0);
+		CommandOut: out std_logic_vector(15 downto 0);
+		command10to8: out std_logic_vector(2 downto 0);
+		command7to5: out std_logic_vector(2 downto 0);
+		command4to2: out std_logic_vector(2 downto 0);
+		command10to0: out std_logic_vector(10 downto 0)
 	);
 end IfIdRegisters;
 
 architecture Behavioral of IfIdRegisters is
-	signal tmpRx : std_logic_vector(2 downto 0);
-	signal tmpRy : std_logic_vector(2 downto 0);
-	signal tmpRz : std_logic_vector(2 downto 0);
-	signal tmpImme : std_logic_vector(10 downto 0);
-	signal tmpCommand : std_logic_vector(15 downto 0);
-	signal tmpPC : std_logic_vector(15 downto 0);
-	
+
 begin
-	rx <= tmpRx;
-	ry <= tmpRy;
-	rz <= tmpRz;
-	imme_10_0 <= tmpImme;
-	commandOut <= tmpCommand;
-	PCOut <= tmpPC;
+
 	process(rst, clk)
-	begin 
-		if (rst = '0') then	--遇到重置信号，直接清零
-			tmpRx 		<= (others => '0');
-			tmpRy 		<= (others => '0');
-			tmpRz 		<= (others => '0');
-			tmpImme 		<= (others => '0');
-			tmpCommand 	<= (others => '0');
-			tmpPC 		<= (others => '0');
-		elsif (clk'event and clk = '1') then 
-			if flashFinished = '1' then
-				if (IfIdKeep = '1') then 
-					null;
-				elsif (SW_IfIdFlush = '1' or Branch_IfIdFlush = '1' or Jump_IfIdFlush = '1') then --IfIdFlush该不该放在时钟上升沿？？该不该放在IfIdKeep之后？？
-					tmpRx 		<= (others => '0');
-					tmpRy 		<= (others => '0');
-					tmpRz 		<= (others => '0');
-					tmpImme 		<= (others => '0');
-					tmpCommand 	<= (others => '0');
-					tmpPC 		<= (others => '0');
-				else
-					tmpRx 		<= commandIn(10 downto 8);
-					tmpRy 		<= commandIn(7 downto 5);
-					tmpRz 		<= commandIn(4 downto 2);
-					tmpImme 		<= commandIn(10 downto 0);
-					tmpCommand	<= commandIn;
-					tmpPC 		<= PCIn;
-				
-				end if;
-			end if;
-		end if;
-	end process;
+	begin
 	
+		if (rst = '0') then
+		
+			PCPlusOneOut <=  (others => '0');
+			CommandOut <= (others => '0');
+			command10to8 <= (others => '0');
+			command7to5 <= (others => '0');
+			command4to2 <= (others => '0');
+			command10to0 <= (others => '0');
+			
+		elsif (rising_edge(clk)) then
+			if(flashFinished = '1') then
+				if ((isJump = '1') or (willBranch = '1') or (IfIdFlush_StructConflict = '1')) then
+				
+					PCPlusOneOut <=  (others => '0');
+					CommandOut <= (others => '0');
+					command10to8 <= (others => '0');
+					command7to5 <= (others => '0');
+					command4to2 <= (others => '0');
+					command10to0 <= (others => '0');
+					
+				elsif (IfIdKeep_LW = '0') then
+					
+					PCPlusOneOut <=  PCPlusOneIn;
+					CommandOut <= CommandIn;
+					command10to8 <= CommandIn(10 downto 8);
+					command7to5 <= CommandIn(7 downto 5);
+					command4to2 <= CommandIn(4 downto 2);
+					command10to0 <= CommandIn(10 downto 0);
+					
+				else
+					null;
+					
+				end if;
+			else
+				null;
+				
+			end if;
+		else
+			null;
+		
+		end if;
+		
+	end process;
 
 end Behavioral;
 

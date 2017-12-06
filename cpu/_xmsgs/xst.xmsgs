@@ -5,17 +5,17 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1082</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fontRom</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1081</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fontRom</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1135</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1134</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;opt&gt;</arg>
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1172</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1171</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1192</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">1191</arg>: Mux is complete : default of case is discarded
 </msg>
 
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_addr</arg>&gt; in unit &lt;<arg fmt="%s" index="2">MemoryUnit</arg>&gt; has a constant value of <arg fmt="%s" index="3">000000000000000000</arg> during circuit operation. The register is replaced by logic.
@@ -213,37 +213,37 @@
 <msg type="warning" file="Xst" num="80" delta="old" >Model name has been changed to &apos;<arg fmt="%s" index="1">dcm1</arg>&apos;
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpRy_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpCommand_5&gt; &lt;tmpImme_5&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to8_2&gt; &lt;command10to0_10&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpCommand_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpRz_2&gt; &lt;tmpImme_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to8_1&gt; &lt;command10to0_9&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpCommand_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpRz_1&gt; &lt;tmpImme_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to8_0&gt; &lt;command10to0_8&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpCommand_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpRz_0&gt; &lt;tmpImme_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">command7to5_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;CommandOut_7&gt; &lt;command10to0_7&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpRx_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpCommand_10&gt; &lt;tmpImme_10&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">command7to5_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;CommandOut_6&gt; &lt;command10to0_6&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpCommand_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpImme_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">command7to5_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;CommandOut_5&gt; &lt;command10to0_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpRx_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpCommand_9&gt; &lt;tmpImme_9&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command4to2_2&gt; &lt;command10to0_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpCommand_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpImme_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command4to2_1&gt; &lt;command10to0_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpRx_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpCommand_8&gt; &lt;tmpImme_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command4to2_0&gt; &lt;command10to0_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpRy_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpCommand_7&gt; &lt;tmpImme_7&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to0_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpRy_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpCommand_6&gt; &lt;tmpImme_6&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to0_0&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Mtridata_flash_data_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u17</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Mtridata_flash_data_9&gt; &lt;Mtridata_flash_data_10&gt; &lt;Mtridata_flash_data_11&gt; &lt;Mtridata_flash_data_12&gt; &lt;Mtridata_flash_data_13&gt; &lt;Mtridata_flash_data_14&gt; &lt;Mtridata_flash_data_15&gt; </arg>
@@ -449,37 +449,37 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="638" delta="old" >in unit <arg fmt="%s" index="1">MemoryUnit</arg> Conflict on KEEP property on signal <arg fmt="%s" index="2">Mtridata_flash_data&lt;0&gt;</arg> and <arg fmt="%s" index="3">Mtridata_flash_data&lt;7&gt;</arg> <arg fmt="%s" index="4">Mtridata_flash_data&lt;7&gt;</arg> signal will be lost.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpRy_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpCommand_5&gt; &lt;tmpImme_5&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to8_2&gt; &lt;command10to0_10&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpCommand_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpRz_2&gt; &lt;tmpImme_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to8_1&gt; &lt;command10to0_9&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpCommand_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpRz_1&gt; &lt;tmpImme_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to8_0&gt; &lt;command10to0_8&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpCommand_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpRz_0&gt; &lt;tmpImme_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">command7to5_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;CommandOut_7&gt; &lt;command10to0_7&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpRx_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpCommand_10&gt; &lt;tmpImme_10&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">command7to5_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;CommandOut_6&gt; &lt;command10to0_6&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpCommand_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpImme_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">command7to5_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;CommandOut_5&gt; &lt;command10to0_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpRx_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpCommand_9&gt; &lt;tmpImme_9&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command4to2_2&gt; &lt;command10to0_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpCommand_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpImme_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command4to2_1&gt; &lt;command10to0_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpRx_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpCommand_8&gt; &lt;tmpImme_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command4to2_0&gt; &lt;command10to0_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpRy_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpCommand_7&gt; &lt;tmpImme_7&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to0_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">tmpRy_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tmpCommand_6&gt; &lt;tmpImme_6&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to0_0&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LPM_LATCH_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;2&gt; </arg>

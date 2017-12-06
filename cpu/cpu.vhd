@@ -390,23 +390,22 @@ architecture Behavioral of cpu is
 	--IF/ID阶段寄存器
 	component IfIdRegisters
 	port(
-		rst : in std_logic;
-		clk : in std_logic;
+		rst: in std_logic;
+		clk: in std_logic;
 		flashFinished : in std_logic;
+		isJump: in std_logic;
+		willBranch: in std_logic;
+		IfIdFlush_StructConflict: in std_logic;
+		IfIdKeep_LW: in std_logic;
+		PCPlusOneIn: in std_logic_vector(15 downto 0);
+		CommandIn: in std_logic_vector(15 downto 0);
 		
-		commandIn : in std_logic_vector(15 downto 0);
-		PCIn : in std_logic_vector(15 downto 0); 
-		IfIdKeep : in std_logic;				--LW数据冲突用
-		Branch_IfIdFlush : in std_logic;		--跳转时用
-		Jump_IfIdFlush : in std_logic;		--JR跳转时用
-		SW_IfIdFlush : in std_logic;			--SW结构冲突用
-		
-		rx : out std_logic_vector(2 downto 0);		--Command[10:8]
-		ry : out std_logic_vector(2 downto 0);		--Command[7:5]
-		rz : out std_logic_vector(2 downto 0);		--Command[4:2]
-		imme_10_0 : out std_logic_vector(10 downto 0);	--Command[10:0]
-		commandOut : out std_logic_vector(15 downto 0);
-		PCOut : out std_logic_vector(15 downto 0)  --PC+1用于MFPC指令的EXE段
+		PCPlusOneOut: out std_logic_vector(15 downto 0);
+		CommandOut: out std_logic_vector(15 downto 0);
+		command10to8: out std_logic_vector(2 downto 0);
+		command7to5: out std_logic_vector(2 downto 0);
+		command4to2: out std_logic_vector(2 downto 0);
+		command10to0: out std_logic_vector(10 downto 0)
 	);
 	end component;
 	
@@ -702,19 +701,19 @@ begin
 			rst => rst,
 			clk => clk_3,
 			flashFinished => flashFinished,
-			commandIn => IMInsOut,
-			PCIn => PCAddOne,
-			IfIdKeep => IfIdKeep,
-			Branch_IfIdFlush => BranchJudge, 
-			Jump_IfIdFlush => IdExJump,
-			SW_IfIdFlush => SW_IfIdFlush,
-			
-			rx => rx,
-			ry => ry,
-			rz => rz,
-			imme_10_0 => imme_10_0,
-			commandOut => IfIdCommand,
-			PCOut => IfIdPC
+			isJump => IdExJump,
+			willBranch => BranchJudge, 
+			IfIdFlush_StructConflict => SW_IfIdFlush,
+			IfIdKeep_LW => IfIdKeep,
+			PCPlusOneIn => PCAddOne,
+			CommandIn => IMInsOut,
+
+			PCPlusOneOut => IfIdPC,
+			CommandOut => IfIdCommand,
+			command10to8 => rx,
+			command7to5 => ry,
+			command4to2 => rz,
+			command10to0 => imme_10_0
 		);
 		
 	u4 : RdMux

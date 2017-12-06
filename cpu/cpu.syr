@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.55 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.49 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.55 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.50 secs
  
 --> Reading design: cpu.prj
 
@@ -109,7 +109,8 @@ Architecture behavioral of Entity pcregister is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCIncrementer.vhd" in Library work.
 Architecture behavioral of Entity pcincrementer is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd" in Library work.
-Architecture behavioral of Entity ifidregisters is up to date.
+Entity <ifidregisters> compiled.
+Entity <ifidregisters> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd" in Library work.
 Architecture behavioral of Entity rdmux is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/Controller.vhd" in Library work.
@@ -125,8 +126,7 @@ Architecture behavioral of Entity alumuxa is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxB.vhd" in Library work.
 Architecture behavioral of Entity alumuxb is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ForwardingUnit.vhd" in Library work.
-Entity <ForwardingUnit> compiled.
-Entity <ForwardingUnit> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity forwardingunit is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ExeMemRegisters.vhd" in Library work.
@@ -188,7 +188,7 @@ Analyzing hierarchy for entity <ALUMuxA> in library <work> (architecture <behavi
 
 Analyzing hierarchy for entity <ALUMuxB> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <ForwardingUnit> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <ForwardingUnit> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <ALU> in library <work> (architecture <behavioral>).
 
@@ -225,11 +225,11 @@ Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1082: Instantiating black box module <fontRom>.
-WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1135: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1081: Instantiating black box module <fontRom>.
+WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1134: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <opt>
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1172: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1192: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1171: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1191: Mux is complete : default of case is discarded
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <PCRegister> in library <work> (Architecture <behavioral>).
@@ -262,7 +262,7 @@ Entity <ALUMuxA> analyzed. Unit <ALUMuxA> generated.
 Analyzing Entity <ALUMuxB> in library <work> (Architecture <behavioral>).
 Entity <ALUMuxB> analyzed. Unit <ALUMuxB> generated.
 
-Analyzing Entity <ForwardingUnit> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <ForwardingUnit> in library <work> (Architecture <behavioral>).
 Entity <ForwardingUnit> analyzed. Unit <ForwardingUnit> generated.
 
 Analyzing Entity <ALU> in library <work> (Architecture <behavioral>).
@@ -377,12 +377,12 @@ Unit <PCIncrementer> synthesized.
 
 Synthesizing Unit <IfIdRegisters>.
     Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd".
-    Found 16-bit register for signal <tmpCommand>.
-    Found 11-bit register for signal <tmpImme>.
-    Found 16-bit register for signal <tmpPC>.
-    Found 3-bit register for signal <tmpRx>.
-    Found 3-bit register for signal <tmpRy>.
-    Found 3-bit register for signal <tmpRz>.
+    Found 11-bit register for signal <command10to0>.
+    Found 3-bit register for signal <command10to8>.
+    Found 3-bit register for signal <command7to5>.
+    Found 3-bit register for signal <command4to2>.
+    Found 16-bit register for signal <CommandOut>.
+    Found 16-bit register for signal <PCPlusOneOut>.
     Summary:
 	inferred  52 D-type flip-flop(s).
 Unit <IfIdRegisters> synthesized.
@@ -1271,17 +1271,17 @@ Optimizing FSM <u6/state/FSM> on signal <state[1:3]> with one-hot encoding.
 -------------------
 WARNING:Xst:79 - Model 'dcm' has different characteristics in destination library
 WARNING:Xst:80 - Model name has been changed to 'dcm1'
-INFO:Xst:2261 - The FF/Latch <tmpRy_0> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_5> <tmpImme_5> 
-INFO:Xst:2261 - The FF/Latch <tmpCommand_4> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpRz_2> <tmpImme_4> 
-INFO:Xst:2261 - The FF/Latch <tmpCommand_3> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpRz_1> <tmpImme_3> 
-INFO:Xst:2261 - The FF/Latch <tmpCommand_2> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpRz_0> <tmpImme_2> 
-INFO:Xst:2261 - The FF/Latch <tmpRx_2> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_10> <tmpImme_10> 
-INFO:Xst:2261 - The FF/Latch <tmpCommand_1> in Unit <u3> is equivalent to the following FF/Latch, which will be removed : <tmpImme_1> 
-INFO:Xst:2261 - The FF/Latch <tmpRx_1> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_9> <tmpImme_9> 
-INFO:Xst:2261 - The FF/Latch <tmpCommand_0> in Unit <u3> is equivalent to the following FF/Latch, which will be removed : <tmpImme_0> 
-INFO:Xst:2261 - The FF/Latch <tmpRx_0> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_8> <tmpImme_8> 
-INFO:Xst:2261 - The FF/Latch <tmpRy_2> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_7> <tmpImme_7> 
-INFO:Xst:2261 - The FF/Latch <tmpRy_1> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_6> <tmpImme_6> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_10> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <command10to8_2> <command10to0_10> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_9> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <command10to8_1> <command10to0_9> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_8> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <command10to8_0> <command10to0_8> 
+INFO:Xst:2261 - The FF/Latch <command7to5_2> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <CommandOut_7> <command10to0_7> 
+INFO:Xst:2261 - The FF/Latch <command7to5_1> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <CommandOut_6> <command10to0_6> 
+INFO:Xst:2261 - The FF/Latch <command7to5_0> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <CommandOut_5> <command10to0_5> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_4> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <command4to2_2> <command10to0_4> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_3> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <command4to2_1> <command10to0_3> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_2> in Unit <u3> is equivalent to the following 2 FFs/Latches, which will be removed : <command4to2_0> <command10to0_2> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_1> in Unit <u3> is equivalent to the following FF/Latch, which will be removed : <command10to0_1> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_0> in Unit <u3> is equivalent to the following FF/Latch, which will be removed : <command10to0_0> 
 INFO:Xst:2261 - The FF/Latch <Mtridata_flash_data_8> in Unit <u17> is equivalent to the following 7 FFs/Latches, which will be removed : <Mtridata_flash_data_9> <Mtridata_flash_data_10> <Mtridata_flash_data_11> <Mtridata_flash_data_12> <Mtridata_flash_data_13> <Mtridata_flash_data_14> <Mtridata_flash_data_15> 
 WARNING:Xst:638 - in unit u17 Conflict on KEEP property on signal Mtridata_flash_data<8> and Mtridata_flash_data<9> Mtridata_flash_data<9> signal will be lost.
 WARNING:Xst:638 - in unit u17 Conflict on KEEP property on signal Mtridata_flash_data<8> and Mtridata_flash_data<10> Mtridata_flash_data<10> signal will be lost.
@@ -1411,17 +1411,17 @@ WARNING:Xst:638 - in unit MemoryUnit Conflict on KEEP property on signal Mtridat
 WARNING:Xst:638 - in unit MemoryUnit Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<5> Mtridata_flash_data<5> signal will be lost.
 WARNING:Xst:638 - in unit MemoryUnit Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<6> Mtridata_flash_data<6> signal will be lost.
 WARNING:Xst:638 - in unit MemoryUnit Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<7> Mtridata_flash_data<7> signal will be lost.
-INFO:Xst:2261 - The FF/Latch <tmpRy_0> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_5> <tmpImme_5> 
-INFO:Xst:2261 - The FF/Latch <tmpCommand_4> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpRz_2> <tmpImme_4> 
-INFO:Xst:2261 - The FF/Latch <tmpCommand_3> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpRz_1> <tmpImme_3> 
-INFO:Xst:2261 - The FF/Latch <tmpCommand_2> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpRz_0> <tmpImme_2> 
-INFO:Xst:2261 - The FF/Latch <tmpRx_2> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_10> <tmpImme_10> 
-INFO:Xst:2261 - The FF/Latch <tmpCommand_1> in Unit <IfIdRegisters> is equivalent to the following FF/Latch, which will be removed : <tmpImme_1> 
-INFO:Xst:2261 - The FF/Latch <tmpRx_1> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_9> <tmpImme_9> 
-INFO:Xst:2261 - The FF/Latch <tmpCommand_0> in Unit <IfIdRegisters> is equivalent to the following FF/Latch, which will be removed : <tmpImme_0> 
-INFO:Xst:2261 - The FF/Latch <tmpRx_0> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_8> <tmpImme_8> 
-INFO:Xst:2261 - The FF/Latch <tmpRy_2> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_7> <tmpImme_7> 
-INFO:Xst:2261 - The FF/Latch <tmpRy_1> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <tmpCommand_6> <tmpImme_6> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_10> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <command10to8_2> <command10to0_10> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_9> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <command10to8_1> <command10to0_9> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_8> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <command10to8_0> <command10to0_8> 
+INFO:Xst:2261 - The FF/Latch <command7to5_2> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <CommandOut_7> <command10to0_7> 
+INFO:Xst:2261 - The FF/Latch <command7to5_1> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <CommandOut_6> <command10to0_6> 
+INFO:Xst:2261 - The FF/Latch <command7to5_0> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <CommandOut_5> <command10to0_5> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_4> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <command4to2_2> <command10to0_4> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_3> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <command4to2_1> <command10to0_3> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_2> in Unit <IfIdRegisters> is equivalent to the following 2 FFs/Latches, which will be removed : <command4to2_0> <command10to0_2> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_1> in Unit <IfIdRegisters> is equivalent to the following FF/Latch, which will be removed : <command10to0_1> 
+INFO:Xst:2261 - The FF/Latch <CommandOut_0> in Unit <IfIdRegisters> is equivalent to the following FF/Latch, which will be removed : <command10to0_0> 
 INFO:Xst:2261 - The FF/Latch <4> in Unit <LPM_LATCH_1> is equivalent to the following FF/Latch, which will be removed : <2> 
 WARNING:Xst:1294 - Latch <ReadData2_0> is equivalent to a wire in block <Registers>.
 WARNING:Xst:1294 - Latch <ReadData2_1> is equivalent to a wire in block <Registers>.
@@ -1531,15 +1531,15 @@ Design Statistics
 # IOs                              : 169
 
 Cell Usage :
-# BELS                             : 3559
+# BELS                             : 3561
 #      GND                         : 1
 #      INV                         : 32
 #      LUT1                        : 86
 #      LUT2                        : 205
 #      LUT2_D                      : 5
 #      LUT2_L                      : 5
-#      LUT3                        : 723
-#      LUT3_D                      : 32
+#      LUT3                        : 726
+#      LUT3_D                      : 31
 #      LUT3_L                      : 27
 #      LUT4                        : 1506
 #      LUT4_D                      : 86
@@ -1579,7 +1579,7 @@ Selected Device : 3s1200efg320-4
 
  Number of Slices:                     1533  out of   8672    17%  
  Number of Slice Flip Flops:            651  out of  17344     3%  
- Number of 4 input LUTs:               2834  out of  17344    16%  
+ Number of 4 input LUTs:               2836  out of  17344    16%  
  Number of IOs:                         169
  Number of bonded IOBs:                 169  out of    250    67%  
  Number of GCLKs:                         7  out of     24    29%  
@@ -1676,30 +1676,30 @@ Delay:               7.889ns (Levels of Logic = 11)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'u18/count_01'
-  Clock period: 11.215ns (frequency: 89.168MHz)
-  Total number of paths / destination ports: 5866 / 238
+  Clock period: 11.232ns (frequency: 89.033MHz)
+  Total number of paths / destination ports: 5930 / 238
 -------------------------------------------------------------------------
-Delay:               11.215ns (Levels of Logic = 6)
-  Source:            u3/tmpRx_1 (FF)
+Delay:               11.232ns (Levels of Logic = 6)
+  Source:            u3/CommandOut_9 (FF)
   Destination:       u8/regWriteOut (FF)
   Source Clock:      u18/count_01 rising
   Destination Clock: u18/count_01 rising
 
-  Data Path: u3/tmpRx_1 to u8/regWriteOut
+  Data Path: u3/CommandOut_9 to u8/regWriteOut
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            10   0.591   0.886  u3/tmpRx_1 (u3/tmpRx_1)
+     FDCE:C->Q            10   0.591   0.886  u3/CommandOut_9 (u3/CommandOut_9)
      LUT4_D:I3->O         17   0.704   1.086  u21/ReadReg1Out<1>_SW2 (N1378)
      LUT3:I2->O           34   0.704   1.267  u21/ReadReg1Out<1> (ReadReg1MuxOut<1>)
      LUT4:I3->O            1   0.704   0.424  u15/PCKeep_and000026 (u15/PCKeep_and000026)
-     LUT4:I3->O           18   0.704   1.072  u15/PCKeep_and0000139 (IfIdKeep)
+     LUT4:I3->O           19   0.704   1.089  u15/PCKeep_and0000139 (IfIdKeep)
      LUT4:I3->O           82   0.704   1.357  u8/Reg1Out_or00001 (u8/Reg1Out_or0000)
      LUT2:I1->O            1   0.704   0.000  u8/regWriteOut_mux00011 (u8/regWriteOut_mux0001)
      FDCE:D                    0.308          u8/regWriteOut
     ----------------------------------------
-    Total                     11.215ns (5.123ns logic, 6.092ns route)
-                                       (45.7% logic, 54.3% route)
+    Total                     11.232ns (5.123ns logic, 6.109ns route)
+                                       (45.6% logic, 54.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'u23/CLK_21'
@@ -1911,12 +1911,12 @@ Delay:               3.095ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 167.00 secs
-Total CPU time to Xst completion: 167.51 secs
+Total REAL time to Xst completion: 131.00 secs
+Total CPU time to Xst completion: 130.62 secs
  
 --> 
 
-Total memory usage is 459296 kilobytes
+Total memory usage is 459268 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  120 (   0 filtered)
