@@ -200,11 +200,11 @@ architecture Behavioral of cpu is
 	--ALU运算器
 	component ALU
 	port(
-		Asrc       	 :  in STD_LOGIC_VECTOR(15 downto 0);
-		Bsrc       	 :  in STD_LOGIC_VECTOR(15 downto 0);
+		input1       	 :  in STD_LOGIC_VECTOR(15 downto 0);
+		input2       	 :  in STD_LOGIC_VECTOR(15 downto 0);
 		ALUop		  	 :  in STD_LOGIC_VECTOR(3 downto 0);
-		ALUresult  	 :  out STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; -- 默认设为全0
-		BranchJudge  :  out STD_LOGIC
+		result  	 :  out STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; -- 默认设为全0
+		branch  :  out STD_LOGIC
 		);
 	end component;
 	
@@ -501,8 +501,8 @@ architecture Behavioral of cpu is
 			rst : in std_logic;
 			flashFinished : in std_logic;
 			
-			ReadReg1In : in std_logic_vector(3 downto 0);  --"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T
-			ReadReg2In : in std_logic_vector(3 downto 0);  --"0XXX"代表R0~R7
+			readreg1 : in std_logic_vector(3 downto 0);  --"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T
+			readreg2 : in std_logic_vector(3 downto 0);  --"0XXX"代表R0~R7
 			
 			WriteReg : in std_logic_vector(3 downto 0);	  --由WB阶段传回：目的寄存器
 			WriteData : in std_logic_vector(15 downto 0);  --由WB阶段传回：写目的寄存器的值
@@ -741,8 +741,8 @@ begin
 			clk => clk,
 			rst => rst,
 			
-			ReadReg1In => ReadReg1MuxOut,
-			ReadReg2In => ReadReg2MuxOut,
+			readreg1 => ReadReg1MuxOut,
+			readreg2 => ReadReg2MuxOut,
 			
 			--这三条来自MEM/WB段寄存器（因为发生在写回段）
 			WriteReg => rdToWB,
@@ -863,12 +863,12 @@ begin
 	
 	u12 : ALU
 	port map(
-			Asrc      	=> AMuxOut,
-			Bsrc        => BMuxOut,
+			input1      	=> AMuxOut,
+			input2        => BMuxOut,
 			ALUop		  	=> IdExALUOP,
 			
-			ALUresult  	=> ALUResult,
-			branchJudge => BranchJudge
+			result  	=> ALUResult,
+			branch => BranchJudge
 	);
 	
 	u13 : ExeMemRegisters
