@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    14:54:38 11/21/2016 
+-- Create Date:    16:50:50 11/27/2017 
 -- Design Name: 
--- Module Name:    ReadReg1Mux - Behavioral 
+-- Module Name:    ReadReg1MUX - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -30,36 +30,39 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ReadReg1Mux is
-	--源寄存器1选择器
 	port(
-		rx : in std_logic_vector(2 downto 0);
-		ry : in std_logic_vector(2 downto 0);				--R0~R7中的一个
-		
-		ReadReg1 : in std_logic_vector(2 downto 0);		--由总控制器Controller生成的控制信号
-		
-		ReadReg1Out : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T, "1111"=没有
-	);
+			ten_downto_eight : in std_logic_vector(2 downto 0);
+			seven_downto_five : in std_logic_vector(2 downto 0);
+			
+			ReadReg1 : in std_logic_vector(2 downto 0);
+			
+			ReadReg1Out : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T, "1111"=没有
+		);
 end ReadReg1Mux;
 
 architecture Behavioral of ReadReg1Mux is
 
 begin
-	process(rx, ry, ReadReg1)
+	process(ten_downto_eight,seven_downto_five,ReadReg1)
 	begin
 		case ReadReg1 is
-			when "001" =>		--rx
-				ReadReg1Out <= '0' & rx;
-			when "010" =>		--ry
-				ReadReg1Out <= '0' & ry;
+			when "001" =>		--(10,8)
+				ReadReg1Out <= '0' & ten_downto_eight;
+			when "010" =>		--(7,5)
+				ReadReg1Out <= '0' & seven_downto_five;
 			when "011" =>		--T
 				ReadReg1Out <= "1010";
 			when "100" =>		--SP
 				ReadReg1Out <= "1000";
 			when "101" =>		--IH
 				ReadReg1Out <= "1001";
-			when others =>		--No ReadReg1（不需要寄存器1）
+			when others =>		--No ReadReg1
 				ReadReg1Out <= "1111";
 		end case;
 	end process;
+
+
 end Behavioral;
+
+
 

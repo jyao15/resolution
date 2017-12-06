@@ -29,7 +29,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ReadReg2MUX is
+entity ReadReg2Mux is
 	port(
 			ten_downto_eight : in std_logic_vector(2 downto 0);
 			seven_downto_five : in std_logic_vector(2 downto 0);
@@ -38,9 +38,9 @@ entity ReadReg2MUX is
 			
 			ReadReg2Out : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7，"1111"=没有
 		);
-end ReadReg2MUX;
+end ReadReg2Mux;
 
-architecture Behavioral of ReadReg2MUX is
+architecture Behavioral of ReadReg2Mux is
 
 begin
 	process(ten_downto_eight,seven_downto_five,ReadReg2)

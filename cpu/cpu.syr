@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: cpu.prj
 
@@ -104,62 +104,6 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/cpu is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/cpu.vhd".
-WARNING:HDLParsers:3607 - Unit work/cpu/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/cpu.vhd".
-WARNING:HDLParsers:3607 - Unit work/ALU is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ALU.vhd".
-WARNING:HDLParsers:3607 - Unit work/ALU/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ALU.vhd".
-WARNING:HDLParsers:3607 - Unit work/ALUMuxA is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ALUMuxA.vhd".
-WARNING:HDLParsers:3607 - Unit work/ALUMuxA/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ALUMuxA.vhd".
-WARNING:HDLParsers:3607 - Unit work/ALUMuxB is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxB.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ALUMuxB.vhd".
-WARNING:HDLParsers:3607 - Unit work/ALUMuxB/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxB.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ALUMuxB.vhd".
-WARNING:HDLParsers:3607 - Unit work/clock is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/clock.vhd".
-WARNING:HDLParsers:3607 - Unit work/clock/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/clock.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/clock.vhd".
-WARNING:HDLParsers:3607 - Unit work/Controller is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/Controller.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/Controller.vhd".
-WARNING:HDLParsers:3607 - Unit work/Controller/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/Controller.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/Controller.vhd".
-WARNING:HDLParsers:3607 - Unit work/ExeMemRegisters is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ExeMemRegisters.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ExeMemRegisters.vhd".
-WARNING:HDLParsers:3607 - Unit work/ExeMemRegisters/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ExeMemRegisters.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ExeMemRegisters.vhd".
-WARNING:HDLParsers:3607 - Unit work/ForwardingUnit is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ForwardingUnit.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ForwardingUnit.vhd".
-WARNING:HDLParsers:3607 - Unit work/ForwardingUnit/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ForwardingUnit.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ForwardingUnit.vhd".
-WARNING:HDLParsers:3607 - Unit work/HazardDetectionUnit is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/HazardDetectionUnit.vhd".
-WARNING:HDLParsers:3607 - Unit work/HazardDetectionUnit/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/HazardDetectionUnit.vhd".
-WARNING:HDLParsers:3607 - Unit work/IdExeRegisters is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/IdExeRegisters.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/IdExeRegisters.vhd".
-WARNING:HDLParsers:3607 - Unit work/IdExeRegisters/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/IdExeRegisters.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/IdExeRegisters.vhd".
-WARNING:HDLParsers:3607 - Unit work/IfIdRegisters is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/IfIdRegisters.vhd".
-WARNING:HDLParsers:3607 - Unit work/IfIdRegisters/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/IfIdRegisters.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/IfIdRegisters.vhd".
-WARNING:HDLParsers:3607 - Unit work/ImmeExtendUnit is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ImmeExtendUnit.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ImmeExtendUnit.vhd".
-WARNING:HDLParsers:3607 - Unit work/ImmeExtendUnit/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ImmeExtendUnit.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ImmeExtendUnit.vhd".
-WARNING:HDLParsers:3607 - Unit work/dcm is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/dcm.vhd".
-WARNING:HDLParsers:3607 - Unit work/dcm/BEHAVIORAL is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/dcm.vhd".
-WARNING:HDLParsers:3607 - Unit work/fontRom is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ipcore_dir/fontRom.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ipcore_dir/fontRom.vhd".
-WARNING:HDLParsers:3607 - Unit work/fontRom/fontRom_a is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ipcore_dir/fontRom.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ipcore_dir/fontRom.vhd".
-WARNING:HDLParsers:3607 - Unit work/MemoryUnit is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/MemoryUnit.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MemoryUnit.vhd".
-WARNING:HDLParsers:3607 - Unit work/MemoryUnit/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/MemoryUnit.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MemoryUnit.vhd".
-WARNING:HDLParsers:3607 - Unit work/MemWbRegisters is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MemWbRegisters.vhd".
-WARNING:HDLParsers:3607 - Unit work/MemWbRegisters/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MemWbRegisters.vhd".
-WARNING:HDLParsers:3607 - Unit work/MemWriteDataMux is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/MemWriteDataMux.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MemWriteDataMux.vhd".
-WARNING:HDLParsers:3607 - Unit work/MemWriteDataMux/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/MemWriteDataMux.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MemWriteDataMux.vhd".
-WARNING:HDLParsers:3607 - Unit work/MFPCMux is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MFPCMux.vhd".
-WARNING:HDLParsers:3607 - Unit work/MFPCMux/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/MFPCMux.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MFPCMux.vhd".
-WARNING:HDLParsers:3607 - Unit work/PCBranchAdder is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/PCBranchAdder.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCBranchAdder.vhd".
-WARNING:HDLParsers:3607 - Unit work/PCBranchAdder/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/PCBranchAdder.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCBranchAdder.vhd".
-WARNING:HDLParsers:3607 - Unit work/PCIncrementer is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/PCIncrementer.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCIncrementer.vhd".
-WARNING:HDLParsers:3607 - Unit work/PCIncrementer/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/PCIncrementer.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCIncrementer.vhd".
-WARNING:HDLParsers:3607 - Unit work/PCMux is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCMux.vhd".
-WARNING:HDLParsers:3607 - Unit work/PCMux/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCMux.vhd".
-WARNING:HDLParsers:3607 - Unit work/PCRegister is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCRegister.vhd".
-WARNING:HDLParsers:3607 - Unit work/PCRegister/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/PCRegister.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCRegister.vhd".
-WARNING:HDLParsers:3607 - Unit work/RdMux is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/RdMux.vhd".
-WARNING:HDLParsers:3607 - Unit work/RdMux/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/RdMux.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/RdMux.vhd".
-WARNING:HDLParsers:3607 - Unit work/ReadReg1Mux is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg1Mux.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ReadReg1Mux.vhd".
-WARNING:HDLParsers:3607 - Unit work/ReadReg1Mux/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg1Mux.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ReadReg1Mux.vhd".
-WARNING:HDLParsers:3607 - Unit work/ReadReg2MUX is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ReadReg2Mux.vhd".
-WARNING:HDLParsers:3607 - Unit work/ReadReg2MUX/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/ReadReg2Mux.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ReadReg2Mux.vhd".
-WARNING:HDLParsers:3607 - Unit work/Registers is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/Registers.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/Registers.vhd".
-WARNING:HDLParsers:3607 - Unit work/Registers/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/Registers.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/Registers.vhd".
-WARNING:HDLParsers:3607 - Unit work/StructConflictUnit is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/StructConflictUnit.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/StructConflictUnit.vhd".
-WARNING:HDLParsers:3607 - Unit work/StructConflictUnit/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/StructConflictUnit.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/StructConflictUnit.vhd".
-WARNING:HDLParsers:3607 - Unit work/VGA_Controller is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/VGA_Controller.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/VGA_Controller.vhd".
-WARNING:HDLParsers:3607 - Unit work/VGA_Controller/behave is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/resolution/cpu/VGA_Controller.vhd", and is now defined in "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/VGA_Controller.vhd".
 Compiling vhdl file "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCRegister.vhd" in Library work.
 Architecture behavioral of Entity pcregister is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/PCIncrementer.vhd" in Library work.
@@ -167,10 +111,10 @@ Architecture behavioral of Entity pcincrementer is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/IfIdRegisters.vhd" in Library work.
 Architecture behavioral of Entity ifidregisters is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/RdMux.vhd" in Library work.
-Architecture behavioral of Entity rdmux is up to date.
+Entity <ReadDstMUX> compiled.
+Entity <ReadDstMUX> (Architecture <Behavioral>) compiled.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/Controller.vhd" in Library work.
-Entity <controller> compiled.
-Entity <controller> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity controller is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/Registers.vhd" in Library work.
 Architecture behavioral of Entity registers is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ImmeExtendUnit.vhd" in Library work.
@@ -202,7 +146,8 @@ Architecture behavioral of Entity structconflictunit is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/MFPCMux.vhd" in Library work.
 Architecture behavioral of Entity mfpcmux is up to date.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ReadReg1Mux.vhd" in Library work.
-Architecture behavioral of Entity readreg1mux is up to date.
+Entity <readreg1mux> compiled.
+Entity <readreg1mux> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/ReadReg2Mux.vhd" in Library work.
 Entity <readreg2mux> compiled.
 Entity <readreg2mux> (Architecture <behavioral>) compiled.
@@ -231,7 +176,7 @@ Analyzing hierarchy for entity <PCIncrementer> in library <work> (architecture <
 
 Analyzing hierarchy for entity <IfIdRegisters> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <RdMux> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <ReadDstMUX> in library <work> (architecture <Behavioral>).
 
 Analyzing hierarchy for entity <Controller> in library <work> (architecture <behavioral>).
 
@@ -298,8 +243,8 @@ Entity <PCIncrementer> analyzed. Unit <PCIncrementer> generated.
 Analyzing Entity <IfIdRegisters> in library <work> (Architecture <behavioral>).
 Entity <IfIdRegisters> analyzed. Unit <IfIdRegisters> generated.
 
-Analyzing Entity <RdMux> in library <work> (Architecture <behavioral>).
-Entity <RdMux> analyzed. Unit <RdMux> generated.
+Analyzing Entity <ReadDstMUX> in library <work> (Architecture <Behavioral>).
+Entity <ReadDstMUX> analyzed. Unit <ReadDstMUX> generated.
 
 Analyzing Entity <Controller> in library <work> (Architecture <behavioral>).
 Entity <Controller> analyzed. Unit <Controller> generated.
@@ -444,9 +389,9 @@ Synthesizing Unit <IfIdRegisters>.
 Unit <IfIdRegisters> synthesized.
 
 
-Synthesizing Unit <RdMux>.
+Synthesizing Unit <ReadDstMUX>.
     Related source file is "C:/Users/nuonuo/Desktop/yjn/resolution/cpu/RdMux.vhd".
-Unit <RdMux> synthesized.
+Unit <ReadDstMUX> synthesized.
 
 
 Synthesizing Unit <Controller>.
@@ -1938,14 +1883,14 @@ Delay:               3.095ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 61.00 secs
-Total CPU time to Xst completion: 61.16 secs
+Total REAL time to Xst completion: 47.00 secs
+Total CPU time to Xst completion: 46.30 secs
  
 --> 
 
-Total memory usage is 494084 kilobytes
+Total memory usage is 541064 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  144 (   0 filtered)
+Number of warnings :   88 (   0 filtered)
 Number of infos    :   76 (   0 filtered)
 
