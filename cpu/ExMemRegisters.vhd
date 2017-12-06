@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    14:03:34 11/21/2016 
+-- Create Date:    00:41:16 11/30/2017 
 -- Design Name: 
--- Module Name:    ExMemRegisters - Behavioral 
+-- Module Name:    ExeMemRegisters - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,63 +29,57 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ExMemRegisters is
-	--EX/MEM阶段寄存器
+entity ExeMemRegisters is
 	port(
-		clk : in std_logic;
-		rst : in std_logic;
-		
+		rst: in std_logic;
+		clk: in std_logic;
 		flashFinished : in std_logic;
-
-		--数据输入
-		rdIn : in std_logic_vector(3 downto 0);
-		MFPCMuxIn : in std_logic_vector(15 downto 0);
-		readData2In : in std_logic_vector(15 downto 0); --供SW语句写内存
-		--信号输入
-		regWriteIn : in std_logic;
-		memReadIn : in std_logic;
-		memWriteIn : in std_logic;
-		memToRegIn : in std_logic;
-
-		--数据输出
-		rdOut : out std_logic_vector(3 downto 0);
-		ALUResultOut : out std_logic_vector(15 downto 0);
-		readData2Out : out std_logic_vector(15 downto 0); --供SW语句写内存
-		--信号输出
-		regWriteOut : out std_logic;
-		memReadOut : out std_logic;
-		memWriteOut : out std_logic;
-		memToRegOut : out std_logic
+		IdExeRegWrite: in std_logic;
+		IdExeWBSrc: in std_logic;
+		IdExeMemRead: in std_logic;
+		IdExeMemWrite: in std_logic;
+		RealALUResultIn: in std_logic_vector(15 downto 0);
+		MemWriteDataIn: in std_logic_vector(15 downto 0);
+		IdExeWriteReg: in std_logic_vector(3 downto 0);
+		
+		ExeMemRegWrite: out std_logic;
+		ExeMemWBSrc: out std_logic;
+		ExeMemMemRead: out std_logic;
+		ExeMemMemWrite: out std_logic;
+		ALUResultOut: out std_logic_vector(15 downto 0);
+		MemWriteDataOut: out std_logic_vector(15 downto 0);
+		ExeMemWriteReg: out std_logic_vector(3 downto 0)
 	);
-end ExMemRegisters;
+end ExeMemRegisters;
 
-architecture Behavioral of ExMemRegisters is
+architecture Behavioral of ExeMemRegisters is
 
 begin
+
 	process(rst, clk)
 	begin
 		if (rst = '0') then
-			rdOut <= "1110";
+			ExeMemRegWrite <= '0';
+			ExeMemWBSrc <= '0';
+			ExeMemMemRead <= '0';
+			ExeMemMemWrite <= '0';
 			ALUResultOut <= (others => '0');
-			readData2Out <= (others => '0');
-			
-			regWriteOut <= '0';
-			memReadOut <= '0';
-			memWriteOut <= '0';
-			memToRegOut <= '0';
-
-		elsif (clk'event and clk = '1') then
-		if(flashFinished = '1') then
-			rdOut <= rdIn;
-			ALUResultOut <= MFPCMuxIn;
-			readData2Out <= readData2In;
-			
-			regWriteOut <= regWriteIn;
-			memReadOut <= memReadIn;
-			memWriteOut <= memWriteIn;
-			memToRegOut <= memToRegIn;
-		end if;
+			MemWriteDataOut <= (others => '0');
+			ExeMemWriteReg <= "1110";
+		elsif (rising_edge(clk)) then
+			if(flashFinished = '1') then
+				ExeMemRegWrite <= IdExeRegWrite;
+				ExeMemWBSrc <= IdExeWBSrc;
+				ExeMemMemRead <= IdExeMemRead;
+				ExeMemMemWrite <= IdExeMemWrite;
+				ALUResultOut <= RealALUResultIn;
+				MemWriteDataOut <= MemWriteDataIn;
+				ExeMemWriteReg <= IdExeWriteReg;
+			else null;
+			end if;
+		else null;
 		end if;
 	end process;
+
 end Behavioral;
 

@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.40 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.39 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.40 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.39 secs
  
 --> Reading design: cpu.prj
 
@@ -129,9 +129,10 @@ Architecture behavioral of Entity forwardcontroller is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ALU.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ExMemRegisters.vhd" in Library work.
-Architecture behavioral of Entity exmemregisters is up to date.
+Architecture behavioral of Entity exememregisters is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd" in Library work.
-Architecture behavioral of Entity memwbregisters is up to date.
+Entity <memwbregisters> compiled.
+Entity <memwbregisters> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/HazardDetectionUnit.vhd" in Library work.
 Architecture behavioral of Entity hazarddetectionunit is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCMux.vhd" in Library work.
@@ -155,12 +156,12 @@ Architecture fontrom_a of Entity fontrom is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/WriteDataMux.vhd" in Library work.
 Architecture behavioral of Entity memwritedatamux is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/PCBranchAdder.vhd" in Library work.
-Entity <PCBranchAdder> compiled.
-Entity <PCBranchAdder> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity pcbranchadder is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/dcm.vhd" in Library work.
 Architecture behavioral of Entity dcm is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" in Library work.
-Architecture behavioral of Entity cpu is up to date.
+Entity <cpu> compiled.
+Entity <cpu> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -191,7 +192,7 @@ Analyzing hierarchy for entity <ForwardController> in library <work> (architectu
 
 Analyzing hierarchy for entity <ALU> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <ExMemRegisters> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <ExeMemRegisters> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <MemWbRegisters> in library <work> (architecture <behavioral>).
 
@@ -215,7 +216,7 @@ Analyzing hierarchy for entity <VGA_Controller> in library <work> (architecture 
 
 Analyzing hierarchy for entity <MemWriteDataMux> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <PCBranchAdder> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <PCBranchAdder> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral>).
 
@@ -224,11 +225,11 @@ Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1105: Instantiating black box module <fontRom>.
-WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1159: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1095: Instantiating black box module <fontRom>.
+WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1149: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <opt>
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1196: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1216: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1186: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1206: Mux is complete : default of case is discarded
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <PCRegister> in library <work> (Architecture <behavioral>).
@@ -267,8 +268,8 @@ Entity <ForwardController> analyzed. Unit <ForwardController> generated.
 Analyzing Entity <ALU> in library <work> (Architecture <behavioral>).
 Entity <ALU> analyzed. Unit <ALU> generated.
 
-Analyzing Entity <ExMemRegisters> in library <work> (Architecture <behavioral>).
-Entity <ExMemRegisters> analyzed. Unit <ExMemRegisters> generated.
+Analyzing Entity <ExeMemRegisters> in library <work> (Architecture <behavioral>).
+Entity <ExeMemRegisters> analyzed. Unit <ExeMemRegisters> generated.
 
 Analyzing Entity <MemWbRegisters> in library <work> (Architecture <behavioral>).
 Entity <MemWbRegisters> analyzed. Unit <MemWbRegisters> generated.
@@ -322,7 +323,7 @@ Entity <VGA_Controller> analyzed. Unit <VGA_Controller> generated.
 Analyzing Entity <MemWriteDataMux> in library <work> (Architecture <behavioral>).
 Entity <MemWriteDataMux> analyzed. Unit <MemWriteDataMux> generated.
 
-Analyzing Entity <PCBranchAdder> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <PCBranchAdder> in library <work> (Architecture <behavioral>).
 Entity <PCBranchAdder> analyzed. Unit <PCBranchAdder> generated.
 
 Analyzing Entity <dcm> in library <work> (Architecture <behavioral>).
@@ -515,25 +516,25 @@ INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and 
 Unit <ALU> synthesized.
 
 
-Synthesizing Unit <ExMemRegisters>.
+Synthesizing Unit <ExeMemRegisters>.
     Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/ExMemRegisters.vhd".
-    Found 1-bit register for signal <memWriteOut>.
-    Found 1-bit register for signal <memToRegOut>.
-    Found 4-bit register for signal <rdOut>.
-    Found 1-bit register for signal <regWriteOut>.
-    Found 1-bit register for signal <memReadOut>.
-    Found 16-bit register for signal <readData2Out>.
+    Found 1-bit register for signal <ExeMemRegWrite>.
+    Found 1-bit register for signal <ExeMemMemWrite>.
+    Found 16-bit register for signal <MemWriteDataOut>.
+    Found 1-bit register for signal <ExeMemMemRead>.
+    Found 1-bit register for signal <ExeMemWBSrc>.
+    Found 4-bit register for signal <ExeMemWriteReg>.
     Found 16-bit register for signal <ALUResultOut>.
     Summary:
 	inferred  36 D-type flip-flop(s).
-Unit <ExMemRegisters> synthesized.
+Unit <ExeMemRegisters> synthesized.
 
 
 Synthesizing Unit <MemWbRegisters>.
     Related source file is "C:/Users/thinkpad/Desktop/resolution/cpu/MemWbRegisters.vhd".
-    Found 16-bit register for signal <dataToWB>.
-    Found 4-bit register for signal <rdOut>.
-    Found 1-bit register for signal <regWriteOut>.
+    Found 16-bit register for signal <WriteData>.
+    Found 1-bit register for signal <MemWbRegWrite>.
+    Found 4-bit register for signal <MemWbWriteReg>.
     Summary:
 	inferred  17 D-type flip-flop(s).
 Unit <MemWbRegisters> synthesized.
@@ -1479,7 +1480,7 @@ Optimizing unit <IdExRegisters> ...
 
 Optimizing unit <ALU> ...
 
-Optimizing unit <ExMemRegisters> ...
+Optimizing unit <ExeMemRegisters> ...
 
 Optimizing unit <MemWbRegisters> ...
 
@@ -1487,7 +1488,7 @@ Mapping all equations...
 Building and optimizing final netlist ...
 INFO:Xst:2261 - The FF/Latch <u8/memReadOut> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <u8/memToRegOut> 
 INFO:Xst:2261 - The FF/Latch <u8/immeOut_15> in Unit <cpu> is equivalent to the following 4 FFs/Latches, which will be removed : <u8/immeOut_14> <u8/immeOut_13> <u8/immeOut_12> <u8/immeOut_11> 
-INFO:Xst:2261 - The FF/Latch <u13/memReadOut> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <u13/memToRegOut> 
+INFO:Xst:2261 - The FF/Latch <u13/ExeMemMemRead> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <u13/ExeMemWBSrc> 
 Found area constraint ratio of 100 (+ 5) on block cpu, actual ratio is 21.
 FlipFlop u23/y_3 has been replicated 2 time(s)
 FlipFlop u23/y_4 has been replicated 2 time(s)
@@ -1576,7 +1577,7 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-4 
 
- Number of Slices:                     1531  out of   8672    17%  
+ Number of Slices:                     1533  out of   8672    17%  
  Number of Slice Flip Flops:            651  out of  17344     3%  
  Number of 4 input LUTs:               2834  out of  17344    16%  
  Number of IOs:                         169
@@ -1910,12 +1911,12 @@ Delay:               3.095ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 132.00 secs
-Total CPU time to Xst completion: 131.88 secs
+Total REAL time to Xst completion: 130.00 secs
+Total CPU time to Xst completion: 130.67 secs
  
 --> 
 
-Total memory usage is 459288 kilobytes
+Total memory usage is 459284 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  120 (   0 filtered)

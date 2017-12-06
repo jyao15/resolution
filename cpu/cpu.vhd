@@ -285,30 +285,26 @@ architecture Behavioral of cpu is
 	
 	
 	--EX/MEM阶段寄存器
-	component ExMemRegisters
+	component ExeMemRegisters
 	port(
-		clk : in std_logic;
-		rst : in std_logic;
+		rst: in std_logic;
+		clk: in std_logic;
 		flashFinished : in std_logic;
-		--数据输入
-		rdIn : in std_logic_vector(3 downto 0);
-		MFPCMuxIn : in std_logic_vector(15 downto 0);
-		readData2In : in std_logic_vector(15 downto 0); --供SW语句写内存
-		--信号输入
-		regWriteIn : in std_logic;
-		memReadIn : in std_logic;
-		memWriteIn : in std_logic;
-		memToRegIn : in std_logic;
-
-		--数据输出
-		rdOut : out std_logic_vector(3 downto 0);
-		ALUResultOut : out std_logic_vector(15 downto 0);
-		readData2Out : out std_logic_vector(15 downto 0); --供SW语句写内存
-		--信号输出
-		regWriteOut : out std_logic;
-		memReadOut : out std_logic;
-		memWriteOut : out std_logic;
-		memToRegOut : out std_logic
+		IdExeRegWrite: in std_logic;
+		IdExeWBSrc: in std_logic;
+		IdExeMemRead: in std_logic;
+		IdExeMemWrite: in std_logic;
+		RealALUResultIn: in std_logic_vector(15 downto 0);
+		MemWriteDataIn: in std_logic_vector(15 downto 0);
+		IdExeWriteReg: in std_logic_vector(3 downto 0);
+		
+		ExeMemRegWrite: out std_logic;
+		ExeMemWBSrc: out std_logic;
+		ExeMemMemRead: out std_logic;
+		ExeMemMemWrite: out std_logic;
+		ALUResultOut: out std_logic_vector(15 downto 0);
+		MemWriteDataOut: out std_logic_vector(15 downto 0);
+		ExeMemWriteReg: out std_logic_vector(3 downto 0)
 	);
 	end component;
 	
@@ -432,21 +428,19 @@ architecture Behavioral of cpu is
 	--MEM/WB阶段寄存器
 	component MemWbRegisters
 		port(
-			clk : in std_logic;
-			rst : in std_logic;
-			flashFinished : in std_logic;
-			--数据
-			readMemDataIn : in std_logic_vector(15 downto 0);	--DataMemory读出的数据
-			ALUResultIn : in std_logic_vector(15 downto 0);		--ALU的计算结果
-			rdIn : in std_logic_vector(3 downto 0);				--目的寄存器
-			--控制信号
-			regWriteIn : in std_logic;		--是否要写回
-			memToRegIn : in std_logic;		--写回时选择readMemDataIn（'1'）还是ALUResultIn（'0'）
-			
-			dataToWB : out std_logic_vector(15 downto 0);		--写回的数据
-			rdOut : out std_logic_vector(3 downto 0);				--目的寄存器："0xxx"-R0~R7,"1000"-SP,"1001"-IH,"1010"-T,"1110"-没有目的寄存器
-			regWriteOut : out std_logic								--是否要写回
-		);
+		rst: in std_logic;
+		clk: in std_logic;
+		flashFinished : in std_logic;
+		ExeMemRegWrite: in std_logic;
+		ExeMemWBSrc: in std_logic;
+		MemReadData: in std_logic_vector(15 downto 0);
+		ALUResult: in std_logic_vector(15 downto 0);
+		ExeMemWriteReg: in std_logic_vector(3 downto 0);
+		
+		MemWbRegWrite: out std_logic;
+		MemWbWriteReg: out std_logic_vector(3 downto 0);
+		WriteData: out std_logic_vector(15 downto 0)
+	);
 	end component;
 	
 	--PC加法器 实现PC+1
@@ -888,47 +882,43 @@ begin
 			branchJudge => BranchJudge
 	);
 	
-	u13 : ExMemRegisters
+	u13 : ExeMemRegisters
 	port map(
-			clk => clk_3,
 			rst => rst,
+			clk => clk_3,
 			flashFinished => flashFinished,
-			
-			rdIn => IdExRd,
-			MFPCMuxIn => MFPCMuxOut,
-			readData2In => WriteDataOut,
-			
-			regWriteIn => IdExRegWrite,
-			memReadIn => IdExMemRead,
-			memWriteIn => IdExMemWrite,
-			memToRegIn => IdExMemToReg,
-						
-			rdOut => ExMemRd,
+			IdExeRegWrite => IdExRegWrite,
+			IdExeWBSrc => IdExMemToReg,
+			IdExeMemRead => IdExMemRead,
+			IdExeMemWrite => IdExMemWrite,
+			RealALUResultIn => MFPCMuxOut,
+			MemWriteDataIn => WriteDataOut,
+			IdExeWriteReg => IdExRd,
+					
+			ExeMemRegWrite => ExMemRegWrite,
+			ExeMemWBSrc => ExMemToReg,
+			ExeMemMemRead => ExMemRead,
+			ExeMemMemWrite => ExMemWrite,
 			ALUResultOut => ExMemALUResult,
-			readData2Out => ExMemReadData2,
-			
-			regWriteOut => ExMemRegWrite,
-			memReadOut => ExMemRead,
-			memWriteOut => ExMemWrite,
-			memToRegOut => ExMemToReg
+			MemWriteDataOut => ExMemReadData2,
+			ExeMemWriteReg => ExMemRd
 		);
 	
 	u14 : MemWbRegisters
 	port map(
-			clk => clk_3,
+			
 			rst => rst,
+			clk => clk_3,
 			flashFinished => flashFinished,
+			ExeMemRegWrite => ExMemRegWrite,
+			ExeMemWBSrc => ExMemToReg,
+			MemReadData => DMDataOut,
+			ALUResult => ExMemALUResult,
+			ExeMemWriteReg => ExMemRd,
 			
-			readMemDataIn => DMDataOut,
-			ALUResultIn => ExMemALUResult,
-			rdIn => ExMemRd,
-			
-			regWriteIn => ExMemRegWrite,
-			memToRegIn => ExMemToReg,
-			
-			dataToWB => dataToWB,
-			rdOut => rdToWB,
-			regWriteOut => MemWbRegWrite
+			MemWbWriteReg => rdToWB,
+			MemWbRegWrite => MemWbRegWrite,
+			WriteData => dataToWB
 		);
 	
 	u15 : HazardDetectionUnit
