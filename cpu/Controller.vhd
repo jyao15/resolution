@@ -69,7 +69,7 @@ begin
 					controllerOut <= "1001001001011000100000";
 				when "01100" =>
 					if (commandIn(10 downto 8) = "011") then	 --ADDSP
-						controllerOut <= "1101101001011000100000";
+						controllerOut <= "1101100001011000100000";
 					elsif (commandIn(10 downto 8) = "000") then--BTEQZ
 						controllerOut <= "0000011001010100100000";
 					elsif (commandIn(10 downto 8) = "100") then--MTSP
