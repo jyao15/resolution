@@ -1,40 +1,40 @@
 V3 140
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ALU.vhd 2017/12/06.01:17:25 P.20131013
-EN work/ALU 1512506267 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ALU.vhd \
+EN work/ALU 1512556729 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ALU.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/ALU/Behavioral 1512506268 \
-      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ALU.vhd EN work/ALU 1512506267
+AR work/ALU/Behavioral 1512556730 \
+      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ALU.vhd EN work/ALU 1512556729
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/AMux.vhd 2017/12/05.23:17:54 P.20131013
-EN work/AMux 1512506261 \
+EN work/AMux 1512556723 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/AMux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/AMux/Behavioral 1512506262 \
-      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/AMux.vhd EN work/AMux 1512506261
+AR work/AMux/Behavioral 1512556724 \
+      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/AMux.vhd EN work/AMux 1512556723
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/BMux.vhd 2017/12/05.23:17:54 P.20131013
-EN work/BMux 1512506263 \
+EN work/BMux 1512556725 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/BMux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/BMux/Behavioral 1512506264 \
-      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/BMux.vhd EN work/BMux 1512506263
+AR work/BMux/Behavioral 1512556726 \
+      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/BMux.vhd EN work/BMux 1512556725
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/clock.vhd 2017/12/05.23:17:55 P.20131013
-EN work/clock 1512506279 \
+EN work/clock 1512556741 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/clock.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/clock/Behavioral 1512506280 \
-      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/clock.vhd EN work/clock 1512506279
+AR work/clock/Behavioral 1512556742 \
+      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/clock.vhd EN work/clock 1512556741
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/Controller.vhd 2017/12/06.03:00:32 P.20131013
-EN work/Controller 1512506253 \
+EN work/Controller 1512556715 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/Controller.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Controller/Behavioral 1512506254 \
+AR work/Controller/Behavioral 1512556716 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/Controller.vhd \
-      EN work/Controller 1512506253
-FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/cpu.vhd 2017/12/06.04:37:21 P.20131013
-EN work/cpu 1512506297 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/cpu.vhd \
+      EN work/Controller 1512556715
+FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/cpu.vhd 2017/12/06.18:38:22 P.20131013
+EN work/cpu 1512556759 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/cpu.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/cpu/Behavioral 1512506298 \
-      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/cpu.vhd EN work/cpu 1512506297 \
+AR work/cpu/Behavioral 1512556760 \
+      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/cpu.vhd EN work/cpu 1512556759 \
       CP PCRegister CP PCAdder CP IfIdRegisters CP ReadDstMUX CP Controller \
       CP Registers CP ImmeExtendUnit CP IdExRegisters CP AMux CP BMux \
       CP ForwardController CP ALU CP ExMemRegisters CP MemWbRegisters \
@@ -42,155 +42,155 @@ AR work/cpu/Behavioral 1512506298 \
       CP MFPCMux CP ReadReg1Mux CP ReadReg2Mux CP VGA_Controller CP fontRom \
       CP WriteDataMux CP dcm
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/dcm.vhd 2017/12/05.23:17:55 P.20131013
-EN work/dcm 1512506295 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/dcm.vhd \
+EN work/dcm 1512556757 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/dcm.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/dcm/BEHAVIORAL 1512506296 \
-      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/dcm.vhd EN work/dcm 1512506295 \
+AR work/dcm/BEHAVIORAL 1512556758 \
+      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/dcm.vhd EN work/dcm 1512556757 \
       CP BUFG CP DCM_SP
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ExMemRegisters.vhd 2017/12/05.23:17:54 P.20131013
-EN work/ExMemRegisters 1512506269 \
+EN work/ExMemRegisters 1512556731 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ExMemRegisters.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ExMemRegisters/Behavioral 1512506270 \
+AR work/ExMemRegisters/Behavioral 1512556732 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ExMemRegisters.vhd \
-      EN work/ExMemRegisters 1512506269
+      EN work/ExMemRegisters 1512556731
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ForwardController.vhd 2017/12/05.23:17:54 P.20131013
-EN work/ForwardController 1512506265 \
+EN work/ForwardController 1512556727 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ForwardController.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ForwardController/Behavioral 1512506266 \
+AR work/ForwardController/Behavioral 1512556728 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ForwardController.vhd \
-      EN work/ForwardController 1512506265
+      EN work/ForwardController 1512556727
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/HazardDetectionUnit.vhd 2017/12/05.23:17:54 P.20131013
-EN work/HazardDetectionUnit 1512506273 \
+EN work/HazardDetectionUnit 1512556735 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/HazardDetectionUnit.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/HazardDetectionUnit/Behavioral 1512506274 \
+AR work/HazardDetectionUnit/Behavioral 1512556736 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/HazardDetectionUnit.vhd \
-      EN work/HazardDetectionUnit 1512506273
+      EN work/HazardDetectionUnit 1512556735
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/IdExRegisters.vhd 2017/12/05.23:17:54 P.20131013
-EN work/IdExRegisters 1512506259 \
+EN work/IdExRegisters 1512556721 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/IdExRegisters.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/IdExRegisters/Behavioral 1512506260 \
+AR work/IdExRegisters/Behavioral 1512556722 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/IdExRegisters.vhd \
-      EN work/IdExRegisters 1512506259
+      EN work/IdExRegisters 1512556721
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/IfIdRegisters.vhd 2017/12/05.23:17:55 P.20131013
-EN work/IfIdRegisters 1512506249 \
+EN work/IfIdRegisters 1512556711 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/IfIdRegisters.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/IfIdRegisters/Behavioral 1512506250 \
+AR work/IfIdRegisters/Behavioral 1512556712 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/IfIdRegisters.vhd \
-      EN work/IfIdRegisters 1512506249
+      EN work/IfIdRegisters 1512556711
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ImmeExtendUnit.vhd 2017/12/06.04:36:50 P.20131013
-EN work/ImmeExtendUnit 1512506257 \
+EN work/ImmeExtendUnit 1512556719 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ImmeExtendUnit.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ImmeExtendUnit/Behavioral 1512506258 \
+AR work/ImmeExtendUnit/Behavioral 1512556720 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ImmeExtendUnit.vhd \
-      EN work/ImmeExtendUnit 1512506257
+      EN work/ImmeExtendUnit 1512556719
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ipcore_dir/fontRom.vhd 2017/12/05.23:17:55 P.20131013
-EN work/fontRom 1512506291 \
+EN work/fontRom 1512556753 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ipcore_dir/fontRom.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/fontRom/fontRom_a 1512506292 \
+AR work/fontRom/fontRom_a 1512556754 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ipcore_dir/fontRom.vhd \
-      EN work/fontRom 1512506291
+      EN work/fontRom 1512556753
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/MemoryUnit.vhd 2017/12/05.23:17:55 P.20131013
-EN work/MemoryUnit 1512506277 \
+EN work/MemoryUnit 1512556739 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/MemoryUnit.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/MemoryUnit/Behavioral 1512506278 \
+AR work/MemoryUnit/Behavioral 1512556740 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/MemoryUnit.vhd \
-      EN work/MemoryUnit 1512506277
+      EN work/MemoryUnit 1512556739
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/MemWbRegisters.vhd 2017/12/05.23:17:55 P.20131013
-EN work/MemWbRegisters 1512506271 \
+EN work/MemWbRegisters 1512556733 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/MemWbRegisters.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/MemWbRegisters/Behavioral 1512506272 \
+AR work/MemWbRegisters/Behavioral 1512556734 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/MemWbRegisters.vhd \
-      EN work/MemWbRegisters 1512506271
+      EN work/MemWbRegisters 1512556733
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/MFPCMux.vhd 2017/12/05.23:17:55 P.20131013
-EN work/MFPCMux 1512506283 \
+EN work/MFPCMux 1512556745 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/MFPCMux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/MFPCMux/Behavioral 1512506284 \
+AR work/MFPCMux/Behavioral 1512556746 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/MFPCMux.vhd \
-      EN work/MFPCMux 1512506283
+      EN work/MFPCMux 1512556745
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/PCAdder.vhd 2017/12/05.23:17:55 P.20131013
-EN work/PCAdder 1512506247 \
+EN work/PCAdder 1512556709 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/PCAdder.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/PCAdder/Behavioral 1512506248 \
+AR work/PCAdder/Behavioral 1512556710 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/PCAdder.vhd \
-      EN work/PCAdder 1512506247
+      EN work/PCAdder 1512556709
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/PCMux.vhd 2017/12/05.23:17:55 P.20131013
-EN work/PCMux 1512506275 \
+EN work/PCMux 1512556737 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/PCMux.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/PCMux/Behavioral 1512506276 \
-      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/PCMux.vhd EN work/PCMux 1512506275
+AR work/PCMux/Behavioral 1512556738 \
+      FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/PCMux.vhd EN work/PCMux 1512556737
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/PCRegister.vhd 2017/12/05.23:17:55 P.20131013
-EN work/PCRegister 1512506245 \
+EN work/PCRegister 1512556707 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/PCRegister.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/PCRegister/Behavioral 1512506246 \
+AR work/PCRegister/Behavioral 1512556708 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/PCRegister.vhd \
-      EN work/PCRegister 1512506245
+      EN work/PCRegister 1512556707
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/RdMux.vhd 2017/12/06.02:03:16 P.20131013
-EN work/ReadDstMUX 1512506251 \
+EN work/ReadDstMUX 1512556713 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/RdMux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ReadDstMUX/Behavioral 1512506252 \
+AR work/ReadDstMUX/Behavioral 1512556714 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/RdMux.vhd \
-      EN work/ReadDstMUX 1512506251
+      EN work/ReadDstMUX 1512556713
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ReadReg1Mux.vhd 2017/12/06.01:19:11 P.20131013
-EN work/ReadReg1Mux 1512506285 \
+EN work/ReadReg1Mux 1512556747 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ReadReg1Mux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ReadReg1Mux/Behavioral 1512506286 \
+AR work/ReadReg1Mux/Behavioral 1512556748 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ReadReg1Mux.vhd \
-      EN work/ReadReg1Mux 1512506285
+      EN work/ReadReg1Mux 1512556747
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ReadReg2Mux.vhd 2017/12/06.00:47:28 P.20131013
-EN work/ReadReg2Mux 1512506287 \
+EN work/ReadReg2Mux 1512556749 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ReadReg2Mux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ReadReg2Mux/Behavioral 1512506288 \
+AR work/ReadReg2Mux/Behavioral 1512556750 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/ReadReg2Mux.vhd \
-      EN work/ReadReg2Mux 1512506287
-FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/Registers.vhd 2017/12/05.23:17:55 P.20131013
-EN work/Registers 1512506255 \
+      EN work/ReadReg2Mux 1512556749
+FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/Registers.vhd 2017/12/06.18:38:22 P.20131013
+EN work/Registers 1512556717 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/Registers.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Registers/Behavioral 1512506256 \
+AR work/Registers/Behavioral 1512556718 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/Registers.vhd \
-      EN work/Registers 1512506255
+      EN work/Registers 1512556717
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/StructConflictUnit.vhd 2017/12/05.23:17:55 P.20131013
-EN work/StructConflictUnit 1512506281 \
+EN work/StructConflictUnit 1512556743 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/StructConflictUnit.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/StructConflictUnit/Behavioral 1512506282 \
+AR work/StructConflictUnit/Behavioral 1512556744 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/StructConflictUnit.vhd \
-      EN work/StructConflictUnit 1512506281
+      EN work/StructConflictUnit 1512556743
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/VGA_Controller.vhd 2017/12/05.23:17:55 P.20131013
-EN work/VGA_Controller 1512506289 \
+EN work/VGA_Controller 1512556751 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/VGA_Controller.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/VGA_Controller/behave 1512506290 \
+AR work/VGA_Controller/behave 1512556752 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/VGA_Controller.vhd \
-      EN work/VGA_Controller 1512506289
+      EN work/VGA_Controller 1512556751
 FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/WriteDataMux.vhd 2017/12/05.23:17:55 P.20131013
-EN work/WriteDataMux 1512506293 \
+EN work/WriteDataMux 1512556755 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/WriteDataMux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/WriteDataMux/Behavioral 1512506294 \
+AR work/WriteDataMux/Behavioral 1512556756 \
       FL C:/Users/nuonuo/Desktop/no_banzi/resolution/cpu/WriteDataMux.vhd \
-      EN work/WriteDataMux 1512506293
+      EN work/WriteDataMux 1512556755
 FL D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/ALU.vhd 2016/11/26.21:51:39 P.20131013
 FL D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/AMux.vhd 2016/11/26.21:51:19 P.20131013
 FL D:/Junior/ComputerOrganization/CPU/jiyuan/cpu/BMux.vhd 2016/11/26.21:51:24 P.20131013
