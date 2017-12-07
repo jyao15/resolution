@@ -67,6 +67,8 @@ begin
 					controllerOut <= "1010001000011000100000";
 				when "01001" =>		--ADDIU
 					controllerOut <= "1001001001011000100000";
+				when "01011" =>		--SLTUI
+					controllerOut <= "1100001001001110100000";
 				when "01100" =>
 					if (commandIn(10 downto 8) = "011") then	 --ADDSP
 						controllerOut <= "1101100001011000100000";
