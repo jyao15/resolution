@@ -93,16 +93,17 @@ begin
 				end if;
 				branchJudge <= '0';
 			when "1001" => --BEQZ, BTEQZ
-				--ALUresult  <= Asrc - Bsrc; 
+				ALUresult <= "0000000000000000";
 				if (Asrc = zero) then
 					branchJudge <= '1';
 				else 
 					branchJudge <= '0';
 				end if;
 			when "1010" => --B
+				ALUresult <= "0000000000000000";
 				branchJudge <= '1';
 			when "1011" => --BNEZ
-				--ALUresult  <= Asrc - Bsrc; 
+				ALUresult <= "0000000000000000";
 				if (Asrc = zero) then
 					branchJudge <= '0';
 				else 
@@ -110,8 +111,10 @@ begin
 				end if;
 			when "1110" => --Asrc
 				ALUresult <= Asrc;
+				branchJudge <= '0';
 			when "1111" => --Bsrc
 				ALUresult <= Bsrc;
+				branchJudge <= '0';
 				
 			when others => ALUresult <= "0000000000000000";
 				branchJudge <= '0';

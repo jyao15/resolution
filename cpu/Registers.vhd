@@ -146,7 +146,7 @@ begin
 			when "1000" => ReadData1 <= SP;
 			when "1001" => ReadData1 <= IH;
 			when "1010" => ReadData1 <= T;
-			when others =>
+			when others => ReadData1 <= (others => '0');
 		end case;
 		
 		case ReadReg2In is
@@ -158,7 +158,7 @@ begin
 			when "0101" => ReadData2 <= r5;
 			when "0110" => ReadData2 <= r6;
 			when "0111" => ReadData2 <= r7;
-			when others =>
+			when others => ReadData2 <= (others => '0');
 		end case;
 		
 	end process;

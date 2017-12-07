@@ -39,22 +39,25 @@
 <arg fmt="%s" index="2">Pin I2 of clkIn_clock1</arg>
 </msg>
 
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">u9/Mmux_ALUSrcA21</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">u20/RealALUResult&lt;7&gt;24_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">u9/Mmux_ALUSrcA21</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">u20/RealALUResult&lt;8&gt;34_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">u9/Mmux_ALUSrcA21</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">u20/RealALUResult&lt;9&gt;34_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">u23/romAddr_mux0053&lt;5&gt;41</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">u23/romAddr_mux0053&lt;5&gt;12111_SW0</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">u23/romAddr_mux0053&lt;3&gt;32</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">u23/romAddr_mux0053&lt;3&gt;21_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">u23/romAddr_mux0053&lt;6&gt;31</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">u23/romAddr_mux0053&lt;6&gt;21_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">u23/romAddr_mux0053&lt;4&gt;31</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">u23/romAddr_mux0053&lt;4&gt;21_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">u7/sign_or0000</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">u12/ALUresult_not0001</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">u6/ReadData1_or0000</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">u12/branchJudge_not0001</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">u23/romAddr_mux0053&lt;7&gt;33</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">u23/romAddr_mux0053&lt;7&gt;21_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
 <msg type="info" file="PhysDesignRules" num="772" delta="old" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">u28/DCM_SP_INST</arg>, consult the device Interactive Data Sheet.

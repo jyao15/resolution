@@ -50,7 +50,7 @@ begin
 			when "001" => sign := immeIn(3); --3-0
 			when "010" => sign := immeIn(4); --4-0
 			when "101" => sign := immeIn(7); --7-0
-			when others => 
+			when others => sign := '0';
 		end case;
 		tmpOut := (others => sign);
 		
@@ -68,6 +68,7 @@ begin
 			when "101" =>
 				immeOut <= tmpOut(15 downto 8) & immeIn(7 downto 0);
 			when others =>
+				immeOut <= (others => '0');
 		end case;
 	end process;
 end Behavioral;
