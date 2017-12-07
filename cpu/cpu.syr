@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.48 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.48 secs
+Total CPU time to Xst completion: 0.49 secs
  
 --> Reading design: cpu.prj
 
@@ -119,8 +119,7 @@ Architecture behavioral of Entity registers is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ImmeExtendUnit.vhd" in Library work.
 Architecture behavioral of Entity immeextendunit is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/IdExeRegisters.vhd" in Library work.
-Entity <IdExeRegisters> compiled.
-Entity <IdExeRegisters> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity idexeregisters is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxA.vhd" in Library work.
 Architecture behavioral of Entity alumuxa is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/resolution/cpu/ALUMuxB.vhd" in Library work.
@@ -182,7 +181,7 @@ Analyzing hierarchy for entity <Registers> in library <work> (architecture <beha
 
 Analyzing hierarchy for entity <ImmeExtendUnit> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <IdExeRegisters> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <IdExeRegisters> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <ALUMuxA> in library <work> (architecture <behavioral>).
 
@@ -226,10 +225,10 @@ Analyzing hierarchy for entity <dcm> in library <work> (architecture <behavioral
 =========================================================================
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
 WARNING:Xst:2211 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1082: Instantiating black box module <fontRom>.
-WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1135: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1122: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <opt>
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1172: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1192: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1159: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/thinkpad/Desktop/resolution/cpu/cpu.vhd" line 1179: Mux is complete : default of case is discarded
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <PCRegister> in library <work> (Architecture <behavioral>).
@@ -253,7 +252,7 @@ Entity <Registers> analyzed. Unit <Registers> generated.
 Analyzing Entity <ImmeExtendUnit> in library <work> (Architecture <behavioral>).
 Entity <ImmeExtendUnit> analyzed. Unit <ImmeExtendUnit> generated.
 
-Analyzing Entity <IdExeRegisters> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <IdExeRegisters> in library <work> (Architecture <behavioral>).
 Entity <IdExeRegisters> analyzed. Unit <IdExeRegisters> generated.
 
 Analyzing Entity <ALUMuxA> in library <work> (Architecture <behavioral>).
@@ -1161,7 +1160,10 @@ Synthesizing Unit <cpu>.
 WARNING:Xst:646 - Signal <ram2AddrOutput<17:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <clk_registers> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <always_zero> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <RegisterState> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <MemoryState> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <LOCKED_OUT> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <FlashStateOut> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <CLK2X_OUT> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <CLK0_OUT> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 16x7-bit ROM for signal <digit1>.
@@ -1531,21 +1533,21 @@ Design Statistics
 # IOs                              : 169
 
 Cell Usage :
-# BELS                             : 3561
+# BELS                             : 3558
 #      GND                         : 1
 #      INV                         : 32
 #      LUT1                        : 86
 #      LUT2                        : 205
 #      LUT2_D                      : 5
 #      LUT2_L                      : 5
-#      LUT3                        : 725
-#      LUT3_D                      : 32
-#      LUT3_L                      : 27
-#      LUT4                        : 1506
+#      LUT3                        : 721
+#      LUT3_D                      : 31
+#      LUT3_L                      : 28
+#      LUT4                        : 1507
 #      LUT4_D                      : 86
-#      LUT4_L                      : 127
+#      LUT4_L                      : 126
 #      MUXCY                       : 166
-#      MUXF5                       : 387
+#      MUXF5                       : 388
 #      MUXF6                       : 33
 #      MUXF7                       : 1
 #      VCC                         : 1
@@ -1577,9 +1579,9 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-4 
 
- Number of Slices:                     1532  out of   8672    17%  
+ Number of Slices:                     1530  out of   8672    17%  
  Number of Slice Flip Flops:            651  out of  17344     3%  
- Number of 4 input LUTs:               2836  out of  17344    16%  
+ Number of 4 input LUTs:               2832  out of  17344    16%  
  Number of IOs:                         169
  Number of bonded IOBs:                 169  out of    250    67%  
  Number of GCLKs:                         7  out of     24    29%  
@@ -1635,7 +1637,7 @@ Speed Grade: -4
 
    Minimum period: 13.947ns (Maximum Frequency: 71.701MHz)
    Minimum input arrival time before clock: 11.295ns
-   Maximum output required time after clock: 6.009ns
+   Maximum output required time after clock: 12.262ns
    Maximum combinational path delay: 3.095ns
 
 Timing Detail:
@@ -1852,23 +1854,23 @@ Offset:              4.999ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk1'
-  Total number of paths / destination ports: 172 / 100
+  Total number of paths / destination ports: 167 / 101
 -------------------------------------------------------------------------
-Offset:              5.919ns (Levels of Logic = 2)
-  Source:            u17/flashstate_FSM_FFd2 (FF)
-  Destination:       led<11> (PAD)
+Offset:              5.870ns (Levels of Logic = 2)
+  Source:            u17/ram2AddrOutput_7 (FF)
+  Destination:       digit1<6> (PAD)
   Source Clock:      clk1 rising
 
-  Data Path: u17/flashstate_FSM_FFd2 to led<11>
+  Data Path: u17/ram2AddrOutput_7 to digit1<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             8   0.591   0.932  u17/flashstate_FSM_FFd2 (u17/flashstate_FSM_FFd2)
-     LUT3:I0->O            1   0.704   0.420  u17/flashstate_or00001 (led_11_OBUF)
-     OBUF:I->O                 3.272          led_11_OBUF (led<11>)
+     FDE:C->Q              7   0.591   0.883  u17/ram2AddrOutput_7 (u17/ram2AddrOutput_7)
+     LUT4:I0->O            1   0.704   0.420  Mrom_digit121 (digit1_2_OBUF)
+     OBUF:I->O                 3.272          digit1_2_OBUF (digit1<2>)
     ----------------------------------------
-    Total                      5.919ns (4.567ns logic, 1.352ns route)
-                                       (77.2% logic, 22.8% route)
+    Total                      5.870ns (4.567ns logic, 1.303ns route)
+                                       (77.8% logic, 22.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'u23/CLK_21'
@@ -1891,6 +1893,81 @@ Offset:              6.009ns (Levels of Logic = 2)
                                        (76.0% logic, 24.0% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u12/branchJudge_not0001'
+  Total number of paths / destination ports: 16 / 8
+-------------------------------------------------------------------------
+Offset:              9.669ns (Levels of Logic = 4)
+  Source:            u12/branchJudge (LATCH)
+  Destination:       led<7> (PAD)
+  Source Clock:      u12/branchJudge_not0001 falling
+
+  Data Path: u12/branchJudge to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              52   0.676   1.444  u12/branchJudge (u12/branchJudge)
+     LUT2:I0->O           15   0.704   1.192  u16/selectedPC<0>11 (u16/N3)
+     LUT4:I0->O            2   0.704   0.526  u16/selectedPC<1>17 (u16/selectedPC<1>17)
+     LUT2:I1->O            2   0.704   0.447  u16/selectedPC<1>18 (led_1_OBUF)
+     OBUF:I->O                 3.272          led_1_OBUF (led<1>)
+    ----------------------------------------
+    Total                      9.669ns (6.060ns logic, 3.609ns route)
+                                       (62.7% logic, 37.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u18/count_01'
+  Total number of paths / destination ports: 424 / 8
+-------------------------------------------------------------------------
+Offset:              12.262ns (Levels of Logic = 13)
+  Source:            u1/nextPC_1 (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      u18/count_01 rising
+
+  Data Path: u1/nextPC_1 to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             7   0.591   0.883  u1/nextPC_1 (u1/nextPC_1)
+     LUT1:I0->O            1   0.704   0.000  u2/Madd_PCPlusOne_cy<1>_rt (u2/Madd_PCPlusOne_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  u2/Madd_PCPlusOne_cy<1> (u2/Madd_PCPlusOne_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  u2/Madd_PCPlusOne_cy<2> (u2/Madd_PCPlusOne_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  u2/Madd_PCPlusOne_cy<3> (u2/Madd_PCPlusOne_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  u2/Madd_PCPlusOne_cy<4> (u2/Madd_PCPlusOne_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  u2/Madd_PCPlusOne_cy<5> (u2/Madd_PCPlusOne_cy<5>)
+     XORCY:CI->O           3   0.804   0.531  u2/Madd_PCPlusOne_xor<6> (PCAddOne<6>)
+     INV:I->O              1   0.704   0.000  u16/Msub_selectedPC_addsub0000_lut<6>_INV_0 (u16/Msub_selectedPC_addsub0000_lut<6>)
+     MUXCY:S->O            1   0.464   0.000  u16/Msub_selectedPC_addsub0000_cy<6> (u16/Msub_selectedPC_addsub0000_cy<6>)
+     XORCY:CI->O           1   0.804   0.424  u16/Msub_selectedPC_addsub0000_xor<7> (u16/selectedPC_addsub0000<7>)
+     LUT4:I3->O            2   0.704   0.526  u16/selectedPC<7>17 (u16/selectedPC<7>17)
+     LUT2:I1->O            2   0.704   0.447  u16/selectedPC<7>18 (led_7_OBUF)
+     OBUF:I->O                 3.272          led_7_OBUF (led<7>)
+    ----------------------------------------
+    Total                     12.262ns (9.451ns logic, 2.811ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u12/ALUresult_not0001'
+  Total number of paths / destination ports: 14 / 7
+-------------------------------------------------------------------------
+Offset:              8.906ns (Levels of Logic = 4)
+  Source:            u12/ALUresult_14 (LATCH)
+  Destination:       led<7> (PAD)
+  Source Clock:      u12/ALUresult_not0001 falling
+
+  Data Path: u12/ALUresult_14 to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.676   0.526  u12/ALUresult_14 (u12/ALUresult_14)
+     LUT3:I1->O           49   0.704   1.347  u19/IfIdFlush_StructConflict_and00001 (PCRollback)
+     LUT4:I1->O            2   0.704   0.526  u16/selectedPC<1>17 (u16/selectedPC<1>17)
+     LUT2:I1->O            2   0.704   0.447  u16/selectedPC<1>18 (led_1_OBUF)
+     OBUF:I->O                 3.272          led_1_OBUF (led<1>)
+    ----------------------------------------
+    Total                      8.906ns (6.060ns logic, 2.846ns route)
+                                       (68.0% logic, 32.0% route)
+
+=========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
@@ -1911,14 +1988,14 @@ Delay:               3.095ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 131.00 secs
-Total CPU time to Xst completion: 131.08 secs
+Total REAL time to Xst completion: 145.00 secs
+Total CPU time to Xst completion: 145.62 secs
  
 --> 
 
-Total memory usage is 459336 kilobytes
+Total memory usage is 459312 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  120 (   0 filtered)
+Number of warnings :  123 (   0 filtered)
 Number of infos    :   77 (   0 filtered)
 

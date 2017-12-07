@@ -1115,21 +1115,8 @@ begin
 	
 	
 	
-	process(flashData, MemoryState, FlashStateOut, RegisterState)
-	--process(dataToWB, ForwardA, ForwardSW, rdToWB)
-	--process(dataToWB, rdToWB, MemoryState, RegisterState)
-	begin
-		led(15 downto 14) <= RegisterState;
-		led(13 downto 12) <= MemoryState;
-		led(11 downto 9) <= FlashStateOut;
-		--led(15 downto 14) <= ForwardA;
-		--led(13 downto 12) <= ForwardSW;
-		--led(11 downto 8) <= rdToWB;
-		--led(7 downto 0) <= dataToWB(7 downto 0);
-		
-		led(8 downto 0) <= (others => '0');
-		--led <= flashData;
-	end process;
+	led(15 downto 8) <= r5(7 downto 0);
+	led(7 downto 0) <= PCMuxOut(7 downto 0);
 	
 	--clk_chooser
 	process(CLKFX_OUT, rst, clk_hand)
